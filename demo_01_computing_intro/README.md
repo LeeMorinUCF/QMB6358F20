@@ -6,7 +6,7 @@
 
 ## What is a computer?
 
-At a basic level, a computer is a list of information stored in memory combined with some operations that can be performed on the information in memory. 
+At a basic level, a computer is a list of information stored in memory, combined with some operations that can be performed on the information in memory. 
 At any time, a computer has a state that is defined by the set of values at each of the locations in memory. 
 
 
@@ -101,7 +101,7 @@ This program moves the contents of register 4 into register 5:
 4 END
 ```
 
-Notice the first step is to remove the contents of register 5 so that it does not get counted in the value moved from register 4.
+Notice the first step is to remove the contents of register 5 so that the value does not get counted with the value moved from register 4.
 
 ### Program 4: ```COPY[1,3]```
 
@@ -118,11 +118,11 @@ Notice the first step is to remove the contents of register 5 so that it does no
 
 As above, thie first steps are to clear spaces in memory to store the result (in register 3) and storethe values of intermediate calculations (in register 4). 
 Steps 3, 4 and 5 cycle through the subtraction of values from register 1 and the addition of each value to both registers 3 and 4. 
-Moving to register 3 is the gola but the movement to register 4 is to store the original value of register 1.
+Moving to register 3 is the goal but the movement to register 4 is to store the original value of register 1.
 When register 1 is empty, the program then alternates between steps 6 and 7 to move the values in register 4 back to register 1, leaving the value that was copied in its original location. 
 
 
-### Program 4: Non-desctuctive ```ADD[1,2,3]```
+### Program 4: Non-destructive ```ADD[1,2,3]```
 
 This program now adds the values in registers 1 and 2 and stores the result in register 3, while preserving the values in registers 1 and 2. 
 
@@ -143,10 +143,10 @@ This program now adds the values in registers 1 and 2 and stores the result in r
 ```
 
 Other programs can be written to multiply two values, with repeated addition. 
-Subtraction can also be done, except that there is the potential for negative values, in which an extra register must be used to store a minus sign. 
-Divisin can be completed by repeated subtraction, with an extra register for the remainder, with one additional hitch: storing an error message in a register to denote division by zero. 
+Subtraction can also be performed similarly, except that there is the potential for negative values, in which an extra register must be used to store a minus sign. 
+Division can be completed by repeated subtraction, with an extra register for the remainder, with one additional hitch: storing an error message in a register to denote division by zero. 
 Once these programs are written, one can create a program to emulate a pocket calculator by including a register with a value to indicate the desired operation. 
-For example, zero for ```ADD```, one for ```SUBTRACT```, three for ```MULTIPLY``` and four for ```DIVIDE```. 
+For example, zero for ```ADD```, one for ```SUBTRACT```, two for ```MULTIPLY``` and three for ```DIVIDE```. 
 
 The extension to more advanced computers is described in this note: [Secrets to Computer Power Revealed](http://sites.tufts.edu/rodrego/files/2011/03/Secrets-of-Computer-Power-Revealed-2008.pdf).
 
