@@ -58,7 +58,7 @@ These commands are listed in a program in which each line has up to four paramet
 * The first is the *step* number of the program referring to a particular command.
 * The second is the *instruction*, the command to either ```END```, ```INC``` or ```DEB```.
 * The third is needed only in the case of the ```INC``` or ```DEB``` commands and is the instruction to *go to* a particular *step* in the program and execute the instruction at that step. 
-* The fourth column, which is ony needed for the ```DEB``` command, indicating the *step* in the program to be executed next in the case that the register has a value of zero and cannot be decreased. 
+* The fourth column, which is ony needed for the ```DEB``` command, indicating the *branch-to step* in the program to be executed next in the case that the register has a value of zero and cannot be decreased. 
 
 Here are some examples that follow from the discussion of the [RodRego](http://sites.tufts.edu/rodrego/) program on the website of the philosopher Dan Dennet at Tufts University. 
 RodRego is a program for running programs in a language called ```RAP```, which stands for *Register Assembly Programming*. 
@@ -77,8 +77,10 @@ This program adds the value in register 1 to the value in register 2.
 
 This process is illustrated in a *flow graph*. 
 Each circle represents an instruction, with the number inside showing the *address* of the register to be changed, with a "+" for an ```INC``` instruction and a "-" for a ```DEB``` instruction. 
-Only one arrow trails from the ```INC``` instruction but two arrows trail from the ```DEB``` instruction, with the *branch to* step labeled with a zero. 
+Only one arrow trails from the ```INC``` instruction but two arrows trail from the ```DEB``` instruction, with the *branch-to* step labeled with a zero. 
 The program starts at &alpha; and ends at &Omega;.
+
+
 
 <img src="FlowGraphADD12.png" width="500"/>
 
@@ -110,6 +112,11 @@ This program moves the contents of register 4 into register 5:
 4 END
 ```
 
+The flow graph is shown here:
+
+<img src="RodRegoMOVE45.png" width="500"/>
+
+
 Notice the first step is to remove the contents of register 5 so that the value does not get counted with the value moved from register 4.
 
 ### Program 4: ```COPY[1,3]```
@@ -124,6 +131,10 @@ Notice the first step is to remove the contents of register 5 so that the value 
 7 INC 1 6
 8 END
 ```
+
+
+<img src="RodRegoCOPY13.png" width="500"/>
+
 
 As above, thie first steps are to clear spaces in memory to store the result (in register 3) and storethe values of intermediate calculations (in register 4). 
 Steps 3, 4 and 5 cycle through the subtraction of values from register 1 and the addition of each value to both registers 3 and 4. 
@@ -150,6 +161,9 @@ This program now adds the values in registers 1 and 2 and stores the result in r
 12 INC 2 11
 13 END
 ```
+
+<img src="RodRegoNonDestrADD123.png" width="500"/>
+
 
 Other programs can be written to multiply two values, with repeated addition. 
 Subtraction can also be performed similarly, except that there is the potential for negative values, in which an extra register must be used to store a minus sign. 
