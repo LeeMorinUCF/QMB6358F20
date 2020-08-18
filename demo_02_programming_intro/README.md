@@ -100,6 +100,13 @@ In ```python```, the words ```and``` and ```or``` can also be used, with the wor
 These are the operators that are most familiar to you. 
 These operators work much like they do with pencil and paper, following the order of operations. 
 
+In ```R``` these operators are used
+
+<img src="ArithmeticOperatorsR.png" width="500"/>
+
+In ```python``` these are the equivalent operators
+
+<img src="ArithmeticOperatorsPython.jpg" width="500"/>
 
 
 
@@ -147,13 +154,15 @@ gretting(name = "Linus")
 > "Hello, Linus!"
 
 ```
-
+Building your own functions is a large part of programming. 
+We will study this in greater detail throughout this course. 
 
 
 ### Methods
 
-In a programming paradigm called object-oriented programming, there is a special kind of function designed to work with a particular data type called an object. 
-Some built-in methods work with one of the above data types. 
+In a programming paradigm called object-oriented programming, 
+there is a special kind of function designed to work with a particular data type called an object. 
+Some built-in methods work with one of the above data types, such as strings or characters. 
 An object can also be a mix of several data types. 
 Typically, an object is designed with a particular application in mind. 
 
