@@ -48,8 +48,15 @@ Simple as they are, these operations are enough to do anything that any computer
 The first command is not very interesting but it is still required to declare that the program has stopped. 
 The second is fairly simple and makes a primitive change to the state of the register. 
 The magic occurs with the third condition. 
-Subtraction is nearly the same as addition, in reverse, except that it is undefined if the particular register 
+Subtraction is nearly the same as addition, in reverse, except that it is undefined if the particular register has a value of zero. 
+This is important because it provides an opportunity to execute a command that depends on the state. 
 
+These commands are listed in a program in which each line has up to four parameters:
+
+* The first is the *step* number of the program referring to a particular command.
+* The second is the *instruction*, the command to either ```END```, ```INC``` or ```DEB```.
+* The third is needed only in the case of the ```INC``` or ```DEB``` commands and is the instruction to *go to* a particular *step* in the program and execute the instruction at that step. 
+* The fourth column, which is ony needed for the ```DEB``` command, indicating the *step* in the program to be executed next in the case that the register has a value of zero and cannot be decreased. 
 
 Here are some examples that follow from the discussion in the [RodRego](http://sites.tufts.edu/rodrego/) on the website of the philosopher Dan Dennet at Tufts University. 
 RodRego is a program for running programs in a language called ```RAP```, which stands for *Register Assembly Programming*. 
