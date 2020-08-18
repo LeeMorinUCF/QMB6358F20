@@ -57,7 +57,7 @@ It detrmines under what conditions an operation is to be performed.
 
 ### ```if```...```else``` statements
 
-<img src="if_else_flow_diagram_C.jpg" width="500"/>
+<img src="If_else_flow_diagram_C.jpg" width="500"/>
 
 ### ```for``` loops
 
