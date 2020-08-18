@@ -222,7 +222,14 @@ if (time == "8:00" & day != "Sunday") {
 
 ### ```if```...```else``` statements
 
+Sometimes it is necessary to execute one command if a contition is ```TRUE```
+and execute other commands when the condition is ```FALSE``` 
+but avoid executing these other commands if the condition is ```TRUE``
+
 <img src="If_else_flow_diagram_C.jpg" width="500"/>
+
+In the flow chart above, the program executes the first block of code then skips the second block when ```condition == TRUE```.
+When ```condition``` is ```FALSE```, the interpreter skips the first block of code and runs only the second. 
 
 ```R
 if (condition) {
@@ -232,6 +239,29 @@ if (condition) {
     # Execute statements when condition is FALSE.
 }
 ```
+
+Consider this example:
+
+```R
+if (weather == "rainy") {
+    print("Bring an unbrella.")
+} else {
+   print("Leave your umbrella at home.")
+}
+```
+
+For more complicated situations, you can also chain
+
+```R
+if (weather == "rainy") {
+    print("Bring an unbrella.")
+} else if (weather == "sunny") {
+   print("Bring a hat.")
+} else {
+    print("Bring both, just in case.")
+}
+```
+Furthermore, each code block can contain other ```if``` statements or *loops*.
 
 
 ### ```for``` loops
@@ -266,7 +296,7 @@ Alternatively, a ```for``` loop can be used on a *list* or *vector* of objects.
 ```R
 for (day_prefix in c("Mon", Tues", "Wednes", "Thurs", "Fri") {
     print(sprintf("%sday", day_prefix))
-})
+}
 ```
 
 By the way, the ```%s``` is called an *escape sequence* which exits the string to insert the string argument stored in ```day_prefix```.
