@@ -14,12 +14,29 @@ Variables, objects.
 
 Data types. 
 
+Examples of classes of data in ```R``` are as follows: 
 
-In the languages we will use, Values are represented in binary.
+<img src="Rvariablesdata.jpg" width="500"/>
+
+A variable can have a single element (i.e. atomic) or be a vector or array of values. 
+Typically, vectors and arrays comprise elements of the same data type. 
+Statistical programming languages like ```R``` and ```Python``` also allow collection of data in data frames, in which each column can be of a separate data type. 
+
+
+In the languages we will use, Values are represented in binary digits, or "bits".
+The storage of a 32-bit real number is as follows:
 
 <img src="Binary32bitFloat.jpg" width="500"/>
 
+For each individual variable or element of an array of data, the values are actually stored in a sequence of, for example, 32 adjacent locations in memory. 
 
+Characters are stored similarly, with, for example, 8 bits to generate the decimal numbers 0 to 127, which correspond to the characters in the follofing ASCII table:
+
+<img src="RASCII-Table.png" width="500"/>
+
+
+This gives us many objects to work with. 
+Now what can we do with them?
 
 
 ## Verbs
