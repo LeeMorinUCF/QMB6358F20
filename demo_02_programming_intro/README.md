@@ -23,16 +23,16 @@ Typically, vectors and arrays comprise elements of the same data type.
 Statistical programming languages like ```R``` and ```Python``` also allow collection of data in data frames, in which each column can be of a separate data type. 
 
 
-In the languages we will use, Values are represented in binary digits, or "bits".
+In the languages we will use, values are represented in binary digits, or "bits".
 The storage of a 32-bit real number is as follows:
 
 <img src="Binary32bitFloat.jpg" width="500"/>
 
 For each individual variable or element of an array of data, the values are actually stored in a sequence of, for example, 32 adjacent locations in memory. 
 
-Characters are stored similarly, with, for example, 8 bits to generate the decimal numbers 0 to 127, which correspond to the characters in the follofing ASCII table:
+Characters are stored similarly, with, for example, 8 bits to generate the decimal numbers 0 to 127, which correspond to the characters in the following ASCII table:
 
-<img src="RASCII-Table.png" width="500"/>
+<img src="ASCII-Table.png" width="500"/>
 
 
 This gives us many objects to work with. 
@@ -41,7 +41,7 @@ Now what can we do with them?
 
 ## Verbs
 
-
+The action words of programming are sorted into several categories. 
 
 
 ### Operators 
@@ -56,8 +56,34 @@ Before we can perform any operations, a variables has to be initialized with an 
 
 ### Relational operators
 
+These operators are used to determine whether conditions hold and output a logical, or Boolean, variable.
+They are commonly used for flow control, such as for ```if``` statements, discussed below.
+The precise syntax differs by programing language but the most common are shown in the following table.
+
+<img src="RelationalOps.jpg" width="500"/>
+
+
+
 
 ### Functions
+
+
+
+
+### Methods
+
+In a programming paradigm called object-oriented programming, there is a special kind of function designed to work with a particular data type called an object. 
+Some built-in methods work with one of the above data types. 
+An object can also be a mix of several data types. 
+Typically, an object is designed with a particular application in mind. 
+
+In Python, here are many methods designed for type string, for example:
+
+```python
+my_string = "ThIs_Is_A_sTrInG"
+print(my_string.tolower())
+> "this_is_a_string"
+```
 
 
 
