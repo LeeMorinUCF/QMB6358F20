@@ -51,18 +51,18 @@ There are several kinds of operators that each perform a different function.
 
 ### Assignment operator
 
-Before we can perform any operations, a variables has to be initialized with an assignment operator. 
+Before we can perform any operations, a variable has to be initialized with an assignment operator. 
 An assignment operator assigns a value to a variable with a particular name. 
 
 
-In ```R```, the assignment operator is ```R <-```
+In ```R```, the assignment operator is ```<-```
 
 ```R
 x <- 7
 first_name <- "Linus"
 ```
 
-In ```Python```, the assignment operator is ```python =```
+In ```Python```, the assignment operator is ```=```
 
 ```python
 y = 5
@@ -70,17 +70,26 @@ last_name = "Torvalds"
 ```
 
 When reading the assignments aloud, you would say "y is assigned 5" but not "y equals 5"
-because that would be confusing the assignment with a relational operators discussed next. 
+because that would be confusing the assignment with one of the relational operators discussed next. 
 
 
 
 ### Relational operators
 
-These operators are used to determine whether conditions hold and output a logical, or Boolean, variable.
+These operators are used to determine whether conditions hold.
+They output what are called binary, logical, or Boolean, variables.
 They are commonly used for flow control, such as for ```if``` statements, discussed below.
 The precise syntax differs by programing language but the most common are shown in the following table.
 
 <img src="RelationalOpsTrimmed.jpg" width="500"/>
+
+### Logical Operators
+
+The logical variables from two relational operators can be combined into another logical variable using logical operators. 
+In ```R```, there are the following possibilities, illustrated by Venn diagrams with the sets in which the logical variable ```x``` and ```y``` are ```TRUE```.
+
+<img src="LogicalOpsVenn.png" width="500"/>
+
 
 
 ### Arithmetic operators
