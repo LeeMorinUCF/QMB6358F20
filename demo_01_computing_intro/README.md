@@ -114,7 +114,7 @@ This program moves the contents of register 4 into register 5:
 
 The flow graph is shown here:
 
-<img src="RodRegoMOVE45.png" width="500"/>
+<img src="FlowGraphMOVE45.png" width="500"/>
 
 
 Notice the first step is to remove the contents of register 5 so that the value does not get counted with the value moved from register 4.
@@ -133,7 +133,7 @@ Notice the first step is to remove the contents of register 5 so that the value 
 ```
 
 
-<img src="RodRegoCOPY13.png" width="500"/>
+<img src="FlowGraphCOPY13.png" width="500"/>
 
 
 As above, thie first steps are to clear spaces in memory to store the result (in register 3) and storethe values of intermediate calculations (in register 4). 
@@ -162,7 +162,7 @@ This program now adds the values in registers 1 and 2 and stores the result in r
 13 END
 ```
 
-<img src="RodRegoNonDestrADD123.png" width="500"/>
+<img src="FlowGraphNonDestrADD123.png" width="500"/>
 
 
 Other programs can be written to multiply two values, with repeated addition. 
