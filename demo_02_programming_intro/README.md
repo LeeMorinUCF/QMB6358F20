@@ -90,6 +90,8 @@ In ```R```, there are the following possibilities, illustrated by Venn diagrams 
 
 <img src="LogicalOpsVenn.png" width="500"/>
 
+The ampersand "&" represnts *and*, while the vertical bar, or pipe, "|" represents *or*.
+In ```python```, the words ```and``` and ```or``` can also be used, with the word ```not``` taking the place of the negation operator ```!```
 
 
 ### Arithmetic operators
