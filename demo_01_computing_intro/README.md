@@ -122,8 +122,32 @@ Moving to register 3 is the gola but the movement to register 4 is to store the 
 When register 1 is empty, the program then alternates between steps 6 and 7 to move the values in register 4 back to register 1, leaving the value that was copied in its original location. 
 
 
+### Program 4: Non-desctuctive ```ADD[1,2,3]```
 
+This program now adds the values in registers 1 and 2 and stores the result in register 3, while preserving the values in registers 1 and 2. 
 
+```
+1  DEB 3  1  2
+2  DEB 4  2  3
+3  DEB 1  4  6
+4  INC 3  5
+5  INC 4  3
+6  DEB 4  7  8
+7  INC 1  6
+8  DEB 2  9 11
+9  INC 3 10
+10 INC 4 11
+11 DEB 4 12 13
+12 INC 2 11
+13 END
+```
 
+Other programs can be written to multiply two values, with repeated addition. 
+Subtraction can also be done, except that there is the potential for negative values, in which an extra register must be used to store a minus sign. 
+Divisin can be completed by repeated subtraction, with an extra register for the remainder, with one additional hitch: storing an error message in a register to denote division by zero. 
+Once these programs are written, one can create a program to emulate a pocket calculator by including a register with a value to indicate the desired operation. 
+For example, zero for ```ADD```, one for ```SUBTRACT```, three for ```MULTIPLY``` and four for ```DIVIDE```. 
+
+The extension to more advanced computers is described in this note: [Secrets to Computer Power Revealed](http://sites.tufts.edu/rodrego/files/2011/03/Secrets-of-Computer-Power-Revealed-2008.pdf).
 
 
