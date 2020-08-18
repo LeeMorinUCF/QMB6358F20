@@ -75,6 +75,15 @@ This program adds the value in register 1 to the value in register 2.
 3 END
 ```
 
+This process is illustrated in a *flow graph*. 
+Each circle represents an instruction, with the number inside showing the *address* of the register to be changed, with a "+" for an ```INC``` instruction and a "-" for a ```DEB``` instruction. 
+Only one arrow trails from the ```INC``` instruction but two arrows trail from the ```DEB``` instruction, with the *branch to* step labeled with a zero. 
+The program starts at &alpha; and ends at &Omega;.
+
+<img src="FlowGraphADD12.png" width="500"/>
+
+
+Now run this program to see it in action. 
 Open RodRego and it is initialized with ten registers, numbered zero to 9, each initialized with the value equal to the name of the register. 
 
 <img src="RodRegoStart.png" width="500"/>
@@ -148,6 +157,6 @@ Division can be completed by repeated subtraction, with an extra register for th
 Once these programs are written, one can create a program to emulate a pocket calculator by including a register with a value to indicate the desired operation. 
 For example, zero for ```ADD```, one for ```SUBTRACT```, two for ```MULTIPLY``` and three for ```DIVIDE```. 
 
-The extension to more advanced computers is described in this note: [Secrets to Computer Power Revealed](http://sites.tufts.edu/rodrego/files/2011/03/Secrets-of-Computer-Power-Revealed-2008.pdf).
+The extension to more advanced computers is described in this note: [Secrets to Computer Power Revealed](http://sites.tufts.edu/rodrego/files/2011/03/Secrets-of-Computer-Power-Revealed-2008.pdf) and an updated version is available in [this note from a Royal Institution Masterclass](http://brainmindforum.com/docs/convergence-booklet-reprint.pdf) called *CONERGENCE of Biogenetics, Cognitive Neuroscience and Computing*.
 
 
