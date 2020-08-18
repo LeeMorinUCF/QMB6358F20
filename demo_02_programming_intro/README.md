@@ -246,17 +246,17 @@ Consider this example:
 if (weather == "rainy") {
     print("Bring an unbrella.")
 } else {
-   print("Leave your umbrella at home.")
+    print("Leave your umbrella at home.")
 }
 ```
 
-For more complicated situations, you can also chain
+For more complicated situations, you can also chain a series of nested ```if``` statements. 
 
 ```R
 if (weather == "rainy") {
     print("Bring an unbrella.")
 } else if (weather == "sunny") {
-   print("Bring a hat.")
+    print("Bring a hat.")
 } else {
     print("Bring both, just in case.")
 }
