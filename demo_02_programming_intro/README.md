@@ -119,7 +119,12 @@ In ```python``` these are the equivalent operators
 ### Functions
 
 A function is an object that returns another object or performs some procedure using inputs called *arguments*. 
+In languages like ```R``` and ```python```, there are many funtions available that are either built in to the language or available on code repositories worldwide. 
+Many common mathematical calculations are implemented, such as ```max()``` to calculate the maximum, ```min()``` to calculate the minimum, and ```mean()``` to calculate the mean, or the average, of a series of values. 
 
+
+To become more productive with these languages, you will often need to program 
+your own functions. 
 Some examples of the syntax in ```R``` are as follows
 
 ```R

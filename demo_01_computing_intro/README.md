@@ -86,7 +86,9 @@ The program starts at &alpha; and ends at &Omega;.
 
 
 Now run this program to see it in action. 
-Open RodRego and it is initialized with ten registers, numbered zero to 9, each initialized with the value equal to the name of the register. 
+Open RodRego and it is initialized with ten registers, 
+with *addresses* numbered zero to nine, each initialized with 
+the *value* equal to the *address* of the register. 
 
 <img src="RodRegoStart.png" width="500"/>
 
@@ -98,7 +100,7 @@ Running the program above, results in the output below.
 
 You can also watch each change by running the program step-by-step. 
 Notice that the value in register 1 is empty, while register 2 contains the sum. 
-To fix this, we will have to learn a few more tools. 
+To preserve the value of the inputs, we will have to learn a few more tools. 
 We can run the following programs in the RodRego program as above. 
 
 ### Program 2: ```MOVE[4,5]```
@@ -121,6 +123,8 @@ Notice the first step is to remove the contents of register 5 so that the value 
 
 ### Program 4: ```COPY[1,3]```
 
+This program copies the value in register 1 and records it in register 3. 
+
 ```
 1 DEB 3 1 2
 2 DEB 4 2 3
@@ -136,7 +140,7 @@ Notice the first step is to remove the contents of register 5 so that the value 
 <img src="FlowGraphCOPY13.png" width="500"/>
 
 
-As above, thie first steps are to clear spaces in memory to store the result (in register 3) and storethe values of intermediate calculations (in register 4). 
+As above, thie first steps are to clear spaces in memory to store the result (in register 3) and store the values of intermediate calculations (in register 4). 
 Steps 3, 4 and 5 cycle through the subtraction of values from register 1 and the addition of each value to both registers 3 and 4. 
 Moving to register 3 is the goal but the movement to register 4 is to store the original value of register 1.
 When register 1 is empty, the program then alternates between steps 6 and 7 to move the values in register 4 back to register 1, leaving the value that was copied in its original location. 
