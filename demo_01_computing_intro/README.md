@@ -136,7 +136,7 @@ This program now adds the values in registers 1 and 2 and stores the result in r
 7  INC 1  6
 8  DEB 2  9 11
 9  INC 3 10
-10 INC 4 11
+10 INC 4  8
 11 DEB 4 12 13
 12 INC 2 11
 13 END
