@@ -1,26 +1,28 @@
-# Introduction to Programming
+# Introduction to Programming *Languages*
 
 Computer programming languages are, literally, languages. 
-It is not a metaphor.
+It is not a metaphor to call tem languages.
 In Google, a language is defined as "the method of human communication, either spoken or written, consisting of the use of words in a structured and conventional way."
-A computer programming language is a written method of communication for the communication of instructions to a computer. 
+A computer programming language is a written method of communication to communicate instructions to a computer. 
 Like other languages, programming languages have parts of speech, syntax and punctuation. 
 
 
 ## Nouns
 
-Variables, objects. 
+The nouns of programming languages are the variables or objects that take on particular values in memory. 
+Variables are stored in various *types* or *classes*. 
+Data types are often numeric, such as integers or real numbers. 
+Depending on the particular language, these types are sometimes called "float" or "long" or "double", depending on the degree of precision, as in the number of decimal places or significant digits.  
+There are also data types for holding non-numeric data, such as letters of the alphabet, in variables called *strings* or *character* vectors. 
 
 
-Data types. 
-
-Examples of classes of data in ```R``` are as follows: 
+Examples of *classes* of data in ```R``` are as follows: 
 
 <img src="Rvariablesdata.jpg" width="500"/>
 
 A variable can have a single element (i.e. atomic) or be a vector or array of values. 
 Typically, vectors and arrays comprise elements of the same data type. 
-Statistical programming languages like ```R``` and ```Python``` also allow collection of data in data frames, in which each column can be of a separate data type. 
+For statistical programming, languages such as ```R``` and ```Python``` also allow for the collection of data into data frames, in which each column can be of a separate data type. 
 
 
 In the languages we will use, values are represented in binary digits, or "bits".
@@ -34,9 +36,10 @@ Characters are stored similarly, with, for example, 8 bits to generate the decim
 
 <img src="ASCII-Table.png" width="500"/>
 
+The interpreter or compiler for a particular language will translate variables into these binary formats for the C.P.U. to execute commands.
 
-Now we have many objects to work with. 
-Now what can we do with them?
+We have many objects to work with. 
+Now, what can we do with them?
 
 
 ## Verbs
@@ -53,6 +56,8 @@ There are several kinds of operators that each perform a different function.
 
 Before we can perform any operations, a variable has to be initialized with an assignment operator. 
 An assignment operator assigns a value to a variable with a particular name. 
+This name is a variable's *address*. 
+It corresponds to a location in memory in which the (binary) data are stored.
 
 
 In ```R```, the assignment operator is ```<-```
@@ -69,7 +74,8 @@ y = 5
 last_name = "Torvalds"
 ```
 
-When reading the assignments aloud, you would say "y is assigned 5" but not "y equals 5"
+When reading the assignments aloud, you would say "y is assigned 5" 
+or "y is set equal to 5" but not "y equals 5"
 because that would be confusing the assignment with one of the relational operators discussed next. 
 
 
@@ -77,7 +83,7 @@ because that would be confusing the assignment with one of the relational operat
 ### Relational operators
 
 These operators are used to determine whether conditions hold.
-They output what are called binary, logical, or Boolean, variables.
+They output what are called *binary*, *logical*, or *Boolean*, variables.
 They are commonly used for flow control, such as for ```if``` statements, discussed below.
 The precise syntax differs by programing language but the most common are shown in the following table.
 
@@ -213,8 +219,15 @@ if (condition) {
 
 ### ```for``` loops
 
+For loops are useful when you have to repeat a calculation for a 
+predetermined number of inputs. 
+These calculation follow this flow chart:
+
 <img src="for_loop_C.jpg" width="500"/>
 
+After an *iteration* is performed, the interpreter automatically *increments* the *iterator* 
+to the next value to repeat the calculation, until all iterations are performed.  
+The syntax is:
 
 ```R
 for (object in list_of_iterators) {
@@ -223,10 +236,39 @@ for (object in list_of_iterators) {
 }
 ```
 
+The prototypical example of a for loop follows a sequence of numbers.
+
+```R
+for (i in 1:10) {
+    print(i^2)
+}
+```
+
+Alternatively, a ```for``` loop can be used on a *list* or *vector* of objects.
+
+```R
+for (day_prefix in c("Mon", Tues", "Wednes", "Thurs", "Fri") {
+    print(sprintf("%sday", day_prefix))
+})
+```
+
+By the way, the ```%s``` is called an *escape sequence* which exits the string to insert the string argument stored in ```day_prefix```.
+
 
 ### ```while``` loops
 
+A ```while``` loop is used for repeated calculations 
+when the conditions for the calculation are not known in advance.
+For example, these are useful when you don't know in advance
+how many times the calculation must be performed beacuse the condition
+depends on the previous steps. 
+Alternatively, your calaculation might be continued until some level of *tolerance* is achieved. 
+
+A ```while``` loop has the following flow chart:
+
 <img src="while_loop_C.jpg" width="500"/>
+
+The commands follow a sequence of commands like this:
 
 ```R
 
@@ -239,5 +281,22 @@ while (condition) {
     # to execute the code block again. 
 }
 ```
+
+As an example, you can count the number of times that you can divide a number by two
+before it is smaller than one percent.
+
+```R
+num <- 3
+step <- 0
+while (num > 0.01) {
+    step <- step + 1
+    num <- num/2
+}
+
+```
+
+Warning: It is possible that the ```while``` loop continues forever, 
+unless the programmer (You!) have made sure that the exit condition is well-defined. 
+
 
 
