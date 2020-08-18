@@ -35,7 +35,7 @@ Characters are stored similarly, with, for example, 8 bits to generate the decim
 <img src="ASCII-Table.png" width="500"/>
 
 
-This gives us many objects to work with. 
+Now we have many objects to work with. 
 Now what can we do with them?
 
 
@@ -83,6 +83,7 @@ The precise syntax differs by programing language but the most common are shown 
 
 <img src="RelationalOpsTrimmed.jpg" width="500"/>
 
+
 ### Logical Operators
 
 The logical variables from two relational operators can be combined into another logical variable using logical operators. 
@@ -104,6 +105,48 @@ These operators work much like they do with pencil and paper, following the orde
 
 ### Functions
 
+A function is an object that returns another object or performs some procedure using inputs called *arguments*. 
+
+Some examples of the syntax in ```R``` are as follows
+
+```R
+add_numbers <- function(num_1, num_2) {
+    sum <- num_1 + num_2
+    return(sum)
+}
+
+greeting <- function(name) {
+    print(sprintf("Hello, %s!", name))
+}
+
+
+addnumbers(num_1 = 2, num_2 = 4)
+[1] 6
+
+gretting(name = "Linus")
+[1] "Hello, Linus!"
+
+```
+
+In ```Python``` the syntax is different but the idea is the same. 
+
+```python
+def add_numbers(num_1, num_2):
+    sum = num_1 + num_2
+    return sum
+
+def greeting(name):
+    print(sprintf("Hello, %s!", name))
+
+
+
+addnumbers(num_1 = 2, num_2 = 4)
+> 6
+
+gretting(name = "Linus")
+> "Hello, Linus!"
+
+```
 
 
 
