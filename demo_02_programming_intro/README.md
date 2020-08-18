@@ -182,16 +182,23 @@ print(my_string.tolower())
 
 
 
-## Prepositions, Conjunctions and Adverbs 
+## Conjunctions, Prepositions and Adverbs 
 
 Conditional logic is what permits the great flexibility of programming languages for designing algorithms. 
 It detrmines under what conditions an operation is to be performed. 
-
+The basic conditional statement is the ```if``` statement.
 
 ### ```if``` statements
 
+The ```if``` statement is used to execute the commands in a block of code only if
+certain conditions hold. 
+As shown in this flow chart, the program will skip that block of code and continue below
+when the condition is not satisfied. 
+
+
 <img src="if_statement_flow_diagram_C.jpg" width="500"/>
 
+In ```R``` the syntax for an ```if``` statement is
 
 ```R
 if (condition) {
@@ -201,6 +208,16 @@ if (condition) {
 
 # Continue with remaining statements in any case.
 ```
+
+
+A simple example is:
+
+```R
+if (time == "8:00" & day != "Sunday") {
+    print("Wake up!")
+}
+```
+
 
 
 ### ```if```...```else``` statements
