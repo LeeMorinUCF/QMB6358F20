@@ -32,4 +32,27 @@ With this separation, you need only write the instructions in standardized synta
 To illustrate the workings of a computer, we will consider one of the simplest forms of computers, called a *register machine*.
 
 
+# The Register Machine
+
+The register machine was introduced by a logician Hao Wang at the dawn of the computing age. 
+It stores information in a list of registers, each one with a natural number. 
+It can perform three operations:
+
+* ```END``` will halt the program.
+* ```INC``` will increase the number in a register by 1.
+* ```DEB``` will decrease the number in a register by 1, if it is nonzero, otherwise ```BRANCH```.
+
+
+
+Simple as they are, these operations are enough to do anything that any computer can do -- it just might take a long time.
+The first command is not very interesting but it is still required to declare that the program has stopped. 
+The second is fairly simple and makes a primitive change to the state of the register. 
+The magic occurs with the third condition. 
+Subtraction is nearly the same as addition, in reverse, except that it is undefined if the particular register 
+
+
+Here are some examples that follow from the discussion in the [RodRego](http://sites.tufts.edu/rodrego/) on the website of the philosopher Dan Dennet at Tufts University. 
+RodRego is a program for running programs in a language called ```RAP```, which stands for *Register Assembly Programming*. 
+A version that will run in your browser is available [here](http://proto.atech.tufts.edu/RodRego/).
+
 
