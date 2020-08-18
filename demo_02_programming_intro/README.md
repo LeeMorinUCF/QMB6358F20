@@ -60,7 +60,7 @@ These operators are used to determine whether conditions hold and output a logic
 They are commonly used for flow control, such as for ```if``` statements, discussed below.
 The precise syntax differs by programing language but the most common are shown in the following table.
 
-<img src="RelationalOps.jpg" width="500"/>
+<img src="RelationalOpsTrimmed.jpg" width="500"/>
 
 
 
