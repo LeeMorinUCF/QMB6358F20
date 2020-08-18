@@ -20,7 +20,7 @@ The human-readable computer program that you write is interpreted, or translated
 This interpreter translates the program into something that will run on the operating system. 
 The operating system, such as Windows, Linux or Mac OS, is another set of programs that then translate your instructions into a more primitive set of instructions that are finally executed on the computer. 
 
-<img src="Interpreter.png" width="1000"/>
+<img src="Interpreter.png" width="500"/>
 
 Why go through all of this trouble? Well, first, the operating system uncouples your program from the particulars of the hardware on your physical computer, such as the monitor, the hard drive and the keyboard. 
 Further, the interpreter separates the instructions in your program from the particular operating system on your computer. 
