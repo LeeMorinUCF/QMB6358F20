@@ -46,12 +46,32 @@ The action words of programming are sorted into several categories.
 
 ### Operators 
 
+There are several kinds of operators that each perform a different function. 
+
+
 ### Assignment operator
 
 Before we can perform any operations, a variables has to be initialized with an assignment operator. 
+An assignment operator assigns a value to a variable with a particular name. 
 
 
-### Arithmetic operators
+In ```R```, the assignment operator is ```R <-```
+
+```R
+x <- 7
+first_name <- "Linus"
+```
+
+In ```Python```, the assignment operator is ```python =```
+
+```python
+y = 5
+last_name = "Torvalds"
+```
+
+When reading the assignments aloud, you would say "y is assigned 5" but not "y equals 5"
+because that would be confusing the assignment with a relational operators discussed next. 
+
 
 
 ### Relational operators
@@ -61,6 +81,12 @@ They are commonly used for flow control, such as for ```if``` statements, discus
 The precise syntax differs by programing language but the most common are shown in the following table.
 
 <img src="RelationalOpsTrimmed.jpg" width="500"/>
+
+
+### Arithmetic operators
+
+These are the operators that are most familiar to you. 
+These operators work much like they do with pencil and paper, following the order of operations. 
 
 
 
