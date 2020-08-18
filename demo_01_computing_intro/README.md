@@ -51,7 +51,7 @@ The first command is not very interesting but it is still required to declare th
 The second is fairly simple and makes a primitive change to the state of the register. 
 The magic occurs with the third condition. 
 Subtraction is nearly the same as addition, in reverse, except that it is undefined if the particular register has a value of zero. 
-This is important because it provides an opportunity to execute a command that depends on the state of the rgister.
+This is important because it provides an opportunity to execute a command that depends on the state of the register.
 
 These commands are listed in a program in which each line has up to four parameters:
 
@@ -60,7 +60,7 @@ These commands are listed in a program in which each line has up to four paramet
 * The third is needed only in the case of the ```INC``` or ```DEB``` commands and is the instruction to *go to* a particular *step* in the program and execute the instruction at that step. 
 * The fourth column, which is ony needed for the ```DEB``` command, indicating the *step* in the program to be executed next in the case that the register has a value of zero and cannot be decreased. 
 
-Here are some examples that follow from the discussion in the [RodRego](http://sites.tufts.edu/rodrego/) on the website of the philosopher Dan Dennet at Tufts University. 
+Here are some examples that follow from the discussion of the [RodRego](http://sites.tufts.edu/rodrego/) program on the website of the philosopher Dan Dennet at Tufts University. 
 RodRego is a program for running programs in a language called ```RAP```, which stands for *Register Assembly Programming*. 
 A version that will run in your browser is available [here](http://proto.atech.tufts.edu/RodRego/).
 The following examples are found in Dan Dennet's book *Intuition Pumps and Other Tools for Thinking*. 
@@ -88,7 +88,41 @@ Running the program above, results in the output below.
 You can also watch each change by running the program step-by-step. 
 Notice that the value in register 1 is empty, while register 2 contains the sum. 
 To fix this, we will have to learn a few more tools. 
-We can run the programs in the RodRego program as above. 
+We can run the following programs in the RodRego program as above. 
+
+### Program 2: ```MOVE[4,5]```
+
+This program moves the contents of register 4 into register 5:
+
+```
+1 DEB 5 1 2
+2 DEB 4 3 4
+3 INC 5 2
+4 END
+```
+
+Notice the first step is to remove the contents of register 5 so that it does not get counted in the value moved from register 4.
+
+### Program 4: ```COPY[1,3]```
+
+```
+1 DEB 3 1 2
+2 DEB 4 2 3
+3 DEB 1 4 6
+4 INC 3 5
+5 INC 4 3
+6 DEB 4 7 8
+7 INC 1 6
+8 END
+```
+
+As above, thie first steps are to clear spaces in memory to store the result (in register 3) and storethe values of intermediate calculations (in register 4). 
+Steps 3, 4 and 5 cycle through the subtraction of values from register 1 and the addition of each value to both registers 3 and 4. 
+Moving to register 3 is the gola but the movement to register 4 is to store the original value of register 1.
+When register 1 is empty, the program then alternates between steps 6 and 7 to move the values in register 4 back to register 1, leaving the value that was copied in its original location. 
+
+
+
 
 
 
