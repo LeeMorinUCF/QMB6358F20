@@ -3,7 +3,7 @@
 In this demo, we will study the process of designing functions. 
 We will follow the 5-step process in our textbook *Practical Programming*, 
 Chapter 3, called the **Function Design Recipe**. 
-
+It is called a recipe because it guides you to follow a systematic approach to designing your function. 
 Every time you write a function, you need to answer the following questions:
 
 * What do you name the function? 
@@ -12,6 +12,9 @@ Every time you write a function, you need to answer the following questions:
 * What does the function return?
 * Does it work as expected?
 
+You will address these questions by following the recipe shown next. 
+
+## The Function Design Recipe
 
 The five steps are as follows:
 
@@ -23,5 +26,36 @@ It should be clear to the reader what arguments it takes as input and what value
 1. **Body** By now, you should be clear about how your function will work. 
 Now type the code to perform the calculations. 
 1. **Test** Run the examples from step 1 to verify that your function works as expected. 
+
+
+## Example
+
+```R
+# Example goes here.
+```
+
+
+
+## Tips
+
+You will get better at writing functions as you gain more experience but the following tips can help you improve more quickly. 
+* Start off with a simple case. 
+  * Save the corner cases for after your base cases work. 
+* Start off with a simple approach.
+  * You can adjust the code for faster computation once it is working. 
+* Type the comments first.
+  * Describe to the first user (you!) how the calculations will be performed. 
+  * Split the calculation into checkpoints where you can determine the format 
+  of intermediate calculations.
+  * Type in the code one block at a time. 
+* If you find it is getting too complicated, consider breaking up the calculation 
+into separate parts.  
+  * Is there a natural checkpoint where you can test with examples? 
+* Choose examples that provide good testing cases. 
+  * Does your function work with negative values? 
+  * Does it work with missing values? 
+  * Does it work with the wrong data types? 
+  * Are there any knife-edge cases when the procedure will change? 
+  * Are there any obvious boundaries?
 
 
