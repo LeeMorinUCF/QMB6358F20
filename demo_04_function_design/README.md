@@ -48,6 +48,8 @@ You will get better at writing functions as you gain more experience but the fol
   * Split the calculation into checkpoints where you can determine the format 
   of intermediate calculations.
   * Type in the code one block at a time. 
+  * Assign values to the arguments (but hide them in comments, so as not to interfere) 
+  and run blocks of code in the IDE to test one section at a time.
 * If you find it is getting too complicated, consider breaking up the calculation 
 into separate parts.  
   * Is there a natural checkpoint where you can test with examples? 
@@ -57,5 +59,10 @@ into separate parts.
   * Does it work with the wrong data types? 
   * Are there any knife-edge cases when the procedure will change? 
   * Are there any obvious boundaries?
-
+* After making any significant changes to a partially-working function, 
+re-run all of your test cases to make sure 
+  * Did you break any of the test cases that were working before?
+  * Did you fix any that were not working? 
+  * Keeping score is good motivation.
+  * With regular testing, you can make changes with more confidence. 
 
