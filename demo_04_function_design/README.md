@@ -28,12 +28,44 @@ Now type the code to perform the calculations.
 1. **Test** Run the examples from step 1 to verify that your function works as expected. 
 
 
-## Example
+## Function Design Examples
+
+
+
+### Examples
+
 
 ```R
 # Example goes here.
 ```
 
+### Header
+
+
+```R
+# Example goes here.
+```
+
+### Description
+
+
+```R
+# Example goes here.
+```
+
+### Body
+
+
+```R
+# Example goes here.
+```
+
+### Test
+
+
+```R
+# Example goes here.
+```
 
 
 ## Tips
