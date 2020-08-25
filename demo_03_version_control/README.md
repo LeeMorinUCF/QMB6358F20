@@ -237,7 +237,7 @@ Each line and each file that was added was then deleted in the revert and vice v
 It is as if you reversed those changes manually and then added and committed the changes. 
 
 
-P.S. This example was not David's fault in any way. 
+P.S. This example was not the student's fault in any way. 
 I aciddentally pushed his content to the upstream instead of the origin of his mirror. 
 It happens to everyone...eventually. 
 Now we know how to fix it. 
