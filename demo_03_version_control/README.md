@@ -210,7 +210,7 @@ where the ```<commit hash>``` is an alphanumeric code that uniquely identifies t
 Browse to any file in the commit and click on the link or message referring to the commit and obtain the commit hash. 
 
 
-<img src="Finding_Commit_Hash.png" width="1000"/>
+<img src="Find_Commit_Hash.png" width="1000"/>
 
 Then enter this into your terminal
 
