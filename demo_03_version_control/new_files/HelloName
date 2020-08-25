@@ -1,3 +1,0 @@
-var = (input("what is your name? " ) 
-
-Print:( Hello, "you entered", var) 
