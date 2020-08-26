@@ -17,7 +17,21 @@ Follow the instructions in [Signing up for a new GitHub account](https://help.gi
 
 ### Start a new coding project
 
-If you want to create a new coding project, you should begin by creating a new repository. A repository is a location in your user space that can be used to store youre code. To initialize a new repository (or repo, for short), follow the instructions in [Create a repo](https://help.github.com/en/articles/create-a-repo).
+If you want to create a new coding project, you should begin by creating a new repository. 
+A repository is a location in your user space that can be used to store youre code. 
+To initialize a new repository (or repo, for short), follow the instructions in [Create a repo](https://help.github.com/en/articles/create-a-repo).
+
+### Minor edits to an existing project
+
+If you want to make some minor changes to a repo, such as correcting or adding a new file, 
+you can [create a new file](https://docs.github.com/en/github/managing-files-in-a-repository/creating-new-files).
+If you want to create a new folder at the same time, simply type the new folder name before the new file name, separated by a slash.
+For example, to create the new file ```Q1_answer.txt``` in a new folder ```assignment_01```, 
+enter ```assignment_01/Q1_answer.txt``` as the new file name. 
+You will see the path automatically acept the new folder as you type the slash. 
+
+The above link to [Create a repo](https://help.github.com/en/articles/create-a-repo) 
+shows how to modify an existing file (scroll down to see the example).
 
 ### Modify an existing project
 
