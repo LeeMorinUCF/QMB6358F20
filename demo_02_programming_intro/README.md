@@ -273,8 +273,8 @@ Furthermore, each code block can contain other ```if``` statements or *loops*.
 
 ### Repetition
 
-Repetition is used to perform a fixed operation a number of times by iterating over a block of code. 
-There are two main kinds of repetion that differ in the user specifies the sequence and number of executions.
+Repetition is used to perform a fixed sequence of operations a number of times by iterating over a block of code. 
+There are two main kinds of repetion that differ in the way the user specifies the sequence and number of executions.
 
 #### ```for``` loops
 
