@@ -50,7 +50,25 @@ With this approach, GitHub is a much more versatile tool.
 
 ## Working in Parallel in Separate Branches
 
+Instead of creating a forked version of another user's repo, 
+you can modify another version of the repo within the same repo. 
+The separate versions are called *branches*. 
+The default branch is called *master* but you may choose any name
+for the new branch, which could refer to you (the user making the changes)
+or to the nature of the modifications to the code in the repo. 
+You must be a collaborator of the repo to modify the repo in this way. 
+This can be done by clicking the branch button (originally labeled master) 
+and typing in the new branch name. 
+You will have to toggle the branch button to switch between branches. 
+Further instructions are available in this page about [managing branches](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/managing-branches).
+Now the project can proceed with separate users making parallel changes to 
+separate branches. 
+
 <img src="GitHub_Branches.jpeg" width="500"/>
+
+With separate users making simultaneous changes, it is best to do your work 
+locally and interact with the repo using the terminal window. 
+
 
 ## Version Control 2: Using the terminal
 
