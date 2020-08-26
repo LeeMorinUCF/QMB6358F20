@@ -189,11 +189,13 @@ print(my_string.tolower())
 
 ## Conjunctions, Prepositions and Adverbs 
 
+### Conditional Logic
+
 Conditional logic is what permits the great flexibility of programming languages for designing algorithms. 
 It detrmines under what conditions an operation is to be performed. 
 The basic conditional statement is the ```if``` statement.
 
-### ```if``` statements
+#### ```if``` statements
 
 The ```if``` statement is used to execute the commands in a block of code only if
 certain conditions hold. 
@@ -225,7 +227,7 @@ if (time == "8:00" & day != "Sunday") {
 
 
 
-### ```if```...```else``` statements
+#### ```if```...```else``` statements
 
 Sometimes it is necessary to execute one command if a contition is ```TRUE```
 and execute other commands when the condition is ```FALSE``` 
@@ -269,7 +271,12 @@ if (weather == "rainy") {
 Furthermore, each code block can contain other ```if``` statements or *loops*.
 
 
-### ```for``` loops
+### Repetition
+
+Repetition is used to perform a fixed operation a number of times by iterating over a block of code. 
+There are two main kinds of repetion that differ in the user specifies the sequence and number of executions.
+
+#### ```for``` loops
 
 For loops are useful when you have to repeat a calculation for a 
 predetermined number of inputs. 
@@ -307,7 +314,7 @@ for (day_prefix in c("Mon", Tues", "Wednes", "Thurs", "Fri") {
 By the way, the ```%s``` is called an *escape sequence* which exits the string to insert the string argument stored in ```day_prefix```.
 
 
-### ```while``` loops
+#### ```while``` loops
 
 A ```while``` loop is used for repeated calculations 
 when the conditions for the calculation are not known in advance.

@@ -1,4 +1,4 @@
-# Coding Practice Exercises
+﻿# Coding Practice Exercises
 
 ## Pseudocode
 
@@ -78,7 +78,6 @@ for ( item in list_of_items)
 
 [Simple Programming Problems](https://adriann.github.io/programming_problems.html)
 
-[Five programming problems every Software Engineer should be able to solve in less than 1 hour](https://www.shiftedup.com/2015/05/07/five-programming-problems-every-software-engineer-should-be-able-to-solve-in-less-than-1-hour)
 
 
 
