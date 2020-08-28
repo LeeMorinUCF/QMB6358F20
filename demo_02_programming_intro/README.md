@@ -181,8 +181,10 @@ In Python, here are many methods designed for type string, for example:
 
 ```python
 my_string = "ThIs_Is_A_sTrInG"
-print(my_string.tolower())
+print(my_string.lower())
 > "this_is_a_string"
+print(my_string.upper())
+> "THIS_IS_A_STRING"
 ```
 
 
