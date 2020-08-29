@@ -141,6 +141,7 @@ addTwoNumbers <- function(first_number, second_number) {
 
 ### Description
 
+Add a title and description of what your function does, in words.
 
 ```R
 addTwoNumbers <- function(first_number, second_number) {
@@ -243,3 +244,49 @@ re-run all of your test cases to make sure
   * Keeping score is good motivation.
   * With regular testing, you can make changes with more confidence. 
 
+
+
+## Collecting Your Functions in a Library
+
+It is cusomary to collect your function definitions into a separate script
+that contains only the definitions of functions. 
+
+Once your functions are written into a script in the working directory, 
+you cal load them by simply running the script with the ```source``` function.
+
+```R
+source("my_library.R")
+```
+Note that it will also run any commands outside of function definitions.
+
+Along the same lines, you can collect your code into a script
+that will read your function definitions and execute some commands that solve your business problem. 
+
+
+## Running a Script at the Command Line
+
+You can execute your script from a terminal window, such as GitBash, 
+instead of within RStudio. 
+
+First, you have to add the location of your instance of ```R``` 
+to the search ```PATH``` to update the list of programs that you can call from the terminal.
+
+```
+$ export PATH="$PATH:/c/Program Files/R/R-4.0.2/bin"
+```
+
+
+In the terminal window, e.g. GitBash, you can now execute
+
+```
+Rscript my_script.R > my_script_output.out
+```
+or
+```
+R CMD BATCH my_script.R my_script_output.out
+```
+And you will see the file ```my_script_output.out``` appear in the directory. Notice that the output is more verbose with ```R CMD BATCH```, 
+including not only the printed output but the commands that were run.
+
+Typically, you would follow this route if the script takes a long time to run or needs to be run on another computer.
+We will discuss this further when we turn to *Remote Computing*.
