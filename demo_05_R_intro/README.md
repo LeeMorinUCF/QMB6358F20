@@ -304,6 +304,8 @@ This is a data type specific to ```R```.
 my_fmla <- as.formula(Y ~ x1 + x2 + x3)
 ```
 
+We will use formula object when we build statistical models later on in the course. 
+
 ### Commands spanning multiple lines.
 
 A specific endpoint has to be chosen for a command that is continued on the next line.
@@ -318,13 +320,14 @@ df2 <- data.frame(var1 = 11:20,
 ```
 
 The ```+``` prompt indicates that ```R``` is waiting for the rest of an unfinished command.
+A common error is the unexpected ```+``` sign, which often ocurrs when you have run a partial block of code or have coded incomplete syntax. 
 
 Now run this:
 ```R
 + var2 = sprintf('row%d', 11:20))
 ```
 
-Everything worked out. The two lies together form a complete command. 
+Everything worked out. The two lines together form a complete command. 
 
 Multi-line commands must end with a symbol that indicates that a command is incomplete.
 An open bracket after a comma will work:
@@ -489,7 +492,7 @@ T*7
 class(T*7)
 ```
 
-```R``` coerces the logical value to integer 1 or 0.
+```R``` coerces the logical value to integer 1 or 0 when combined with other numeric types.
 
 Coercion works similarly for numeric variables.
 ```R
