@@ -1,23 +1,23 @@
 ################################################################################
-# 
-# GEB 6895: Tools for Business Intelligence
+#
+# QMB 6358: Software Tools for Business Analytics
 # Introductory Examples: R Workspace
-# 
+#
 # Lealand Morin, Ph.D.
 # Assistant Professor
 # Department of Economics
 # College of Business Administration
 # University of Central Florida
-# 
-# August 29, 2018
-# 
+#
+# August 29, 2020
+#
 ################################################################################
-# 
+#
 # This program provides introductory examples of R code that demonstrate
 # data types and conditional logic.
-# 
-# 
-# 
+#
+#
+#
 ################################################################################
 
 
@@ -71,7 +71,7 @@ data_path <- sprintf('%s/data', wd_path)
 system('mkdir data')
 
 
-# The strings above are in the workspace. 
+# The strings above are in the workspace.
 # Let's save this workspace for later.
 
 # See what is in the workspace, so that we know what we are saving.
@@ -82,7 +82,7 @@ workspace_file_name <- 'myWorkspace1'
 workspace_path <- sprintf('%s/%s.RData', wd_path, workspace_file_name)
 save.image(workspace_path)
 
-# Now remove some variables. 
+# Now remove some variables.
 rm(data_path)
 data_path
 
@@ -104,14 +104,14 @@ load(workspace_path)
 # The variables above are character strings.
 class(workspace_path)
 
-# The sprintf() is handed down from C.
+# You can combine strings with the sprintf() function handed down from C.
 # (Many C and FORTRAN programs are used in the background in R.)
 string1 <- 'first string'
 string2 <- 'second string'
 full_string <- sprintf('Put the %s before the %s.', string1, string2)
-# The '%s' is called an 'escape sequence'. 
+# The '%s' is called an 'escape sequence'.
 # It tells the sprintf() function to look for the next argument (which should be a string)
-# And insert it in the place of the '%s'.
+# And insert it in the place of the '%s' and outputs the full string.
 class(full_string)
 
 
@@ -173,10 +173,12 @@ num_string <- as.character(some_numbers.integers)
 as.numeric(num_string)
 
 
-
+#--------------------------------------------------
+# Lists
+#--------------------------------------------------
 
 # You can assemble several variables into a list (preserving individual types).
-list_of_stuff <- list(thing1 = some_numbers.integers, 
+list_of_stuff <- list(thing1 = some_numbers.integers,
                       thing2 = value_of_pi)
 
 other_list <- list(item1 = x1 <- 2, item2 = 'string')
@@ -201,25 +203,25 @@ names(list_of_stuff)
 
 
 for (name in names(list_of_stuff)) {
-  
+
   print(name)
   # name
-  
+
   print(mean(list_of_stuff[[name]]))
-  
+
 }
 
 # Equivalently:
 for (name_num in 1:length(names(list_of_stuff))) {
-  
+
   print(name_num)
-  
+
   name <- names(list_of_stuff)[name_num]
-  
+
   print(name)
-  
+
   print(mean(list_of_stuff[[name]]))
-  
+
 }
 
 
@@ -230,9 +232,13 @@ bigger_list$first_list$thing1
 # bigger_list['first_list'][[1]] # Fail.
 
 
+#--------------------------------------------------
+# Data frames
+#--------------------------------------------------
+
 
 # Data frames behave similarly (because a data frame IS a list).
-df1 <- data.frame(var1 = 1:10, var2=sprintf('row%d', 1:10))
+df1 <- data.frame(var1 = 1:10, var2 = sprintf('row%d', 1:10))
 # Note '%d' is the escape sequence for integers.
 
 
@@ -243,30 +249,38 @@ df1[2:7, 'var1']
 
 df1[2:7, ]
 
-
+# Formula objects
 
 # Many statistical functions use a formula object
+# to specify variables to be analyzed within a data frame.
+# This is a data type specific to R.
+my_fmla <- as.formula(Y ~ x1 + x2 + x3)
+
+
+# Commands spanning multiple lines.
 
 # Note the specific endpoint for a command that is continued on the next line.
 # There is no terminal symbol in R (like the semicolon in C).
 # R will determine that a command is unfinished and wait for more.
 
 # Run this line:
-df2 <- data.frame(var1 = 11:20, 
-                  
+df2 <- data.frame(var1 = 11:20,
+
                   # The '+' prompt indicates that R is waiting for the rest of an unfinished command.
-                  
-                  
-                  # Now run this:                  
+
+
+                  # Now run this:
                   var2=sprintf('row%d', 11:20))
 # And everything worked out.
 
 # Multi-line commands must end with a symbol that indicates that a command is incomplete.
 # An open bracket after a comma will work:
 # Run both lines together:
-df3 <- data.frame(var1 = 21:30, 
-                  var2=sprintf('row%d', 21:30))
+df3 <- data.frame(var1 = 21:30,
+                  var2 = sprintf('row%d', 21:30))
 
+
+# Matrices
 
 # Create a matrix.
 A <- matrix(c(2, 4, 3, 1, 5, 7),
@@ -279,14 +293,16 @@ x <- matrix(c(1, 0, 2),
 A
 x
 
+# Matrix multiplication.
 b <- A %*% x
 
 b
 
+# Factors
 
 # Categorical variables are called 'factors'.
-df4 <- data.frame(var1 = 21:30, 
-                  var2=as.factor(sprintf('Group %d', rep(1:2,5))))
+df4 <- data.frame(var1 = 21:30,
+                  var2 = as.factor(sprintf('Group %d', rep(1:2,5))))
 
 df4$var2
 is.factor(df4$var2)
@@ -296,7 +312,7 @@ is.character(df4$var2)
 # Be careful with ambiguous operators:
 value1 <- 7
 value2 <- 10
-total = value1 
+total = value1
   + value2
 
 print(total)
@@ -307,7 +323,7 @@ total = value1 +
 
 print(total)
 
-# The first example saw the second line 
+# The first example saw the second line
 + value2
 # as a second command, with the (positive) value of value2.
 
@@ -405,7 +421,7 @@ weather <- 'rainy'
 # Single if statement.
 if (weather == 'rainy') {
   print('Bring an umbrella.')
-} 
+}
 
 
 weather <- 'sunny'
@@ -415,7 +431,8 @@ if (weather == 'rainy') {
   print('Bring an umbrella.')
 } else if (weather == 'sunny') {
   print('Bring sunglasses.')
-} 
+}
+
 
 if (weather == 'rainy') {}
 if (weather == 'sunny') {}
@@ -447,10 +464,10 @@ if (weather == 'rainy') {
 # For loop.
 total <- 0
 for(i in 1:10) {
-  
+
   # Do the computations here.
   total <- total + i
-  
+
   # Print a progress report.
   print('Cumulative total is')
   print(total)
@@ -471,17 +488,17 @@ while(i < 10) {
 # Be careful with runaway while statements.
 i <- 0
 while(i != 'rainy') {
-  
+
   # This is running smoothly.
   i <- i + 1
   print(sprintf('Completed iteration %d', i))
-  
+
   if (i > 100) {
     # This is getting out of control.
     # Stop it before the computer explodes!
     break
   }
-  
+
 }
 
 
@@ -492,6 +509,7 @@ while(i != 'rainy') {
 # Functions and Packages
 ################################################################################
 
+# Built-in functions in base R.
 
 # Take an example from above.
 cumsum(some_numbers.integers)
@@ -499,7 +517,7 @@ cumsum(some_numbers.integers)
 # Can also specify arguments by name.
 cumsum(x = some_numbers.integers)
 
-# What if the argument contains missing values.
+# What if the argument contains missing values?
 contains_missing_values <- c(2,5,NA,7)
 cumsum(contains_missing_values)
 
@@ -526,14 +544,16 @@ sum(na.rm=TRUE, x = contains_missing_values)
 help(sum)
 
 
+# Creating your own functions.
+
 # You can make your own functions, with the 'function()' function.
 addTwoNumbers <- function(first_number, second_number) {
-  
+
   total <- first_number + second_number
-  
+
   # print(first_number)
   # print(second_number)
-  
+
   return(total)
 }
 
@@ -544,14 +564,14 @@ the_sum <- addTwoNumbers(3,4)
 
 
 addThreeNumbers <- function(first_number, second_number) {
-  
+
   third_number <- 200
-  
+
   total <- first_number + second_number + third_number
-  
+
   # print(first_number)
   # print(second_number)
-  
+
   return(total)
 }
 
@@ -571,18 +591,18 @@ addTwoNumbers(3,4,5)
 
 # Lets make a function that allows for a flexible number of parameters.
 addSeveralNumbers <- function(...) {
-  
+
   # Get arguments.
   list_of_numbers <- list(...)
-  
+
   # Add numbers.
   total <- 0
   for (i in 1:length(list_of_numbers)) {
-    
+
     total <- total + list_of_numbers[[i]]
-    
+
   }
-  
+
   return(total)
 }
 
@@ -595,24 +615,24 @@ addSeveralNumbers(3,2,1,NA,-1)
 
 # Modify the function to remove missing values.
 addSeveralNumbers <- function(..., na.rm=FALSE) {
-  
+
   # Get arguments.
   list_of_numbers <- list(...)
-  
+
   # Add numbers.
   total <- 0
   for (i in 1:length(list_of_numbers)) {
-    
+
     # Add if either na.rm=FALSE or the number is not missing (or both, by definition of 'or').
     if (!na.rm | !is.na(list_of_numbers[[i]])) {
-      
+
       total <- total + list_of_numbers[[i]]
-      
+
     }
     # Adding skipped if both na.rm=TRUE and number is missing.
-    
+
   }
-  
+
   return(total)
 }
 
@@ -628,6 +648,9 @@ addSeveralNumbers(3,2,1,NA,-1)
 ################################################################################
 # Loading packages.
 ################################################################################
+
+# There are many packages of functions available online.
+# You can import them automatically with the library function.
 
 # Syntax:
 # library(name_of_R_package_goes_here) # No quotes: it's an object, not a string.
@@ -654,12 +677,17 @@ library(foreign)
 # install.packages('haven')
 library(haven)
 
+# Packages for handling larger data sets.
+
+# install.packages('data.table')
+library(data.table)
+
+# install.packages('dplyr')
+library(dplyr)
+
+
 # These are a few among many listed on:
 # https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages
-
-
-
-# End
 
 
 
