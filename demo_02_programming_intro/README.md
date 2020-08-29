@@ -36,6 +36,13 @@ Characters are stored similarly, with, for example, 8 bits to generate the decim
 
 <img src="ASCII-Table.png" width="500"/>
 
+These numbers 0-127 are represented in memory by an 8-bit binary sequence. 
+In binary, numbers are represented as the sum of (either 1 or 0 times) 2 raised to the exponent in the positions 0-7. 
+For example, the binary number 65, corresponding to the ASCII character "A" is ```10000010```. 
+Note that the eight bits can generate numbers from 0-255. 
+A larger character set is called UTF-8 contains all the ASCII characters plus another 128. 
+
+
 The interpreter or compiler for a particular language will translate variables into these binary formats for the C.P.U. to execute commands.
 
 We have many objects to work with. 
@@ -95,10 +102,14 @@ The precise syntax differs by programing language but the most common are shown 
 The logical variables from two relational operators can be combined into another logical variable using logical operators. 
 In ```R```, there are the following possibilities, illustrated by Venn diagrams with the sets in which the logical variable ```x``` and ```y``` are ```TRUE```.
 
+
 <img src="LogicalOpsVenn.png" width="500"/>
 
 The ampersand "&" represnts *and*, while the vertical bar, or pipe, "|" represents *or*.
-In ```python```, the words ```and``` and ```or``` can also be used, with the word ```not``` taking the place of the negation operator ```!```
+In ```python```, the words ```and``` and ```or``` can also be used, with the word ```not``` taking the place of the negation operator ```!```.
+For example, let ```x <- a >= 7``` and ```y <- a <= 20``` for some variable ```a```.
+The condition ```x & y``` returns ```TRUE``` when ```a``` is between 7 and 20. 
+
 
 
 ### Arithmetic operators
@@ -114,6 +125,8 @@ In ```python``` these are the equivalent operators
 
 <img src="ArithmeticOperatorsPython.jpg" width="500"/>
 
+These operators can be combined with brackets for calculations performed following the usual order of operations in arithmetic. 
+Although useful on their own, these operators are often combined to perform a specific calculation within a function. 
 
 
 ### Functions
@@ -190,6 +203,9 @@ print(my_string.upper())
 
 
 ## Conjunctions, Prepositions and Adverbs 
+
+With so many operators and functions available, you can perform many kinds of calculations. 
+The programs you write will be more interesting and useful when you specify when or how many times a calculation is to be performed. 
 
 ### Conditional Logic
 
