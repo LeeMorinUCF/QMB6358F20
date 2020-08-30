@@ -289,6 +289,8 @@ that will read your function definitions and execute some commands that solve yo
 You can execute your script from a terminal window, such as GitBash, 
 instead of within RStudio. 
 
+### Adding ```R``` to the environment
+
 First, you have to add the location of your instance of ```R``` 
 to the search ```PATH``` to update the list of programs that you can call from the terminal.
 
@@ -296,6 +298,7 @@ to the search ```PATH``` to update the list of programs that you can call from t
 $ export PATH="$PATH:/c/Program Files/R/R-4.0.2/bin"
 ```
 
+### Running an ```R``` script
 
 In the terminal window, e.g. GitBash, you can now execute
 
@@ -309,5 +312,43 @@ R CMD BATCH my_script.R my_script_output.out
 And you will see the file ```my_script_output.out``` appear in the directory. Notice that the output is more verbose with ```R CMD BATCH```, 
 including not only the printed output but the commands that were run.
 
-Typically, you would follow this route if the script takes a long time to run or needs to be run on another computer.
+### Runnning the ```R``` script from a shell script
+
+Navigate to the folder containing the shell script and execute the following:
+
+```
+$ ./my_shell_script.sh
+```
+The next few lines will show the output.
+```
+Running shell script...
+Running R script...
+Completed R script.
+Completed shell script.
+```
+
+If you list the contents of the directory, you will find a new folder containing the output, ```my_R_script_from_shell.out```:
+
+```R
+[1] "Testing function addTwoNumbers:"
+[1] 7
+[1] 4
+[1] 0
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] "Testing function addThreeNumbers:"
+[1] 9
+[1] 12
+[1] 0
+[1] TRUE
+[1] TRUE
+[1] TRUE
+[1] "my_script complete."
+```
+
+Verify that the output is as expected. 
+
+You would follow this approach if the script takes a long time to run or needs to be run on another computer.
+It is also very useful to automate a series of related programs, so that if you have to make changes, it will run all of the programs in sequence. 
 We will discuss this further when we turn to *Remote Computing*.
