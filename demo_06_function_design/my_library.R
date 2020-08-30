@@ -59,7 +59,7 @@ addTwoNumbers <- function(first_number, second_number) {
 
 addThreeNumbers <- function(first_number, second_number, third_number) {
 
-  #' Add Two Numbers
+  #' Add Three Numbers
   #'
   #' \code{addTwoNumbers} adds two numbers together and returns the sum.
   #'

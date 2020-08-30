@@ -29,7 +29,7 @@
 
 # Install the docstring package to produce documentation for functions
 # from comments called docstrings within functions.
-install.packages("docstring")
+# install.packages("docstring")
 library(docstring)
 
 

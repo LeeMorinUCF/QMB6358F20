@@ -66,6 +66,7 @@ addTwoNumbers
 
 Instead, add documentation to the function in a docstring.
 
+
 ```R
 addTwoNumbers <- function(first_number, second_number) {
 
@@ -83,15 +84,35 @@ addTwoNumbers <- function(first_number, second_number) {
 }
 ```
 
+To convert the docstring into a help file, you need to attach the library ```docstring```:
+
+```R
+# Install the docstring package to produce documentation for functions
+# from comments called docstrings within functions, if not already installed.
+# install.packages("docstring")
+library(docstring)
+```
+
+The docstring package does have its limitations. 
+Another option is to use the ```ehelp``` package.
+
+```R
+# install.packages("ehelp")
+library(ehelp)
+```
+
+
 Now test the documentation by calling for help:
 ```R
 ?addTwoNumbers
 ```
-or
+
+which works only with the input from ```docstring```
+while
 ```R
 help(addTwoNumbers)
 ```
-and you should see the documentation appear in the "Help" window.
+should display the documentation appear in the console (with ehelp) or in the "Help" window (with docstrings).
 
 
 
