@@ -24,7 +24,7 @@ This is in contrast to the traditional product engineering workflow that you mig
 
 <img src="Waterfall_Vs_Agile.png" width="1000" />
 
-While the waterfall approach is suitable and necessary for some very large products, software is typically developed with the Agile approach in mind. 
+Although the waterfall approach is suitable and necessary for some very large products, software is typically developed with the Agile approach in mind. 
 
 
 
