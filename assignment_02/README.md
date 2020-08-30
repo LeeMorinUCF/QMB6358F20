@@ -1,6 +1,19 @@
-# Deadlines vs. Continuous Delivery
+# Assignment 2
 
-Given that we have only partially studied the R programming language, it would be unfair to expect a perfectly working finished product by the "deadline" of Tuesday, September 17. However, in software development, products are improved in increments, beginning with the simplest working prototype (called a Minimum Viable Product - MVP), rather than have the customer wait for a long time to get the finished version. 
+## Gradual Improvements
+
+It is often useful to complete software development in stages. 
+Working through the above assignment, you might tackle one element at a time. 
+For example, you could focus on one function first. 
+You can comment out the tests of the other function in ```Q2_testing.R```. 
+Then you can add improvements as you work through the stages of the function design recipe. 
+Once you solve a particular problem or end a working session, it is good practice to add and push your intermediate results to your repository. 
+this saves a copy of your results and also provides an intermediate solution that you can use to ask for feedback from others (such as your instructor).
+I will check your repos on Thursday, September 10 (even though there is no lecture that day) so that I can give you feedback on your functions, if necessary. 
+
+## Deadlines vs. Continuous Delivery
+
+In software development, products are improved in increments, beginning with the simplest working prototype (called a Minimum Viable Product - MVP), rather than have the customer wait for a long time to get the finished version. 
 
 <img src="MVP_skateboard_bike_car.jpg" width="1000" />
 
