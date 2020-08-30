@@ -20,7 +20,8 @@ The five steps are as follows:
 
 1. **Examples** Type a few example calls and determine what it should return for those values. 
 The name of your function should indicate what is being calculated in your examples. 
-1. **Description** Write a few sentences to describe what your function does. 1. **Header** Type some documentation relating to your function. 
+1. **Description** Write a few sentences to describe what your function does. 
+1. **Header** Type some documentation relating to your function. 
 It should be clear to the reader what arguments it takes as input and what value is returned and the types of each variable. 
 1. **Body** By now, you should be clear about how your function will work. 
 Now type the code to perform the calculations. 
