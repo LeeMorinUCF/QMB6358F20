@@ -50,34 +50,24 @@ source("Q1_functions.R")
 print("Testing function sum_sq_dev:")
 
 # Check values that are output.
-
 print(sum_sq_dev(x = c(0, 0, 0), mu = 0))
-
-# Add two more examples.
-
-
 # Test output against expected answer.
-
 print(sum_sq_dev(x = c(0, 0, 0), mu = 0) == 0)
 
-# Repeat the test of the same two examples.
+# Add more examples.
+
+
 
 
 
 print("Testing function covar_y_x:")
 
 # Check values that are output.
-
 print(covar_y_x(x = c(0, 0, 0), mu = c(0, 0, 0)))
-
-# Add two more examples.
-
-
 # Test output against expected answer.
-
 print(covar_y_x(x = c(0, 0, 0), mu = c(0, 0, 0)) == 0)
 
-# Repeat the test of the same two examples.
+# Add more examples.
 
 
 
