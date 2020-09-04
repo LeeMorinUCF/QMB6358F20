@@ -7,7 +7,8 @@ Working through the above assignment, you might tackle one element at a time.
 For example, you could focus on one function first. 
 You can comment out the tests of the other function in ```Q2_testing.R```. 
 Then you can add improvements as you work through the stages of the function design recipe. 
-Once you solve a particular problem or end a working session, it is good practice to ```add```, ```commit``` and ```push``` your intermediate results to your repository. 
+Once you solve a particular problem or end a working session, it is good practice to ```add```, ```commit``` and ```push``` your intermediate results to your repository
+(or upload them with your browser). 
 This saves a copy of your results and also provides an intermediate solution that you can use to ask for feedback from others (such as your instructor).
 I will check your repos on Thursday, September 10 (even though there is no lecture that day) so that I can give you feedback on your functions, if necessary. 
 This strategy matches the practice typically followed in software engineering. 
