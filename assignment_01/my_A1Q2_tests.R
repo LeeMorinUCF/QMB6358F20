@@ -118,13 +118,13 @@ color_by_number(29)
 print("Testing function multiples_of_5:")
 
 
-# multiples_of_5(n = 2)
+# multiples_of_5(num_5_limit = 2)
 multiples_of_5(2)
-multiples_of_5(n = 17)
-multiples_of_5(2)
-multiples_of_5(n = 20)
+# multiples_of_5(num_5_limit = 17)
+multiples_of_5(17)
+# multiples_of_5(num_5_limit = 20)
 multiples_of_5(20)
-multiples_of_5(n = 26)
+# multiples_of_5(num_5_limit = 26)
 multiples_of_5(26)
 
 
@@ -142,8 +142,8 @@ count_even_numbers(10)
 count_even_numbers(100)
 # count_even_numbers(end_num = 0)
 count_even_numbers(0)
-# count_even_numbers(end_num = 22)
-count_even_numbers(22)
+# count_even_numbers(end_num = 21)
+count_even_numbers(21)
 
 
 #--------------------------------------------------------------------------------
@@ -156,6 +156,8 @@ print("Testing function summarize_5_numbers:")
 summarize_5_numbers(1, 1, 1, 1, 1)
 # summarize_5_numbers(num_1 = 1, num_2 = 2, num_3 = 3, num_4 = 4, num_5 = 5)
 summarize_5_numbers(1, 2, 3, 4, 5)
+# summarize_5_numbers(num_1 = 1, num_2 = 7, num_3 = 20, num_4 = 3, num_5 = 4)
+summarize_5_numbers(1, 7, 20, 3, 4)
 
 
 
