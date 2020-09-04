@@ -1,0 +1,34 @@
+[1] "Testing function multiply_two:"
+[1] 35
+[1] 99
+[1] 100
+[1] 1
+[1] "Testing function is_it_5_or_6:"
+[1] "your number is not 5 or 6"
+[1] "your number is a 5 or 6"
+[1] "your number is a 5 or 6"
+[1] "your number is not 5 or 6"
+[1] "Testing function color_by_number:"
+[1] "Blue"
+[1] "NA"
+[1] "Green"
+[1] "Green"
+[1] "Testing function multiples_of_5:"
+[1] NA
+[1] NA
+[1] NA
+[1] NA
+[1] NA
+[1] NA
+[1] NA
+[1] "Testing function count_even_numbers:"
+[1] 0
+[1] 0
+[1] 0
+[1] 0
+[1] "Testing function summarize_5_numbers:"
+min avg max 
+ NA  NA  NA 
+min avg max 
+ NA  NA  NA 
+[1] "my_script complete."
