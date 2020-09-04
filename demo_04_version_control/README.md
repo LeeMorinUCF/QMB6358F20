@@ -5,7 +5,7 @@ The version control platform that we will use is called GitHub and the reason fo
 
 ## GitHub Workflow
 
-<img src="GitHub_Workflow.jpg" width="1000"/>
+<img src="Images/GitHub_Workflow.jpg" width="1000"/>
 
 ## Version Control 1: Through a Web Browser
 
@@ -64,7 +64,7 @@ Further instructions are available in this page about [managing branches](https:
 Now the project can proceed with separate users making parallel changes to 
 separate branches. 
 
-<img src="GitHub_Branches.jpeg" width="500"/>
+<img src="Images/GitHub_Branches.jpeg" width="500"/>
 
 With separate users making simultaneous changes, it is best to do your work 
 locally and interact with the repo using the terminal window. 
@@ -242,7 +242,7 @@ where the ```<commit hash>``` is an alphanumeric code that uniquely identifies t
 Browse to any file in the commit and click on the link or message referring to the commit and obtain the commit hash. 
 
 
-<img src="Find_Commit_Hash.png" width="1000"/>
+<img src="Images/Find_Commit_Hash.png" width="1000"/>
 
 Then enter this into your terminal
 
@@ -253,7 +253,7 @@ git revert 74abb7e
 Then there is an additional step. 
 Since reverting a commit is an unusual step, the default action after this command is to add a message to the (inverse) commit. 
 
-<img src="Enter_Revert_Message_in_vim.png" width="1000"/>
+<img src="Images/Enter_Revert_Message_in_vim.png" width="1000"/>
 
 This screen is a classic text editor called ```vim```. 
 If you are happy with the comments as is, exit ```vim``` by pressing ```:``` then ```q``` to quit. 
