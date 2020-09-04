@@ -18,7 +18,7 @@ There are also data types for holding non-numeric data, such as letters of the a
 
 Examples of *classes* of data in ```R``` are as follows: 
 
-<img src="Rvariablesdata.jpg" width="500"/>
+<img src="Images/Rvariablesdata.jpg" width="500"/>
 
 A variable can have a single element (i.e. atomic) or be a vector or array of values. 
 Typically, vectors and arrays comprise elements of the same data type. 
@@ -28,13 +28,13 @@ For statistical programming, languages such as ```R``` and ```Python``` also all
 In the languages we will use, values are represented in binary digits, or "bits".
 The storage of a 32-bit real number is as follows:
 
-<img src="Binary32bitFloat.jpg" width="500"/>
+<img src="Images/Binary32bitFloat.jpg" width="500"/>
 
 For each individual variable or element of an array of data, the values are actually stored in a sequence of, for example, 32 adjacent locations in memory. 
 
 Characters are stored similarly, with, for example, 8 bits to generate the decimal numbers 0 to 127, which correspond to the characters in the following ASCII table:
 
-<img src="ASCII-Table.png" width="500"/>
+<img src="Images/ASCII-Table.png" width="500"/>
 
 These numbers 0-127 are represented in memory by an 8-bit binary sequence. 
 In binary, numbers are represented as the sum of (either 1 or 0 times) 2 raised to the exponent in the positions 0-7. 
@@ -94,7 +94,7 @@ They output what are called *binary*, *logical*, or *Boolean*, variables.
 They are commonly used for flow control, such as for ```if``` statements, discussed below.
 The precise syntax differs by programing language but the most common are shown in the following table.
 
-<img src="RelationalOpsTrimmed.jpg" width="500"/>
+<img src="Images/RelationalOpsTrimmed.jpg" width="500"/>
 
 
 ### Logical Operators
@@ -103,7 +103,7 @@ The logical variables from two relational operators can be combined into another
 In ```R```, there are the following possibilities, illustrated by Venn diagrams with the sets in which the logical variable ```x``` and ```y``` are ```TRUE```.
 
 
-<img src="LogicalOpsVenn.png" width="500"/>
+<img src="Images/LogicalOpsVenn.png" width="500"/>
 
 The ampersand "&" represnts *and*, while the vertical bar, or pipe, "|" represents *or*.
 In ```python```, the words ```and``` and ```or``` can also be used, with the word ```not``` taking the place of the negation operator ```!```.
@@ -119,11 +119,11 @@ These operators work much like they do with pencil and paper, following the orde
 
 In ```R``` these operators are used
 
-<img src="ArithmeticOperatorsR.png" width="500"/>
+<img src="Images/ArithmeticOperatorsR.png" width="500"/>
 
 In ```python``` these are the equivalent operators
 
-<img src="ArithmeticOperatorsPython.jpg" width="500"/>
+<img src="Images/ArithmeticOperatorsPython.jpg" width="500"/>
 
 These operators can be combined with brackets for calculations performed following the usual order of operations in arithmetic. 
 Although useful on their own, these operators are often combined to perform a specific calculation within a function. 
@@ -221,7 +221,7 @@ As shown in this flow chart, the program will skip that block of code and contin
 when the condition is not satisfied. 
 
 
-<img src="if_statement_flow_diagram_C.jpg" width="500"/>
+<img src="Images/if_statement_flow_diagram_C.jpg" width="500"/>
 
 In ```R``` the syntax for an ```if``` statement is
 
@@ -251,7 +251,7 @@ Sometimes it is necessary to execute one command if a contition is ```TRUE```
 and execute other commands when the condition is ```FALSE``` 
 but avoid executing these other commands if the condition is ```TRUE``
 
-<img src="If_else_flow_diagram_C.jpg" width="500"/>
+<img src="Images/If_else_flow_diagram_C.jpg" width="500"/>
 
 In the flow chart above, the program executes the first block of code then skips the second block when ```condition == TRUE```.
 When ```condition``` is ```FALSE```, the interpreter skips the first block of code and runs only the second. 
@@ -300,7 +300,7 @@ For loops are useful when you have to repeat a calculation for a
 predetermined number of inputs. 
 These calculation follow this flow chart:
 
-<img src="for_loop_C.jpg" width="500"/>
+<img src="Images/for_loop_C.jpg" width="500"/>
 
 After an *iteration* is performed, the interpreter automatically *increments* the *iterator* 
 to the next value to repeat the calculation, until all iterations are performed.  
@@ -343,7 +343,7 @@ Alternatively, your calaculation might be continued until some level of *toleran
 
 A ```while``` loop has the following flow chart:
 
-<img src="while_loop_C.jpg" width="500"/>
+<img src="Images/while_loop_C.jpg" width="500"/>
 
 The commands follow a sequence of commands like this:
 
