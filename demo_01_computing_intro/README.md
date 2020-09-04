@@ -22,7 +22,7 @@ The human-readable computer program that you write is interpreted, or translated
 This interpreter translates the program into something that will run on the operating system. 
 The operating system, such as Windows, Linux or Mac OS, is another set of programs that then translate your instructions into a more primitive set of instructions that are finally executed on the computer. 
 
-<img src="Interpreter.png" width="500"/>
+<img src="Images/Interpreter.png" width="500"/>
 
 Why go through all of this trouble? Well, first, the operating system uncouples your program from the particulars of the hardware on your physical computer, such as the monitor, the hard drive and the keyboard. 
 Further, the interpreter separates the instructions in your program from the particular operating system on your computer. 
@@ -82,7 +82,7 @@ The program starts at &alpha; and ends at &Omega;.
 
 
 
-<img src="FlowGraphADD12.png" width="500"/>
+<img src="Images/FlowGraphADD12.png" width="500"/>
 
 
 Now run this program to see it in action. 
@@ -90,13 +90,13 @@ Open RodRego and it is initialized with ten registers,
 with *addresses* numbered zero to nine, each initialized with 
 the *value* equal to the *address* of the register. 
 
-<img src="RodRegoStart.png" width="500"/>
+<img src="Images/RodRegoStart.png" width="500"/>
 
 
 
 Running the program above, results in the output below. 
 
-<img src="RodRegoADD12.png" width="500"/>
+<img src="Images/RodRegoADD12.png" width="500"/>
 
 You can also watch each change by running the program step-by-step. 
 Notice that the value in register 1 is empty, while register 2 contains the sum. 
@@ -116,7 +116,7 @@ This program moves the contents of register 4 into register 5:
 
 The flow graph is shown here:
 
-<img src="FlowGraphMOVE45.png" width="500"/>
+<img src="Images/FlowGraphMOVE45.png" width="500"/>
 
 
 Notice the first step is to remove the contents of register 5 so that the value does not get counted with the value moved from register 4.
@@ -137,7 +137,7 @@ This program copies the value in register 1 and records it in register 3.
 ```
 
 
-<img src="FlowGraphCOPY13.png" width="500"/>
+<img src="Images/FlowGraphCOPY13.png" width="500"/>
 
 
 As above, thie first steps are to clear spaces in memory to store the result (in register 3) and store the values of intermediate calculations (in register 4). 
@@ -166,7 +166,7 @@ This program now adds the values in registers 1 and 2 and stores the result in r
 13 END
 ```
 
-<img src="FlowGraphNonDestrADD123.png" width="500"/>
+<img src="Images/FlowGraphNonDestrADD123.png" width="500"/>
 
 
 Other programs can be written to multiply two values, with repeated addition. 
