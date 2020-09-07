@@ -1,6 +1,6 @@
 # Introduction to UNIX 
 
-UNIX is an operating system, just like Windows or OS X are operating systems, but UNIX has a large array of tools for computing. 
+UNIX is an operating system, just like Windows or OS X are operating systems, but UNIX has a large array of powerful tools for computing. 
 It is typically accessed through a terminal window: a text-based interface. 
 Without the computational expense of showing images of a desktop and tracking mouse movements, using UNIX at the terminal allows the computer (and the user!) to focus attention on the computing problem at hand. 
 Commands submitted to the UNIX terminal window are run on a program known as a *shell*. 
@@ -9,7 +9,7 @@ The shell that we will use is called *bash*.
 
 ## Shell Command Syntax
 
-You submit commands at a command prompt, a line in the window displayed by ```$```.
+You submit commands at a command prompt: a line in the window displayed by ```$```.
 The first word of a command is the name of a program. 
 The last words are often arguments, such as names of files or objects on which the commands operate. 
 In between these is typically a set of options, if necessary, in the following format:
@@ -41,18 +41,18 @@ The command ```my_paper.*``` would show ```my_paper.tex```, ```my_paper.log``` a
 Compare this with the ```?``` wildcard. 
 This specifies that the list of files include those with any single charcter in the place of the ```?```. 
 The command ```my_paper_v?.tex``` would show ```my_paper_v1.tex```, ```my_paper_v2.tex``` and ```my_paper_v3.tex```; 
-the command ```my_paper.t??``` would show ```my_paper.tex```, ```my_paper.txt``` but not ```my_paper.pdf```, as long as those files were in the directory. 
+the command ```my_paper.t??``` would show ```my_paper.tex``` and ```my_paper.txt``` but not ```my_paper.pdf```, as long as those files were in the directory. 
 
 
 ## Navigation 
 
 For Windows users, not much file work can be done without Windows Explorer. 
-In UNIX, there are commands that perform any action that can be competed by right-clicking in Windows Explorer. 
+In UNIX, there are commands that perform any action that can be competed by right-clicking the mouse in Windows Explorer. 
 
 ### Present working directory (Where are you?)
 
 The ```pwd``` command prints the present working directory. 
-It is the location in the file system, like the address bar at the top of Explorer. 
+It is the location in the file system, just like that shown in the address bar at the top of Explorer. 
 
 Using GitBash on a Windows machine, the output is 
 
@@ -87,12 +87,13 @@ In UNIX, the syntax is as follows.
 ```
 cd folder_1/folder_2/folder_3
 ```
+which will "click" through as many folders as you list in one line. 
 
 You can also state absolute paths; that is, with a path specified relative to your *home directory* with ```~```: 
 ```
 cd ~/folder_1/folder_2/folder_3
 ```
-or your *root directory* with ```/```:
+or from your *root directory* with ```/```:
 
 ```
 cd /c/Users/le279259/Documents/folder_1/folder_2/folder_3
@@ -117,7 +118,7 @@ Moves two folders up then into 3 folders in that branch of the folder tree.
 The UNIX analogue of "New...Folder" is the ```mkdir``` command:
 
 ```
-mkdir ../../existing_folder/folder/new_folder
+mkdir ../../existing_folder/other_folder/new_folder
 ```
 
 ### Removing a new directory (folder)
@@ -128,7 +129,7 @@ To reverse this decision, you can delete a folder with ```rmdir```.
 rmdir ../../existing_folder/folder/folder_you_want_to_remove
 ```
 Note that you cannot remove a directory unless it is emply. 
-That is, unless you specify to remove all the files and folders inside. 
+That is, you specify that you want to remove all the files and folders inside. 
 
 ```
 rmdir -r ../../existing_folder/folder/folder_you_want_to_remove
@@ -151,7 +152,8 @@ Similar operations can be perfomed on files.
 ```
 cp path/to/file/file.txt path/to/new_file/new_copy_of_file.txt
 ```
-The ```cp``` command works just like "Copy and Paste".
+The ```cp``` command works just like "Copy and Paste", without all of the mouse-clicking. 
+The copying takes place to and from the files in the paths as specified. 
 
 
 
@@ -179,7 +181,7 @@ rm path/to/file_1/file.txt path/to/file_1/new_copy_of_file.txt
 ```
 
 CAUTION: In UNIX, again, there is no "Undo" command. You have to know what you are doing. 
-(However, if you are in a local copy of a git repository, you can revert to your last commit---see (demo_04_version_control)[https://github.com/LeeMorinUCF/QMB6358F20/tree/master/demo_04_version_control].
+(However, if you are in a local copy of a git repository, you can revert to your last commit---see [demo_04_version_control(https://github.com/LeeMorinUCF/QMB6358F20/tree/master/demo_04_version_control).
 This is one of the many reasons to use version control software.
 
 
@@ -393,7 +395,7 @@ A sample of common ```vim```commands is in the following table.
 | Esc      |  Escape to start                             |
 | i        |  Insert (i.e. typing text)                   |
 | Esc :wq  |  Quit and write changes (i.e. save)          |
-| Esc :q   |  Quit (i.e. quit without saving)             |
+| Esc :q!  |  Quit (i.e. quit without saving)             |
 | v        |  Start selection (for cutting or pasting)    |
 | y        |  End selection  (for pasting)                |
 | d        |  End selection  (for cutting)                |
