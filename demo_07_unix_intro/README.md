@@ -117,7 +117,75 @@ echo "Hello, world!" > file_I_want_to_modify.txt
 
 A powerful reason to use the terminal window is to run batch processes. 
 
+### Running ```python``` scripts
 
+
+You can run a ```python``` script at the command line by running python:
+
+```
+python3 my_python_script.py
+```
+and the output will print to screen. 
+You can also redirect the output to a file of your choosing with the ```>``` operator:
+```
+python3 my_python_script.py > my_script_output.out
+```
+
+### Running ```R``` scripts
+
+You can run an ```R``` script with either the ```Rscript``` command or ```R CMD BATCH```:
+
+```
+Rscript my_script.R > my_script_output.out
+```
+or
+```
+R CMD BATCH my_script.R my_script_output.out
+```
+And you will see the file ```my_script_output.out``` appear in the directory. Notice that the output is more verbose with ```R CMD BATCH```, 
+including not only the printed output but the commands that were run.
+
+As mentioned above, the ```>``` operator directs the output of the ```R``` script run by ```Rscript``` to the file called ```my_script_output.out``` (but you can call it anything you want). 
+With the ```R CMD BATCH```, 
+
+
+### Running ```shell``` scripts
+
+A shell script is a program containing Unix commands. 
+For example, you can run a series of ```R``` and ```python``` scripts and execute a number of other Unix commands.
+Suppose you collected the following commands into the file ```my_shell_script.sh```.
+
+```
+#!/bin/bash
+
+# Navigate to a selected working directory.
+cd path/to/my/scripts
+
+# Run a python script.
+python3 my_python_script.py > my_py_script_output.out
+
+# Run an R script.
+Rscript my_script.R > my_R_script_output.out
+
+# Collect all the files into a compressed file (see below). 
+zip my_zip_file.zip *.py *.R *.out my_shell_script.sh
+
+
+```
+
+
+To run this script, you would enter
+
+```
+$ ./my_shell_script.sh
+```
+to print the output to screen
+
+or
+```
+$ ./my_shell_script.sh > my_shell_output.out
+```
+to redirect any printed output to the text file ```my_shell_output.out```.
 
 
 ## Compressing Files
@@ -175,6 +243,7 @@ More about this in my rief description of the text editor called ```vim```.)
 ## The Default Text Editor: ```vim```
 
 This will typically be a traumatic experience for the new user but the pain will all be worth it should you ever find yourself logging into a computer remotely (which you will), where a graphical text editor is not available. 
+A sample of common ```vim```commands is in the following table.
 
 | Command  |  Action                                      |
 | -------- |  ------------------------------------------- |
@@ -187,6 +256,39 @@ This will typically be a traumatic experience for the new user but the pain will
 | d        |  End selection  (for cutting)                |
 | P        |  Paste (before cursor)                       |
 | p        |  Paste (after cursor)                        |
+
+There are many other that you can commit to muscle memory over time.
+You can find many ```vim``` cheat sheets through your favorite search engine. 
+
+
+## Remote Computing
+
+### Secure copy files: ```scp```
+
+If you are very averse to using ```vim```, you can always edit your programs locally 
+and copy the file to the remote computer. 
+Use the ```scp``` command to *secure copy* files *to* another machine. 
+
+```
+scp path/to/my/file.txt my_username@other.computer.address:~/path/to/copied/file.txt
+```
+To copy in the opposite direction (copy a file *from* another computer *to* your local machine), place the remote file and path in the first argument (the *from* argument).
+
+```
+scp my_username@other.computer.address:~/path/to/file_I_want_to_copy.txt path/to/my/file.txt 
+```
+
+### Secure shell: ```ssh```
+
+To do all of this on a computer located somewhere else (a remote machine), use the ```ssh``` command.
+
+```
+ssh my_username@other.computer.address
+```
+
+You will be prompted for you login credentials. 
+After you enter them, you will see a command prompt in your home directory. 
+Now you can do all of this on someone else's computer (provided you have access).
 
 
 
