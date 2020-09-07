@@ -1,9 +1,17 @@
-# Introduction to Unix 
+# Introduction to UNIX 
 
-## Structure of commands
+UNIX is an operating system, just like Windows or OS X are operating systems, but UNIX has a large array of tools for computing. 
+It is typically accessed through a terminal window: a text-based interface. 
+Without the computational expense of showing images of a desktop and tracking mouse movements, using UNIX at the terminal allows the computer (and the user!) to focus attention on the computing problem at hand. 
+Commands submitted to the UNIX terminal window are run on a program known as a *shell*. 
+The shell that we will use is called *bash*. 
 
-The first word is a command. 
-The last words are often arguments, such as files or folders on which the commands operate. 
+
+## Shell Command Syntax
+
+You submit commands at a command prompt, a line in the window displayed by ```$```.
+The first word of a command is the name of a program. 
+The last words are often arguments, such as names of files or objects on which the commands operate. 
 In between these is typically a set of options, if necessary, in the following format:
 
 ```
@@ -11,72 +19,155 @@ command -xyz other arguments
 ```
 
 The options are usually represented as single characters after a hyphen. 
-There are entries in a manual for each Unix command.
+There are entries in a manual for each UNIX command.
 
 ```
 man name_of_command
 ```
 But Google is a good reference as well. 
 
+There are many tricks and shortcuts that you learn as you go along. 
+Some very useful shortcuts are the *wildcards* ```?``` and ```*```.
+
+Consider the list of files printed by ```ls```:
+```
+ls my_paper.*
+ls my_paper_v?.pdf
+ls my_paper.t??
+```
+
+The ```*``` wildcard specifies that the list includes all files with names that have any sequence of characters in the place of the ```*```, while the remaining characters appear exactly as shown. 
+The command ```my_paper.*``` would show ```my_paper.tex```, ```my_paper.log``` and ```my_paper.pdf``` if those were in the directory. 
+Compare this with the ```?``` wildcard. 
+This specifies that the list of files include those with any single charcter in the place of the ```?```. 
+The command ```my_paper_v?.tex``` would show ```my_paper_v1.tex```, ```my_paper_v2.tex``` and ```my_paper_v3.tex```; 
+the command ```my_paper.t??``` would show ```my_paper.tex```, ```my_paper.txt``` but not ```my_paper.pdf```, as long as those files were in the directory. 
+
 
 ## Navigation 
 
+For Windows users, not much file work can be done without Windows Explorer. 
+In UNIX, there are commands that perform any action that can be competed by right-clicking in Windows Explorer. 
+
 ### Present working directory (Where are you?)
+
+The ```pwd``` command prints the present working directory. 
+It is the location in the file system, like the address bar at the top of Explorer. 
+
+Using GitBash on a Windows machine, the usage is 
 
 ```
 pwd
+/c/Users/le279259/Documents/Teaching/QMB6358_Fall_2020/GitRepos/QMB6358F20
 ```
+which shows that I am working in a folder for this course. 
+
+### List files (What else is here?)
+
+The ```ls``` command *lists* the files in the present working directory. 
+Some examples include:
+
+```
+ls
+ls -a
+ls -lh
+```
+
+Without any options, ```ls``` simply lists (most of) the files and folders in the present working directory. 
+The ```-a``` flag lists *all* files, including ones that may be hidden (i.e. with filenames that begin with a dot). 
+The ```-lh``` flag passes two options: the ```l``` calls for the ```l```ong format listing, and the ```h``` specifies that the file sizes be displayed in a ```h```uman-readable format. 
+The ```ls -lh``` command prints a clear table of the information related to each file. 
+
 
 ### Changing Directory (Where do you want to go?)
 
+The action of clicking on a folder in Explorer initiates a change of directory. 
+In UNIX, the syntax is as follows. 
 
 ```
-cd folder/folder/folder
+cd folder_1/folder_2/folder_3
 ```
 
-
-The ```../``` sequence means "move up one level" in the folder hierarchy. 
+You can also state absolute paths; that is, with a path specified relative to your *home directory* with ```~```: 
+```
+cd ~/folder_1/folder_2/folder_3
+```
+or your *root directory* with ```/```:
 
 ```
-cd ../../folder/folder/folder
+cd /c/Users/le279259/Documents/folder_1/folder_2/folder_3
+```
+The folder ```/c/``` is the analogue of the ```C:/``` prefix in the Windows path. 
+This appears when using a terminal on a Windows machine. 
+On UNIX or Linux machines, the root directory is just ```/```, without the ```/c```. 
+
+
+By default, paths are stated relative to the ```pwd```. 
+
+The ```../``` sequence means "move up one level" in the folder hierarchy from the ```pwd```. 
+
+```
+cd ../../folder_a/folder_b/folder_c
 ```
 Moves two folders up then into 3 folders in that branch of the folder tree. 
 
 
 ### Making a new directory (folder)
 
+The UNIX analogue of "New...Folder" is the ```mkdir``` command:
 
 ```
 mkdir ../../existing_folder/folder/new_folder
 ```
 
-### Making a new directory (folder)
+### Removing a new directory (folder)
+
+To reverse this decision, you can delete a folder with ```rmdir```.
 
 ```
 rmdir ../../existing_folder/folder/folder_you_want_to_remove
 ```
+Note that you cannot remove a directory unless it is emply. 
+That is, unless you specify to remove all the files and folders inside. 
+
+```
+rmdir -r ../../existing_folder/folder/folder_you_want_to_remove
+```
+The ```-r``` option specifies that the removing occurr ```r```ecursively. 
+
+CAUTION: In UNIX, there is no "Undo" command or "Recycle Bin". 
+Any file that is removed is forever deleted from the system. 
+Make sure that you know what you are doing when you use this command. 
+
 
 
 
 ## Files
 
+Similar operations can be perfomed on files. 
 
 ### Copying a file
 
 ```
 cp path/to/file_1/file.txt path/to/file_1/new_copy_of_file.txt
 ```
-Like copy and paste.
+The ```cp``` command works just like "Copy and Paste".
 
 
 
 ### Moving a file
 
+Move files with ```mv```:
 ```
-mv path/to/file_1/file.txt path/to/file_1/new_copy_of_file.txt
+mv path/to/file/file.txt path/to/new_copy/new_copy_of_file.txt
+```
+The ```mv``` command works like cut and paste. 
+It can also be used to "Rename" a file, by *moving* it to a file with a new filename:
+
+```
+mv path/to/file/old_file_name.txt path/to/file/new_file_name.txt
 ```
 
-Like cut and paste.
 
 
 ### Removing a file
@@ -87,8 +178,10 @@ The ```rm``` command removes (deletes) a file.
 rm path/to/file_1/file.txt path/to/file_1/new_copy_of_file.txt
 ```
 
-In Unix, there is no "undo" command. You have to know what you are doing. 
-(However, if you are in a local copy of a git repository, you can revert to your last commit---see (demo_04_version_control)[https://github.com/LeeMorinUCF/QMB6358F20/tree/master/demo_04_version_control].)
+CAUTION: In UNIX, again, there is no "Undo" command. You have to know what you are doing. 
+(However, if you are in a local copy of a git repository, you can revert to your last commit---see (demo_04_version_control)[https://github.com/LeeMorinUCF/QMB6358F20/tree/master/demo_04_version_control].
+This is one of the many reasons to use version control software.
+See the short list of commands below or refer to the demo (demo_04_version_control)[https://github.com/LeeMorinUCF/QMB6358F20/tree/master/demo_04_version_control])
 
 
 ### Making a new file
@@ -151,8 +244,8 @@ With the ```R CMD BATCH```,
 
 ### Running ```shell``` scripts
 
-A shell script is a program containing Unix commands. 
-For example, you can run a series of ```R``` and ```python``` scripts and execute a number of other Unix commands.
+A shell script is a program containing UNIX commands. 
+For example, you can run a series of ```R``` and ```python``` scripts and execute a number of other UNIX commands.
 Suppose you collected the following commands into the file ```my_shell_script.sh```.
 
 ```
