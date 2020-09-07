@@ -181,7 +181,7 @@ rm path/to/file_1/file.txt path/to/file_1/new_copy_of_file.txt
 ```
 
 CAUTION: In UNIX, again, there is no "Undo" command. You have to know what you are doing. 
-(However, if you are in a local copy of a git repository, you can revert to your last commit---see [demo_04_version_control(https://github.com/LeeMorinUCF/QMB6358F20/tree/master/demo_04_version_control).
+(However, if you are in a local copy of a git repository, you can revert to your last commit---see [demo_04_version_control](https://github.com/LeeMorinUCF/QMB6358F20/tree/master/demo_04_version_control).
 This is one of the many reasons to use version control software.
 
 
