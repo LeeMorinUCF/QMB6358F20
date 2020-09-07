@@ -54,7 +54,7 @@ In UNIX, there are commands that perform any action that can be competed by righ
 The ```pwd``` command prints the present working directory. 
 It is the location in the file system, like the address bar at the top of Explorer. 
 
-Using GitBash on a Windows machine, the usage is 
+Using GitBash on a Windows machine, the output is 
 
 ```
 pwd
@@ -133,7 +133,7 @@ That is, unless you specify to remove all the files and folders inside.
 ```
 rmdir -r ../../existing_folder/folder/folder_you_want_to_remove
 ```
-The ```-r``` option specifies that the removing occurr ```r```ecursively. 
+The ```-r``` option specifies that the removing occurs ```r```ecursively. 
 
 CAUTION: In UNIX, there is no "Undo" command or "Recycle Bin". 
 Any file that is removed is forever deleted from the system. 
@@ -149,7 +149,7 @@ Similar operations can be perfomed on files.
 ### Copying a file
 
 ```
-cp path/to/file_1/file.txt path/to/file_1/new_copy_of_file.txt
+cp path/to/file/file.txt path/to/new_file/new_copy_of_file.txt
 ```
 The ```cp``` command works just like "Copy and Paste".
 
@@ -159,9 +159,9 @@ The ```cp``` command works just like "Copy and Paste".
 
 Move files with ```mv```:
 ```
-mv path/to/file/file.txt path/to/new_copy/new_copy_of_file.txt
+mv path/to/file/file.txt path/to/new_location/new_copy_of_file.txt
 ```
-The ```mv``` command works like cut and paste. 
+The ```mv``` command works like "Cut and Paste". 
 It can also be used to "Rename" a file, by *moving* it to a file with a new filename:
 
 ```
@@ -181,7 +181,6 @@ rm path/to/file_1/file.txt path/to/file_1/new_copy_of_file.txt
 CAUTION: In UNIX, again, there is no "Undo" command. You have to know what you are doing. 
 (However, if you are in a local copy of a git repository, you can revert to your last commit---see (demo_04_version_control)[https://github.com/LeeMorinUCF/QMB6358F20/tree/master/demo_04_version_control].
 This is one of the many reasons to use version control software.
-See the short list of commands below or refer to the demo (demo_04_version_control)[https://github.com/LeeMorinUCF/QMB6358F20/tree/master/demo_04_version_control])
 
 
 ### Making a new file
@@ -203,12 +202,46 @@ If ```my_new_file.txt``` already exists, it overwrites it, unless you use the ``
 
 ```
 echo "Hello, world!" > file_I_want_to_modify.txt
+echo "Hello, again, world!" >> file_I_want_to_modify.txt
 ```
+
+
+## Inspecting the contents of a file
+
+One way to observe the contents of a file is through a text editor (see the section on ```vim``` below).
+In the terminal, you can print some of the contents to screen with ```head``` and ```tail``` as in the following two examples:
+
+```
+head -10 my_file.txt
+tail -20 my_other_file.txt
+```
+These commands print to screen the first 10 lines of the file ```my_file.txt``` and the last 20 lines of ```my_other_file.txt```.
+
+Another useful command is ```cat```,
+```
+cat my_file.txt
+```
+which will print the entire contents of a file. 
+If the file is large, most of the printout will quickly pass you by. 
+You can redirect output to another file with the redirect operators ```>``` or ```>>```. 
+The power of this command is realized when you want to concatenate two files:
+
+```
+echo "The quick brown fox" > file_1.txt
+echo "jumped over the lazy dogs." > file_2.txt
+cat file_1.txt file_2.txt > file_3.txt
+ls
+cat file_3.txt
+```
+The first three commands create each of the files, 
+and the last two commands show the contents of the directory and the combined file. 
 
 
 ## Running scripts
 
 A powerful reason to use the terminal window is to run batch processes. 
+You can run scripts for software that can run on your computer without opening the program on the screen. 
+This is particulary useful for running programs on another (possibly bigger) computer. 
 
 ### Running ```python``` scripts
 
@@ -239,7 +272,7 @@ And you will see the file ```my_script_output.out``` appear in the directory. No
 including not only the printed output but the commands that were run.
 
 As mentioned above, the ```>``` operator directs the output of the ```R``` script run by ```Rscript``` to the file called ```my_script_output.out``` (but you can call it anything you want). 
-With the ```R CMD BATCH```, 
+With the ```R CMD BATCH``` command, the default is to print the results to a file in the second argument above. 
 
 
 ### Running ```shell``` scripts
@@ -280,6 +313,14 @@ $ ./my_shell_script.sh > my_shell_output.out
 ```
 to redirect any printed output to the text file ```my_shell_output.out```.
 
+The top line ```#!/bin/bash``` communicates the particular shell on which you want to run your program. 
+In this course we will use ```bash```. 
+The path path to the shell appears after ```#!``` (called sharp-bang, like the sharp symbol from music). 
+This path is the result of entering
+```
+which bash
+```
+
 
 ## Compressing Files
 
@@ -291,7 +332,8 @@ zip MorinPS2.zip *.tex *.pdf ReadMe DoWork.sh
 ```
 creates one ```zip``` file containing 
 all files in this directory with the extensions ```.tex``` and ```.pdf```, as well as the files named ```ReadMe``` and the shell script ```DoWork.sh```. 
-
+The reverse operation, recovering the files in a ```zip``` archive, is executed with the ```unzip``` command. 
+Similar compression operations are achieved with ```gzip``` or ```tar```. 
 
 
 
@@ -331,6 +373,14 @@ git commit -m "Describe your changes here"
 ```
 (The ```m``` option is not really an option because if you skip the message an old-fashioned text editor will pop up insisting that you include a message. 
 More about this in my rief description of the text editor called ```vim```.) 
+
+Before we move on to ```vim```, the changes in one or more ```commit```s can be ```push```ed to the online code repository with, for example,
+
+```
+git push origin master
+```
+with ```origin``` representing the particular fork of the repository and ```master``` for the choice of the branch.  
+Again, see (demo_04_version_control)[https://github.com/LeeMorinUCF/QMB6358F20/tree/master/demo_04_version_control] fore more possibilities with ```git```.
 
 
 ## The Default Text Editor: ```vim```
