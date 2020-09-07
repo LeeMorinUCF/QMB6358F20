@@ -120,4 +120,73 @@ A powerful reason to use the terminal window is to run batch processes.
 
 
 
+## Compressing Files
+
+
+For example, the command
+
+```
+zip MorinPS2.zip *.tex *.pdf ReadMe DoWork.sh
+```
+creates one ```zip``` file containing 
+all files in this directory with the extensions ```.tex``` and ```.pdf```, as well as the files named ```ReadMe``` and the shell script ```DoWork.sh```. 
+
+
+
+
+## Version Control with GitHub
+
+
+To *clone* a repo, i.e. download a copy to your local computer, use the ```clone``` option with ```git```:
+
+```
+git clone https://github.com/LeeMorinUCF/QMB6358F20.git
+```
+
+After you make some changes, you will want to upload them to the repo. 
+First verify the changes that have been made, i.e. check the ```status``` of the local copy of your repo. 
+Check this from the root folder of your repo (the first folder in your repo).
+
+
+```
+git status
+```
+Once you choose the files that you want to upload, use the ```add``` option to stage the changes in a particular file. 
+Use ```.``` to include all changes.
+
+```
+git add .
+```
+You can also ```add``` particular file names one at a time: 
+```
+git add my_changed_file.ext
+```
+
+Typically, you will ```add``` a number of changes related to a similar coding problem, feature or bug fix. 
+Once a collection of files are staged to commit, you should add a message to describe the changes, using the ```m``` option.
+
+```
+git commit -m "Describe your changes here"
+```
+(The ```m``` option is not really an option because if you skip the message an old-fashioned text editor will pop up insisting that you include a message. 
+More about this in my rief description of the text editor called ```vim```.) 
+
+
+## The Default Text Editor: ```vim```
+
+This will typically be a traumatic experience for the new user but the pain will all be worth it should you ever find yourself logging into a computer remotely (which you will), where a graphical text editor is not available. 
+
+| Command  |  Action                                      |
+| -------- |  ------------------------------------------- |
+| Esc      |  Escape to start                             |
+| i        |  Insert (i.e. typing text)                   |
+| Esc :wq  |  Quit and write changes (i.e. save)          |
+| Esc :q   |  Quit (i.e. quit without saving)             |
+| v        |  Start selection (for cutting or pasting)    |
+| y        |  End selection  (for pasting)                |
+| d        |  End selection  (for cutting)                |
+| P        |  Paste (before cursor)                       |
+| p        |  Paste (after cursor)                        |
+
+
 
