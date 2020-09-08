@@ -177,7 +177,7 @@ mv path/to/file/old_file_name.txt path/to/file/new_file_name.txt
 The ```rm``` command removes (deletes) a file. 
 
 ```
-rm path/to/file_1/file.txt path/to/file_1/new_copy_of_file.txt
+rm path/to/file/file_to_remove.txt 
 ```
 
 CAUTION: In UNIX, again, there is no "Undo" command. You have to know what you are doing. 
@@ -322,6 +322,69 @@ This path is the result of entering
 ```
 which bash
 ```
+
+### Conditional Logic
+
+UNIX commands are powerful enough that you can accomplish a lot with only one-line commands. 
+However, you can also define variables and use conditional logic and repetition. 
+UNIX allows for the common permutations of ```if``` and ```else``` comands that we used in ```R```:
+
+```
+if...fi statement
+if...else...fi statement
+if...elif...else...fi statement
+```
+
+For example, you can define a script to run either ```R``` or ```python```, depending on the setting at the top. 
+
+```
+RUN_WITH = "R" # Choose to run in R. 
+# RUN_WITH = "Python" # Switched off for now.
+# You can switch the chosen language by exchanging the commented line. 
+
+if "$RUN_WITH" = "R"
+then
+    echo "Executing the script in R."
+    Rscript my_script.R > my_R_script_output.out
+elif "$RUN_WITH" = "Python"
+    echo "Executing the script in Python."
+    python3 my_python_script.py > my_py_script_output.out
+else 
+    echo "Error: Language not supported"
+fi
+```
+
+Note that the ```=``` and ```!=``` options are used only for string comparisons. 
+To compare numerically, you must use ```-eq``` and ```-ne```, for "equal" and "not equal", just like ```gt``` and ```lt``` represent "greater than" and "less than"
+You can combine these statements with ```-o``` for **OR** and ```-a``` for **AND**, 
+as in the sample script ```logical.sh``` above. 
+
+### Repetition
+
+
+
+
+
+## Running Scripts in the Background
+
+If a script takes a long time to run, you may want to run it in the background usin the ampersand operator, i.e. the ```&``` operator. 
+Place it at the end of a command and you can press ```Enter``` to get the ```$``` prompt back, ready for more commands. 
+
+```
+python3 my_python_script.py > my_script_output.out &
+$ 
+```
+You will have to find a way to check when it is finished; using ```cat``` or ```tail``` would display the current contents of the output file ```my_script_output.out```.
+
+Even though this process is running in the background, it will terminate if you close your terminal window. 
+Now, if you use the ```nohup``` command, it will make sure that your batch process does ```no```t ```h```ang```up``` when the terminal is closed. 
+
+```
+nohup ./my_shell_script.sh > my_shell_output.out &
+$ 
+```
+
+Then you can come back in an hour (or tomorrow or Monday morning, etc.) to check on the progress of your program. 
 
 
 ## Compressing Files
