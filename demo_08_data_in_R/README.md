@@ -2,9 +2,9 @@
 
 ## Sample Datasets
 
-Many packages make references to classic sample datasets to highlight their usage. 
+Many packages make reference to classic sample datasets to highlight their usage. 
 Two of these are the ```cars``` dataset and the ```iris``` dataset. 
-The ```cars``` dataset has two variables: ```speed``` in mph and ```diat```ance is the stopping distance in feet, appearing in a statistics book by M. Ezekiel in 1930. 
+The ```cars``` dataset has two variables: ```speed``` in mph and ```dist```ance is the stopping distance in feet, appearing in a statistics book by M. Ezekiel in 1930. 
 The ```iris``` dataset has a variety of measurements of samples of three species of flowers from a daset analyzed by R.A. Fisher and E. Anderson in the 1930's. 
 Authors of packages use these datasets since the contents are 
 well-known and users can focus on the contents of the software package. 
@@ -347,6 +347,35 @@ Note that there are twice as many rows:
 nrow(iris_tall_df)
 [1] 300
 ```
+
+### Binding several datasets in a loop
+
+If you have data that are stored in several files, you can join them in a loop. 
+You can initialize a dataset with ```NULL``` and keep appending new rows, as long as the columns are compatible.
+
+```
+iris_full_df <- NULL
+for (file_num in 1:5) {
+    
+    # Get a new dataset from somewhere.
+    next_df <- iris_df
+    
+    # Append it to the full dataset from somewhere.
+    iris_full_df <- rbind(iris_full_df, next_df)
+}
+summary(iris_full_df)
+       Species     Petal.Length    Petal.Width     Sepal.Length    Sepal.Width   
+ setosa    :250   Min.   :1.000   Min.   :0.100   Min.   :4.300   Min.   :2.000  
+ versicolor:250   1st Qu.:1.600   1st Qu.:0.300   1st Qu.:5.100   1st Qu.:2.800  
+ virginica :250   Median :4.350   Median :1.300   Median :5.800   Median :3.000  
+                  Mean   :3.758   Mean   :1.199   Mean   :5.843   Mean   :3.057  
+                  3rd Qu.:5.100   3rd Qu.:1.800   3rd Qu.:6.400   3rd Qu.:3.300  
+                  Max.   :6.900   Max.   :2.500   Max.   :7.900   Max.   :4.400  
+nrow(iris_full_df)
+[1] 750
+```
+This produces a dataset with five smaller datasets stacked on top of each other. 
+
 
 ### Sorting data
 
