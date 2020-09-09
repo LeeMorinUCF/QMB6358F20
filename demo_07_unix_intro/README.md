@@ -361,6 +361,14 @@ as in the sample script ```logical.sh``` above.
 
 ### Repetition
 
+You can also run ```for``` loops in your scripts by following the pattern ```for ... do... done```. 
+The scripts ```for_loop.sh``` and ```file_loop.sh``` provide two examples. 
+Test them for yourself by running the scripts with ```./for_loop.sh``` and ```./file_loop.sh``` in a terminal window. 
+Replace ```./``` with the path to this directory, ```demo_07_unix_intro```, if you are working in another directory, or navigate to that folder first. 
+
+After running ```file_loop.sh```, there will be no output printed to screen but you can see the files created by entering ```ls -lh```. 
+Afterward, you can clean up your mess by entering ```rm file_*.txt``` but be sure that there are no other similarly-named files in that directory that you want to keep. 
+
 
 
 
@@ -445,7 +453,7 @@ Before we move on to ```vim```, the changes in one or more ```commit```s can be 
 git push origin master
 ```
 with ```origin``` representing the particular fork of the repository and ```master``` for the choice of the branch.  
-Again, see (demo_04_version_control)[https://github.com/LeeMorinUCF/QMB6358F20/tree/master/demo_04_version_control] fore more possibilities with ```git```.
+Again, see [demo_04_version_control](https://github.com/LeeMorinUCF/QMB6358F20/tree/master/demo_04_version_control) for more possibilities with ```git```.
 
 
 ## The Default Text Editor: ```vim```
