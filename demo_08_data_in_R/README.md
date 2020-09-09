@@ -359,6 +359,7 @@ for (file_num in 1:5) {
     
     # Get a new dataset from somewhere.
     next_df <- iris_df
+    # You might use a read.csv() function with a particular filename.
     
     # Append it to the full dataset from somewhere.
     iris_full_df <- rbind(iris_full_df, next_df)
