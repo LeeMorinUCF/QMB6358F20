@@ -3,12 +3,20 @@
 UNIX is an operating system, just like Windows or OS X are operating systems, but UNIX has a large array of powerful tools for computing. 
 It is typically accessed through a terminal window: a text-based interface. 
 Without the computational expense of showing images of a desktop and tracking mouse movements, using UNIX at the terminal allows the computer (and the user!) to focus attention on the computing problem at hand. 
-Commands submitted to the UNIX terminal window are run on a program known as a *shell*. 
-The shell that we will use is called *bash*. 
+
+A software training organization called (Software Carpentry)[https://github.com/swcarpentry] maintains a GitHub repository that offers a comprehensive introduction to UNIX at
+(Software Carpentry : Shell Novice)[https://github.com/swcarpentry/shell-novice/tree/gh-pages/_episodes]. 
+You should work through those readings and examples as practice with UNIX, 
+in addition to the material in Chapter 2 of the course textbook by (Paarsch and Golyaev)[https://mitpress.mit.edu/books/gentle-introduction-effective-computing-quantitative-research].
+This computing material seems daunting to many novice programmers but it is essential to solve computing problems on an industrial scale. 
+These skills are what will separate you from the other job candidates who are restricted to problems that can be solved on a single computer. 
+
 
 
 ## Shell Command Syntax
 
+Commands submitted to the UNIX terminal window are run on a program known as a *shell*. 
+The shell that we will use is called *bash*. 
 You submit commands at a command prompt: a line in the window displayed by ```$```.
 The first word of a command is the name of a program. 
 The last words are often arguments, such as names of files or objects on which the commands operate. 
