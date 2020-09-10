@@ -63,9 +63,9 @@ print(sum_sq_dev(x = c(0, 0, 0), mu = 0) == 0)
 print("Testing function covar_y_x:")
 
 # Check values that are output.
-print(covar_y_x(x = c(0, 0, 0), mu = c(0, 0, 0)))
+print(covar_y_x(y = c(0, 0, 0), x = c(0, 0, 0)))
 # Test output against expected answer.
-print(covar_y_x(x = c(0, 0, 0), mu = c(0, 0, 0)) == 0)
+print(covar_y_x(y = c(0, 0, 0), x = c(0, 0, 0)) == 0)
 
 # Add more examples.
 
