@@ -13,10 +13,9 @@
 #
 ################################################################################
 #
-# This shell script runs an R script to test a dataset generated in R.
-# Then it creates the dataset in UNIX, in two ways.
-# It the runs an R script to test the contents of the datasets
-# created in UNIX.
+# This shell script creates a dataset in UNIX, in two ways.
+# It the runs two R scripts to test the contents of the datasets
+# created in UNIX to compare with the results from R.
 #
 # Note: The top line tells where your bash program is located
 #     and should match the result you get when you
