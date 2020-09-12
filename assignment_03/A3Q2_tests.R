@@ -51,14 +51,14 @@ print("Contents of Dataset for Question 2a):")
 
 # Read in the dataset.
 
-# Copy the commands above to print out results.
+# Copy the commands from Question 1 to print out results.
 
 
 print("Contents of Dataset for Question 2b):")
 
 # Read in the dataset.
 
-# Copy the commands above to print out results.
+# Copy the commands from Question 1 to print out results.
 
 
 
