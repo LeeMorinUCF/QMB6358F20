@@ -27,6 +27,7 @@
 
 echo "Cloning git repos..."
 
+# This declares an array of string urls for the loop:
 declare -a REPO_URLS=("https://github.com/git-user-name-1/name-of-repo-1.git"
 "https://github.com/git-user-name-2/name-of-repo-2.git"
 "https://github.com/git-user-name-3/name-of-repo-3.git"
@@ -52,6 +53,7 @@ done
 echo "Copying scripts for Assignment 2..."
 
 
+# This declares an array of paths to folders for the loop:
 declare -a A2_FOLDERS=("name-of-repo-1/assignment_02/"
 "git-user-name-2/assignment_02/"
 "git-user-name-3/assignment_02/"
@@ -80,6 +82,7 @@ done
 
 echo "Pushing changes for Assignment 2..."
 
+# This declares an array of paths inside each repo for the loop:
 declare -a REPO_NAMES==("name-of-repo-1"
 "git-user-name-2"
 "git-user-name-3"
@@ -87,7 +90,7 @@ declare -a REPO_NAMES==("name-of-repo-1"
 
 
 # Initialize into one of the repos.
-cd assignments_all
+cd name-of-repo-1
 for REPO_FOLDER in ${REPO_NAMES[@]}
 do
     # Append the current dataset to the full dataset.
