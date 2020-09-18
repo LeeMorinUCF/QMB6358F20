@@ -1,0 +1,17 @@
+[1] "Testing function sum_sq_dev:"
+[1] 0
+[1] TRUE
+[1] 20
+[1] TRUE
+[1] 14
+[1] TRUE
+[1] NA
+[1] NA
+[1] "Testing function covar_y_x:"
+[1] 0
+[1] TRUE
+[1] 33.33333
+[1] FALSE
+[1] 2.555556
+[1] FALSE
+[1] "Q1 library testing complete."
