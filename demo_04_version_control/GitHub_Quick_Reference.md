@@ -22,7 +22,8 @@ You can always refer back to this guide to get back on track.
 
 # GitHub Troubleshooting Guide
 
-## ```clone```: the first time
+
+## Guide to ```git``` command ```clone```: the first time
 
 To start work on a project stored in an online repository, use ```git clone```:
 
@@ -65,7 +66,7 @@ Be careful not to miss part of the url if typing or copyng it manually.
 
 
 
-## ```status```: to see what you have done
+## Guide to ```git``` command ```status```: to see what you have done
 
 The ```git status``` command gives you a status report of the current changes to the files in your local repository (on your laptop). 
 
@@ -117,7 +118,7 @@ Use ```cd``` to change directory, with ```cd ..``` to move up one directory or `
 This will be the folder with the name of your repository, with the ```ls``` of files and folders that match the first that you see on the online copy.
 
 
-## ```pull```: to update content from other contributors
+## Guide to ```git``` command ```pull```: to update content from other contributors
 
 When another user makes changes to the remote repository (online), you should ```pull``` these changes to your local repo (on your laptop). 
 The default command is
@@ -146,9 +147,10 @@ This often happens when you take notes in your files or run some programs that o
 It can also happen in the workplace if multiple people are working on the same files.
 If ```git``` were to blindly pull the online copy, it would replace the files and your changes would be lost.
 
-When this happens, you should see output like this:
+When this happens, you will see output like this:
 
 
+<img src="Images/Git_Pull_Conflict.png" width="1000"/>
 
 
 
@@ -163,22 +165,95 @@ Now a human (you?) can manually go through the conflicting files and decide what
 
 Sometimes GitHub will be a little too proactive and decide to merge the files for you. 
 If so, it will demand that you enter a message to descripe the changes. 
+This will trigger an antiquated but reliable text editor called ```vim``` and I profusely apologize for you having seen this so early in your compting career. 
+The solution is to give it the merge message that it wants:
+1. Press ```i``` to ```INSERT``` (you should now see the message ```INSERT``` at the bottom of the screen). 
+1. Move to the first empty line and type a message describing the situation, 
+e.g. ```"Pulled changes from lecture and merged with my comments in class"```. 
+1. To exit ```vim``` press ```<Esc>``` to exit ```INSERT``` mode, press colon ```:``` to enter commands, press ```w``` to write (i.e. save) your message, then press ```q``` to quit. After all this, ```vim``` will close and you should now be at your command line. 
 
 
 
+## Guide to ```git``` command ```add```, ```commit``` and ```push```: the steps to update the repo with your changes
 
-## ```add```, ```commit``` and ```push```: to update the repo with your changes
-
+This is the set of steps that are closes to the real work of software development. 
 When you make changes to a file, the content on your local machine (your laptop) does not match the content on the remote repository (online, on github.com). 
+You have to push the changes to the repository in bundles of changes grouped by the ```commit``` command. 
 
 Updating the online repository is a three-step process:
 1. ```git add``` the content, usually by entering ```git add .``` (with a dot at the end). 
 This ```add```s the changes to a set of changes ready to ```commit``` to the repo. 
 1. ```git commit``` a set of changes that you have already ```add```ed. 
+1. ```git push``` will push the content to the online repository. 
 
 
+Again, typing ```git status``` at any time will give a progress report of your changes
+and help you keep track of what you have done and will do next. 
 
-Typing ```git status``` at any time will give a progress report of your changes. 
+## Guide to ```git``` command ```add```: to stage changes to commit
+
+
+Suppose that you have written a block of code in a file in your repository on your laptop. 
+All of the files that you have changed are candidates to commit to a version but you have to ```add``` them to commit. 
+
+When you enter ```git status``` you will see output like this, showing the changed files in red. 
+
+<img src="Images/Git_Status_Before_Add.png" width="1000"/>
+
+To move *all* of these files to the next stage, enter ```git add .``` (including the dot). 
+You can also ```add``` one file at a time by typing, for example, ```git add my_new_file.txt```.
+
+
+### When this works
+
+After this, the staged files should now be shown in green.
+
+<img src="Images/Git_Status_After_Add.png" width="1000"/>
+
+
+### When this fails
+
+It may not work as expected when you enter this command from another location in your repo--and especially not when outside your repo. 
+
+### How to fix it
+
+Use the ```cd``` command to navigate to the first directory of your repo. 
+While you are learning, you can browse to the file on your system in Explorer, right click and select "Git Bash Here" to open a terminal window at the correct location. 
+
+
+## Guide to ```git``` command ```commit```: to collect your changes into one unit
+
+Typically, you collect your changes into one identifyable unit, such as a new feature or a fix of a bug. 
+If you later find you have made a mistake, this is the minimal unit that can be ```revert```ed. 
+You usually plan that this does not happen but it is a feature of version control sofware that you can choose the checkpoints at which you can take a snapshot and preserve as a minimal unit to "undo". 
+
+Entering 
+
+```git commit -m "Updated GitHub quick reference"```
+
+uses the ```-m``` option to include a ```m```essage describing the changes. 
+The message also communicates to other contributors (including "future you") the purpose of the changes, i.e. what problem it solved. 
+You will see the message displayed on the online repo after it is pushed.
+A user can click on that message to see the changes you made to the files.
+To get your changes out in the open you have to ```push``` them. 
+
+
+### When this works
+
+You should see a description like this: 
+
+
+### When this fails
+
+This part is fairly foolproof (I think--famous last words). 
+If you find an error at this stage let me know and I will add some tips to the manual. 
+
+### How to fix it
+
+To be added if a problem is noted here. 
+
+
+## Guide to ```git``` command ```push```: to update the repo with your changes
 
 To update the remote repository, and share your changes with others, use the ```push``` command:
 
@@ -204,6 +279,8 @@ It might be that other changes were made to the online repository since you last
 You can only ```push``` changes if you are working with a current copy. 
 If this happens, you will see a message like this: 
 
+<img src="Images/Git_Push_Conflict.png" width="1000"/>
+
 
 ### How to fix it
 
@@ -213,6 +290,23 @@ These changes have to ```add```ed and ```commit```ted, just as if you made those
 
 Your attempt to ```pull``` might introduce a conflict if new changes were made to the same files in both repositories. 
 Follow the troubleshooting tips under the section about ```pull```ing. 
+
+
+### When *this* fails
+
+If you have not yet ```add```ed and ```commit```ed those changes, you will see a message like this: 
+
+<img src="Images/Git_Push_Conflict_Unfinished.png" width="1000"/>
+
+
+### How to fix *this*
+
+After you pull those changes, you have to ```add``` and ```commit``` them just like any other changes. 
+The difference is that this time you do not have a choice on whether to exclude these files: 
+they were already "approved" by someone when they ```push```ed them. 
+Your copy of the repo is behind theirs and must be made current to include the latest updates before updating with your changes. 
+Put another way, you cannot ```push``` changes from a stale copy of the repo.
+
 
 
 
