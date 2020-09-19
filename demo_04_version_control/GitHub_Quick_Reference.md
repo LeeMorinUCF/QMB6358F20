@@ -303,7 +303,7 @@ It might be that other changes were made to the online repository since you last
 You can only ```push``` changes if you are working with a current copy. 
 If this happens, you will see a message like this: 
 
-<img src="Images/Git_Push_Conflict.png" width="1000"/>
+<img src="Images/Git_Push_Conflict_with_Online.png" width="1000"/>
 
 
 ### How to fix it
