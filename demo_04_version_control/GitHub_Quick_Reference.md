@@ -255,9 +255,14 @@ It itemizes the changes made, including counts of the number of files changed.
 This part is fairly foolproof (I think--famous last words). 
 If you find an error at this stage let me know and I will add some tips to the manual. 
 
+Not so fast! If you forget to add the option ```-m``` to your ```commit``` command, ```git``` wil *insist* that you leave a message. 
+All changes must be documented, even if only with a few wrods. 
+
+
+
 ### How to fix it
 
-To be added if a problem is noted here. 
+
 
 
 ## Guide to ```git``` command ```push```: to update the repo with your changes
