@@ -3,7 +3,7 @@
 This is a short list of the ```git``` commands used in your daily routines. 
 Bookmark this page until you know your way around GitHub. 
 
-The commands are summarized in this table:
+The most common commands are summarized in this table:
 
 | Command                           |  Action                                      |
 | --------------------------------- |  ------------------------------------------- |
@@ -21,7 +21,7 @@ You can always refer back to this list to get back on track.
 
 
 
-## The first time
+## ```clone```: the first time
 
 To start work on a project stored in an online repository, use ```git clone```:
 
@@ -33,7 +33,7 @@ Make sure you do this in a separate folder that is not contained in a repository
 It will make a local copy at your machine in the working directory. 
 
 
-## To see what you have done
+## `T```status```: to see what you have done
 
 The ```git status``` command gives you a status report of the current changes to the files in your local repository (on your laptop). 
 
@@ -43,14 +43,22 @@ The ```git status``` command gives you a status report of the current changes to
 If you have not made any changes you should get a message like the following: 
 
 
+If you have made some changes, they should appear in red or green, depending on their status. 
+If they have been ```add```ed to the staging area to commit, they will be displayed in green. 
+Otherwise, new changes not yet ```add```ed will be displayed in red. 
+The following is an example: 
+
+
 ### When this fails
 
 This command only works inside a repository.
-If there is an excessively long printout of red text, verify that your present working directory is contained within a GitHub repository on your local machine (your laptop), such as your assignment folder or your copy of the class repository.
+If there is an excessively long printout of red text, verify that your present working directory is contained within a GitHub repository on your local machine (your laptop), such as your assignment folder or your copy of the class repository. 
+
+
 
 It could happen that ```git``` does not recognize changes that you have made. 
 It will only recognize changes that occur within the current folder in the repository. 
-
+For example, if I have made changes to a file in the folder ```assignment_02``` and another in ```assignment_03``` but I enter ```git status``` within the folder ```assignment_02```, only the changes within ```assignment_02``` will be displayed. 
 
 
 #### How to fix it
@@ -59,7 +67,7 @@ To include all changes, navigate into the root folder of your repository.
 This will be the folder with the name of your repository, with the ```ls``` of files and folders that match the first that you see on the online copy.
 
 
-## To update content from other contributors
+## ```pull```: to update content from other contributors
 
 When another user makes changes to the remote repository (online), you should ```pull``` these changes to your local repo (on your laptop). 
 The default command is
@@ -97,7 +105,13 @@ If they are changes that I made on my copy, while
 Now a human (you?) can manually go through the conflicting files and decide what changes should be incorporated into the official file (if that is important).
 
 
-## To update content with your changes
+Sometimes GitHub will be a little too proactive and decide to merge the files for you. 
+If so, it will demand that you enter a message to descripe the changes. 
+
+
+
+
+## ```add```, ```commit``` and ```push```: to update the repo with your changes
 
 When you make changes to a file, the content on your local machine (your laptop) does not match the content on the remote repository (online, on github.com). 
 
@@ -130,17 +144,23 @@ If you check the files you just changed, you should see that your latest changes
 
 ### When this fails
 
-
-
+It might be that other changes were made to the online repository since you last ```clone```d or ```pull```ed your current workspace. 
+You can only ```push``` changes if you are working with a current copy. 
+If this happens, you will see a message like this: 
 
 
 #### How to fix it
 
+You have to update your repository by ```pull```ing those changes. 
+Go back to ```pull``` those changes and now there are new changes to your local machine.
+These changes have to ```add```ed and ```commit```ted, just as if you made those changes yourself. 
+
+Your attempt to ```pull``` might introduce a conflict if new changes were made to the same files in both repositories. 
+Follow the troubleshooting tips under the section about ```pull```ing. 
 
 
 
-
-## If all else fails
+## ```clone```: If all else fails
 
 If, for some reason, you cannot get your material to commit, you can always start over. 
 
@@ -151,8 +171,15 @@ If, for some reason, you cannot get your material to commit, you can always star
 1. After ```push```ing the changes, you should see your latest work in the online repository through your browser. 
 Click the refresh button to display the latest content. 
 
+The best part about GitHub is that it allows you to make mistakes and start over. 
+GitHub is version control software that stored a copy online, no matter what happens to your physical copy on your laptop. 
+You can ```clone``` a new copy and start over. 
+You might want to delete the previous ```clone```s but first you should ```git status``` in that folder to see whether you have made some changes that you want to copy to the new ```clone```. 
+Then follow the procedure above to ```push``` them to the online repository where they are stored securely. 
 
 
+
+## Template:
 
 ### When this works
 
