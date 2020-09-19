@@ -328,6 +328,20 @@ To get out of there, I press the arcane sequence of keystrokes ```<Esc>```, ```:
 Note the keystrokes I pressed are appearing in the bottom left corner.
 After pressing ```<Enter>``` I get back to my trerminal window with my ```pull``` completed as if nothing unusual happened. 
 
+Now it is as if you made those changes yourself. 
+Checked the ```status``` to see the changes in red, then ```add``` and ```commit``` them and now ```push``` with 
+```
+git push origin master
+```
+With much relief you will see the usual result after the ```push``` command, as if nothing unusual happened:
+
+<img src="Images/Git_Push_Conflict_resolved.png" width="1000"/>
+
+
+If you see this, congratulations, you survived. 
+Next time it will be easier.
+
+If you somehow fall short and are in a bind, you can always...
 
 
 ## ```clone```: If all else fails
