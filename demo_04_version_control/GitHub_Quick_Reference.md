@@ -129,7 +129,13 @@ This uses the program ```git``` to ```pull``` the contant from the online repo (
 
 ### When this works
 
-When this command is successful, you should see...
+When this command is successful, you should see a screen like the following:
+
+
+<img src="Images/Git_Pull_Example.png" width="1000"/>
+
+The green arrow highlights the file that was added by some user to the remote repository (online) that was pulled to the local copy (my laptop). 
+The green plus sign indicates a file that was added and its path in the repository. 
 
 
 ### When this fails
