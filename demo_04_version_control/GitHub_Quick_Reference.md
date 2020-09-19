@@ -156,7 +156,7 @@ When this happens, you should see output like this:
 ### How to fix it
 
 An easy way to fix this is to identify the affected files in the message and change those file names to make them unique. 
-If they are changes that I made on my copy, while 
+If they are changes that I made on my copy, while someone else pushed changes to the same file, I usually rename it by adding my initials ```_LM``` or something like ```_v2``` for "version 2". 
 
 Now a human (you?) can manually go through the conflicting files and decide what changes should be incorporated into the official file (if that is important).
 
