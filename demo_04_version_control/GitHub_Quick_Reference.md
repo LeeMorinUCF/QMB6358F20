@@ -245,6 +245,10 @@ To get your changes out in the open you have to ```push``` them.
 
 You should see a description like this: 
 
+<img src="Images/Git_Commit_Success.png" width="1000"/>
+
+It itemizes the changes made, including counts of the number of files changed. 
+
 
 ### When this fails
 
@@ -266,15 +270,22 @@ git push origin master
 
 ### When this works
 
-When this command is successful, you should see...
+When this command is successful, you should see. 
+
+<img src="Images/Git_Push_Success.png" width="1000"/>
+
+Uneventful is good here. 
+No nasty colored error messages, just plain vanilla business as usual: 
+an uninteresting list of the reading, counting, compressing, transferring and writing of the files containing the work you just did. 
 
 
 You should see your latest work in the online repository through your browser. 
 Click the refresh button to display the latest content. 
 If you check the files you just changed, you should see that your latest changes are online. 
+If it is late Wednesday night, you can finally get some sleep. 
+You've earned it! 
 
-
-
+In any other case...
 
 ### When this fails
 
@@ -329,7 +340,7 @@ To get out of there, I press the arcane sequence of keystrokes ```<Esc>```, ```:
 <img src="Images/Git_Push_Conflict_vim_escape.png" width="1000"/>
 
 Note the keystrokes I pressed are appearing in the bottom left corner.
-After pressing ```<Enter>``` I get back to my trerminal window with my ```pull``` completed as if nothing unusual happened. 
+After pressing ```<Enter>``` I get back to my terminal window with my ```pull``` completed as if nothing unusual happened. 
 
 Now it is as if you made those changes yourself. 
 Checked the ```status``` to see the changes in red, then ```add``` and ```commit``` them and now ```push``` with 
