@@ -256,14 +256,19 @@ This part is fairly foolproof (I think--famous last words).
 If you find an error at this stage let me know and I will add some tips to the manual. 
 
 Not so fast! If you forget to add the option ```-m``` to your ```commit``` command, ```git``` wil *insist* that you leave a message. 
-All changes must be documented, even if only with a few wrods. 
-
+All changes must be documented, even if only with a few words. 
+You now have to endure the torture of interacting with the text editor called ```vim``` to enter this message, kicking and screaming, if necessary. 
 
 
 ### How to fix it
 
+Follow the steps outlined after a similar outcome in the help for ```git push``` below. 
+I add a message to the top row, including an admission that I forgot to add the message. 
 
+<img src="Images/Git_Commit_Forgot_Message.png" width="1000"/>
 
+You won't make that mistake again. 
+*Now* you are ready to ```push``` your changes.
 
 ## Guide to ```git``` command ```push```: to update the repo with your changes
 
