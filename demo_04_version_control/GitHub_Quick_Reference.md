@@ -58,7 +58,11 @@ git clone https://github.com/LeeMorinUCF/QMB6358F20.git
 
 ### How to fix it
 
-Make sure the repo is spelled correctly and that 
+Make sure the repo is spelled correctly and that you have ```git``` and GitHub installed. 
+Be careful not to miss part of the url if typing or copyng it manually.
+
+
+
 
 
 ## ```status```: to see what you have done
@@ -69,6 +73,8 @@ The ```git status``` command gives you a status report of the current changes to
 ### When this works
 
 If you have not made any changes you should get a message like the following: 
+
+<img src="Images/Git_Status.png" width="1000"/>
 
 
 If you have made some changes, they should appear in red or green, depending on their status. 
