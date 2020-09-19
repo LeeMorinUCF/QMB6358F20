@@ -380,7 +380,7 @@ If, for some reason, you cannot get your material to commit, you can always star
 Click the refresh button to display the latest content. 
 
 The best part about GitHub is that it allows you to make mistakes and start over. 
-GitHub is version control software that stored a copy online, no matter what happens to your physical copy on your laptop. 
+GitHub is version control software that stored a copy online, which will be avaialble no matter what happens to your physical copy on your laptop. 
 You can ```clone``` a new copy and start over. 
 You might want to delete the previous ```clone```s but first you should ```git status``` in that folder to see whether you have made some changes that you want to copy to the new ```clone```. 
 Then follow the procedure above to ```push``` them to the online repository where they are stored securely. 
@@ -389,6 +389,6 @@ Then follow the procedure above to ```push``` them to the online repository wher
 
 ## If *even this* fails
 
-As a lest resort, worst-case scenario, you can resort to uploading you changes to files one-by-one by interacting with the online repo through your browser. 
+As a last resort, worst-case scenario, you can resort to uploading you changes to files one-by-one by interacting with the online repo through your browser. 
 I know that this is sometimes the culmination of some frustrating attempts at troubleshooting but sometimes it is the only thing you can get to work this late on a Wednesday night. 
 Upload your work for the world to see, get credit for your work, and get some sleep so you can figure it out tomorrow. 
