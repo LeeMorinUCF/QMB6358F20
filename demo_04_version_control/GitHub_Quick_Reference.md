@@ -172,13 +172,14 @@ The solution is to give it the merge message that it wants:
 1. Move to the first empty line and type a message describing the situation, 
 e.g. ```"Pulled changes from lecture and merged with my comments in class"```. 
 1. To exit ```vim``` press ```<Esc>``` to exit ```INSERT``` mode, press colon ```:``` to enter commands, press ```w``` to write (i.e. save) your message, then press ```q``` to quit. After all this, ```vim``` will close and you should now be at your command line. 
+
 This painful eventuality is described in more detail when ```push``` fails. 
 
 
 
-## Guide to ```git``` command ```add```, ```commit``` and ```push```: the steps to update the repo with your changes
+## Guide to ```git``` commands ```add```, ```commit``` and ```push```: the steps to update the repo with your changes
 
-This is the set of steps that are closes to the real work of software development. 
+This is the set of steps that are closest to the real work of software development. 
 When you make changes to a file, the content on your local machine (your laptop) does not match the content on the remote repository (online, on github.com). 
 You have to push the changes to the repository in bundles of changes grouped by the ```commit``` command. 
 
@@ -225,7 +226,7 @@ While you are learning, you can browse to the file on your system in Explorer, r
 
 ## Guide to ```git``` command ```commit```: to collect your changes into one unit
 
-Typically, you collect your changes into one identifyable unit, such as a new feature or a fix of a bug. 
+Typically, you collect your changes into one identifiable unit, such as a new feature or a fix of a bug. 
 If you later find you have made a mistake, this is the minimal unit that can be ```revert```ed. 
 You usually plan that this does not happen but it is a feature of version control sofware that you can choose the checkpoints at which you can take a snapshot and preserve as a minimal unit to "undo". 
 
