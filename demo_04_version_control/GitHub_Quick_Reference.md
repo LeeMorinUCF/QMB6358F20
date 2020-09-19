@@ -74,13 +74,17 @@ The ```git status``` command gives you a status report of the current changes to
 
 If you have not made any changes you should get a message like the following: 
 
-<img src="Images/Git_Status.png" width="1000"/>
+<img src="Images/Git_Clean.png" width="1000"/>
 
 
 If you have made some changes, they should appear in red or green, depending on their status. 
 If they have been ```add```ed to the staging area to commit, they will be displayed in green. 
 Otherwise, new changes not yet ```add```ed will be displayed in red. 
 The following is an example: 
+
+
+<img src="Images/Git_Status.png" width="1000"/>
+
 
 
 ### When this fails
