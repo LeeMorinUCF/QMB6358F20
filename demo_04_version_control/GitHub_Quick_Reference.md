@@ -88,16 +88,28 @@ The following is an example:
 This command only works inside a repository.
 If there is an excessively long printout of red text, verify that your present working directory is contained within a GitHub repository on your local machine (your laptop), such as your assignment folder or your copy of the class repository. 
 
+For example, if your working directory is one step outside the repository, you would see something like this:
+
+<img src="Images/Git_Outside.png" width="1000"/>
+
+Note that the command prompt is outside of the folder containing the repo ```QMB6358F20```. This is not a repository, so ```git``` is confused about the status and includes many files. 
+It appears as though all files in that folder are candidates for a repository. 
 
 
-It could happen that ```git``` does not recognize changes that you have made. 
+
+It could also happen that ```git``` does not recognize changes that you have made. 
 It will only recognize changes that occur within the current folder in the repository. 
-For example, if I have made changes to a file in the folder ```assignment_02``` and another in ```assignment_03``` but I enter ```git status``` within the folder ```assignment_02```, only the changes within ```assignment_02``` will be displayed. 
+This happened to some of us in class during Module 3.
+We made changes to files in the folder ```assignment_02``` and other files in ```assignment_03```. 
+When entering ```git status``` within the folder ```assignment_02```, only the changes within ```assignment_02``` were displayed. 
+
+
 
 
 ### How to fix it
 
 To include all changes, navigate into the root folder of your repository. 
+Use ```cd``` to change directory, with ```cd ..``` to move up one directory or ```cd QMB6358F20``` from outside to move into the repository ```QMB6358F20```. 
 This will be the folder with the name of your repository, with the ```ls``` of files and folders that match the first that you see on the online copy.
 
 
