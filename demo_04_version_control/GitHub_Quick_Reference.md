@@ -299,6 +299,7 @@ If you have not yet ```add```ed and ```commit```ed those changes, you will see a
 <img src="Images/Git_Push_Conflict_Unfinished.png" width="1000"/>
 
 
+
 ### How to fix *this*
 
 After you pull those changes, you have to ```add``` and ```commit``` them just like any other changes. 
@@ -307,6 +308,25 @@ they were already "approved" by someone when they ```push```ed them.
 Your copy of the repo is behind theirs and must be made current to include the latest updates before updating with your changes. 
 Put another way, you cannot ```push``` changes from a stale copy of the repo.
 
+Now you once again get pushed into the circle of hell that is called ```vim```. 
+
+<img src="Images/Git_Push_Conflict_vim.png" width="1000"/>
+
+You have committed changes out of order, so you have to explain yourself. 
+After pressing ```i``` to ```INSERT```, 
+I included this message on the second line of this document:
+
+
+<img src="Images/Git_Push_Conflict_vim_message.png" width="1000"/>
+
+You can see my message highlighted in red. 
+
+To get out of there, I press the arcane sequence of keystrokes ```<Esc>```, ```:```, ```w``` and ```q``` and the screen looks as follows. 
+
+<img src="Images/Git_Push_Conflict_vim_escape.png" width="1000"/>
+
+Note the keystrokes I pressed are appearing in the bottom left corner.
+After pressing ```<Enter>``` I get back to my trerminal window with my ```pull``` completed as if nothing unusual happened. 
 
 
 
