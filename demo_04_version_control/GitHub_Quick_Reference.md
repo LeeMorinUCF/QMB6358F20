@@ -126,7 +126,8 @@ The default command is
 ```
 git pull origin master
 ```
-This uses the program ```git``` to ```pull``` the contant from the online repo (the ```origin```, from which you originally ```clone```d it) and it ```pull```s the content from the ```master``` branch, which is the default. 
+This uses the program ```git``` to ```pull``` the content from the online repo (the ```origin```, from which you originally ```clone```d it) and it ```pull```s the content from the ```master``` branch, which is the default. 
+I discuss branches in the ```README.md``` file within this demo. 
 
 ### When this works
 
@@ -171,6 +172,7 @@ The solution is to give it the merge message that it wants:
 1. Move to the first empty line and type a message describing the situation, 
 e.g. ```"Pulled changes from lecture and merged with my comments in class"```. 
 1. To exit ```vim``` press ```<Esc>``` to exit ```INSERT``` mode, press colon ```:``` to enter commands, press ```w``` to write (i.e. save) your message, then press ```q``` to quit. After all this, ```vim``` will close and you should now be at your command line. 
+This painful eventuality is described in more detail when ```push``` fails. 
 
 
 
@@ -363,14 +365,8 @@ Then follow the procedure above to ```push``` them to the online repository wher
 
 
 
-## Template:
+## If *even this* fails
 
-### When this works
-
-
-### When this fails
-
-
-### How to fix it
-
-
+As a lest resort, worst-case scenario, you can resort to uploading you changes to files one-by-one by interacting with the online repo through your browser. 
+I know that this is sometimes the culmination of some frustrating attempts at troubleshooting but sometimes it is the only thing you can get to work this late on a Wednesday night. 
+Upload your work for the world to see, get credit for your work, and get some sleep so you can figure it out tomorrow. 
