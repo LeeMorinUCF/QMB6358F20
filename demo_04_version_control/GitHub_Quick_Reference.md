@@ -17,9 +17,10 @@ The most common commands are summarized in this table:
 
 Eventually, you will get to the point that your use of GitHub is uneventful and the commands work as they should. 
 In the off chance that something does go wrong, troubleshooting tips are outlined in what follows. 
-You can always refer back to this list to get back on track. 
+You can always refer back to this guide to get back on track. 
 
 
+# GitHub Troubleshooting Guide
 
 ## ```clone```: the first time
 
@@ -33,7 +34,34 @@ Make sure you do this in a separate folder that is not contained in a repository
 It will make a local copy at your machine in the working directory. 
 
 
-## `T```status```: to see what you have done
+### When this works
+
+This should work almost all of the time, once you get it working once. 
+If you have GitBash and ```git``` installed and access to the internet, it should work fine. 
+
+You need to be logged in to GitHub or have previously entered your login credentials. 
+If not, you will typically be promted for GitHub login credentials through a pop-up window or at the command line in your terminal. 
+
+### When this fails
+
+It fails when you do not enter the url for a valid repository for which you have access. 
+make sure that you copy the url from the GitHub home page for the target repo. 
+
+<img src="Images/Copy_url_to_clone.png" width="1000"/>
+
+In this case, the url should match the url in the address bar, with extension ```.git```.
+
+```
+git clone https://github.com/LeeMorinUCF/QMB6358F20.git
+```
+
+
+### How to fix it
+
+Make sure the repo is spelled correctly and that 
+
+
+## ```status```: to see what you have done
 
 The ```git status``` command gives you a status report of the current changes to the files in your local repository (on your laptop). 
 
@@ -61,7 +89,7 @@ It will only recognize changes that occur within the current folder in the repos
 For example, if I have made changes to a file in the folder ```assignment_02``` and another in ```assignment_03``` but I enter ```git status``` within the folder ```assignment_02```, only the changes within ```assignment_02``` will be displayed. 
 
 
-#### How to fix it
+### How to fix it
 
 To include all changes, navigate into the root folder of your repository. 
 This will be the folder with the name of your repository, with the ```ls``` of files and folders that match the first that you see on the online copy.
@@ -97,7 +125,7 @@ When this happens, you should see output like this:
 
 
 
-#### How to fix it
+### How to fix it
 
 An easy way to fix this is to identify the affected files in the message and change those file names to make them unique. 
 If they are changes that I made on my copy, while 
@@ -149,7 +177,7 @@ You can only ```push``` changes if you are working with a current copy.
 If this happens, you will see a message like this: 
 
 
-#### How to fix it
+### How to fix it
 
 You have to update your repository by ```pull```ing those changes. 
 Go back to ```pull``` those changes and now there are new changes to your local machine.
@@ -187,6 +215,6 @@ Then follow the procedure above to ```push``` them to the online repository wher
 ### When this fails
 
 
-#### How to fix it
+### How to fix it
 
 
