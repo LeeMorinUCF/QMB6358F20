@@ -285,6 +285,28 @@ As mentioned above, the ```>``` operator directs the output of the ```R``` scrip
 With the ```R CMD BATCH``` command, the default is to print the results to a file in the second argument above. 
 
 
+Note that the path to your installation of ```R.exe``` and ```Rscript.exe``` 
+must be added to your ```$PATH``` environment variable.
+This tells UNIX where to look for the file when you try to run ```R``` and ```Rscript``` commands. 
+To run these commands, you need to add the ```R``` path to your ```$PATH``` variable.
+
+
+```
+$ export PATH="$PATH:/c/Program Files/R/R-4.0.2/bin"
+```
+
+
+You would have to run this command each tim you open a terminal window, if you want to run ```R``` during that session.
+To avoid this repetition, you can add it to a file in your home directory called ```.bashrc```, such as the one available above. 
+If you navigate to this location on your local machine, you can copy it to your home directory with the ```cp``` command:
+
+```
+cp .bashrc ~/
+```
+
+This is just one of many shell scripts that you can run to automate your programs. 
+
+
 ### Running ```shell``` scripts
 
 A shell script is a program containing UNIX commands. 

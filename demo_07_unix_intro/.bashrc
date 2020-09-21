@@ -12,8 +12,8 @@ export PATH="$PATH:/c/Program Files/R/R-4.0.2/bin"
 # You can also set up aliases, i.e. shortcuts to other programs
 # so that you don't need to type as much.
 # I will leave that to you to learn it yourself.
-# While you are learning unix, it is better to type in the commands
-# To gain practice at the terminal window. 
+# While you are learning UNIX, it is better to type in the commands
+# to gain practice at the terminal window. 
 
 
 # End
