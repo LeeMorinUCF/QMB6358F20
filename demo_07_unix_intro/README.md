@@ -326,9 +326,9 @@ a, 1 2
 f, 7 9
 ```
 
-
-
-Notice that only some of the 
+Notice that only some of the rows are present. 
+In this case, only the rows with matching keys end up in the resulting file.
+This is called an ```INNER JOIN``` in the ```SQL``` query language, which we will use later in the course. 
 
 In a more complex (and more realistic) situation, you will have to specify what happens when not all of the information is available. 
 The following command is an example: 
