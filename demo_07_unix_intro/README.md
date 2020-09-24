@@ -234,17 +234,166 @@ cat my_file.txt
 which will print the entire contents of a file. 
 If the file is large, most of the printout will quickly pass you by. 
 You can redirect output to another file with the redirect operators ```>``` or ```>>```. 
-The power of this command is realized when you want to concatenate two files:
+
+## Connecting separate files
+
+### Concatenating files with ```cat```
+
+The power of th ```cat``` command is realized when you want to concatenate two files.
+You can con```cat```enate two or more files and the result is a file that is made up of the separate file stacked on top of each other. 
 
 ```
 echo "The quick brown fox" > file_1.txt
+echo " " >> file_1.txt
 echo "jumped over the lazy dogs." > file_2.txt
 cat file_1.txt file_2.txt > file_3.txt
 ls
 cat file_3.txt
 ```
-The first three commands create each of the files, 
+The first four commands create each of the files, 
 and the last two commands show the contents of the directory and the combined file. 
+
+### Pasting files with ```paste```
+
+You can also create a file by appending several files side-by-side. 
+The ```paste``` command is useful for this. 
+Consider the following simple file constructed with the ```echo``` command:
+
+```
+echo "a b" > A.dat
+echo "c d" >> A.dat
+echo "e f" >> A.dat
+cat A.dat
+```
+
+Now create another file:
+```
+echo "1 2 3 4" > B.dat
+echo "5 6 7 8" >> B.dat
+```
+
+Paste them together with the ```paste``` command:
+```
+paste A.dat B.dat
+```
+Maybe you want to open this file in a text editor to see what it looks like. 
+Output the result to a third file instead:
+```
+paste A.dat B.dat > C.dat
+cat C.dat
+```
+There are many other tricks you can do with the options on these commands. 
+For example, cut out the second and third columns, where the delimiter is a space
+```
+cut -d ' ' -f 2-3 B.dat > D.dat
+cat D.dat
+```
+
+Now paste this to the first file to see what difference it made.
+```
+paste D.dat A.dat
+```
+
+### Joining files with ```join```
+
+This procedure is a little more complicated because each row in the datasets are identified with a key. 
+In the files ```file1.txt``` and ```file2.txt```, the key is the letters ```a-g``` in the first column of each dataset. 
+These files are saved in this directory but I show the contents below to explain the example. 
+
+Contents of ```file1.txt```:
+```
+a, 1
+b, 5
+c, 2
+f, 7
+```
+
+Contents of ```file2.txt```:
+```
+a, 2
+f, 9
+g, 3
+```
+
+
+The following command joins the two files together.
+```
+join file1.txt file2.txt
+```
+The result is 
+```
+a, 1 2
+f, 7 9
+```
+
+
+
+Notice that only some of the 
+
+In a more complex (and more realistic) situation, you will have to specify what happens when not all of the information is available. 
+The following command is an example: 
+```
+join -t, -a 1 -a 2 -o0,1.2,2.2 -e ' -' file1.txt file2.txt
+```
+The result is 
+```
+a, 1, 2
+b, 5, -
+c, 2, -
+f, 7, 9
+g, -, 3
+```
+
+There are a lot of options to that command, so I paste an explanation below. 
+
+The options used above tells the utility to expect comma-delimited input (```-t,```) 
+and to produce output for all entries in both files 
+(```-a 1 -a 2```, otherwise it would only produce output for lines with matching first field). 
+We then ask for the join field along with the second column of both files to be outputted (```-o0,1.2,2.2```) and say that any missing field should be replaced by the string ```" -"``` (space-dash, with ```-e ' -'```).
+
+If the input is not sorted, it has to be pre-sorted. 
+In shells that understands process substitution with ```<( ... )```, this my be done through
+
+```
+join -t, -a 1 -a 2 -o0,1.2,2.2 -e ' -' <( sort file1.txt ) <( sort file2.txt )
+```
+See below for more information about the sort command. 
+
+To give full credit where it is due, this example is base on a response to a question on the website <unix.stackexchange.com>:
+
+[join-two-files-based-on-a-column](https://unix.stackexchange.com/questions/395961/join-two-files-based-on-a-column)
+
+
+Another excellent example can be found here:
+
+[Linux and Unix join command tutorial with examples](https://shapeshed.com/unix-join/)
+
+In this case, the data are not so well behaved. 
+The data have to be sorted and the columns are not in a natural order. 
+
+
+### Sorting files with ```sort```
+
+Before or after these procedures, you may need to sort your dataset. 
+Let's make another dataset to show how this works:
+```
+# Create a file of names
+echo "Taylor" > Names.dat
+echo "Jones" >> Names.dat
+echo "Smith" >> Names.dat
+```
+
+Take a look at the file.
+```
+cat Names.dat
+```
+
+Now sort them and take another look
+```
+sort Names.dat > SortedNames.dat
+
+cat SortedNames.dat
+```
 
 
 ## Running scripts
