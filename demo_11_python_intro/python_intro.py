@@ -72,15 +72,26 @@ x = 3
 
 x = 'string'
 
-print x
+print(x)
 
 
 # As in many other languages, python is case-sensitive:
 
-print X
+print(X)
 
 
 # In the above, x was last set as type string
+
+
+# The print statement automatically concatenates strings. 
+
+print("this","is","one","string")
+
+
+# Compare with this:
+
+print("this","is","one","string", sep = "")
+
 
 #--------------------------------------------------
 ### Selecting elements of objects
@@ -108,7 +119,7 @@ x[2] = 'x'
 # If you want to do such a thing, there is always a work-around:
 
 x = x[0:2] + 'x' + x[3:7]
-print x
+print(x)
 
 # This was done by taking the two substrings on each side of element two and forming a new string by concatenating them with a one-letter string in the middle. 
 
@@ -192,7 +203,7 @@ a = [[1, 2, 3], [4, 5, 6]]
 
 # Once an array is in memory, you can extract subsets of the data by using the 2-dimensional notation. 
 
-print a
+print(a)
 
 print(a[0])
 print(a[1])
@@ -278,13 +289,13 @@ elif age <= 17 and age > 12:
 
 words = ['cat', 'window', 'defenestrate']
 for w in words:
-    print w, len(w)
+    print(w, len(w))
 
 
 # Compare with this:
 
 for w in 'words':
-    print w
+    print(w)
 
 
 # While loops work just as they do in other languages. 
@@ -439,7 +450,7 @@ def FeetToMetres(feet):
     centi = 2.54
     inches = 12
     return feet*inches*centi/100
-print "x"
+print("x")
 
 
 # Consider this example. What if I make a mistake in spelling a variable?

@@ -43,12 +43,12 @@ x = 3
 
 x = 'string'
 
-print x
+print(x)
 ```
 
 As in many other languages, python is case-sensitive:
 ```
-print X
+print(X)
 ```
 
 In the above, ```x``` was last set as type ```string```
@@ -77,7 +77,7 @@ x[2] = 'x'
 If you want to do such a thing, there is always a work-around:
 ```
 x = x[0:2] + 'x' + x[3:7]
-print x
+print(x)
 ```
 This was done by taking the two substrings on each side of element two and forming a new string by concatenating them with a one-letter string in the middle. 
 
@@ -154,7 +154,7 @@ For now, the above are acceptable because ```a``` is technically a ```list```, w
 
 Once an array is in memory, you can extract subsets of the data by using the 2-dimensional notation. 
 ```
-print a
+print(a)
 
 print(a[0])
 print(a[1])
@@ -233,13 +233,13 @@ As with ```if``` statements, use a colon ```:``` and indent properly to denote t
 ```
 words = ['cat', 'window', 'defenestrate']
 for w in words:
-    print w, len(w)
+    print(w, len(w))
 ```
 
 Compare with this:
 ```
 for w in 'words':
-    print w
+    print(w)
 ```
 
 While loops work just as they do in other languages. 
@@ -366,7 +366,7 @@ def FeetToMetres(feet):
     centi = 2.54
     inches = 12
     return feet*inches*centi/100
-    print "Calculation complete"
+    print("Calculation complete")
 ```
 Indenting usually indicates when the function block is over but, just like with ```R```, the ```return``` statement ends the execution of the function. 
 ```
@@ -390,7 +390,7 @@ def FeetToMetres(feet):
     centi = 2.54
     inches = 12
     return feet*inches*centi/100
-print "x"
+print("x")
 ```
 
 Consider this example. What if I make a mistake in spelling a variable?
