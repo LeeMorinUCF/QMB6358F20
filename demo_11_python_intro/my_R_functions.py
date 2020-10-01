@@ -43,7 +43,8 @@ import math
 #--------------------------------------------------
 
 def multiply_two(num_1, num_2):
-  
+    
+    
     name_of_output = float('NaN')
     
     return name_of_output
@@ -56,7 +57,7 @@ def multiply_two(num_1, num_2):
 #--------------------------------------------------
 
 def is_it_5_or_6(num_in):
-  
+    
     name_of_output = float('NaN')
     
     return name_of_output
@@ -69,7 +70,7 @@ def is_it_5_or_6(num_in):
 #--------------------------------------------------
 
 def color_by_number(num_in):
-  
+    
     name_of_output = float('NaN')
     
     return name_of_output
@@ -82,7 +83,7 @@ def color_by_number(num_in):
 #--------------------------------------------------
 
 def multiples_of_5(n):
-  
+    
     name_of_output = float('NaN')
     
     return name_of_output
@@ -95,7 +96,7 @@ def multiples_of_5(n):
 #--------------------------------------------------
 
 def count_even_numbers(end_num):
-  
+    
     name_of_output = float('NaN')
     
     return name_of_output
@@ -108,7 +109,7 @@ def count_even_numbers(end_num):
 #--------------------------------------------------
 
 def summarize_5_numbers(num_1, num_2, num_3, num_4, num_5):
-  
+    
     name_of_output = float('NaN')
     
     return name_of_output

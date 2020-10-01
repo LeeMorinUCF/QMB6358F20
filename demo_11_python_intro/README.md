@@ -76,7 +76,7 @@ If you want to do such a thing, there is always a work-around:
 x = x[0:2] + 'x' + x[3:7]
 print x
 ```
-This was done by 
+This was done by taking the two substrings on each side of element two and forming a new string by concatenating them with a one-letter string in the middle. 
 
 Be careful with the index numbers. You have to keep track of the number of elements. 
 ```
@@ -99,8 +99,7 @@ The exclamation point is also used to test if two values are not equal.
 ```
 other_boolean_ind = x != 5
 ```
-Python also has a more versatile set of commands that work like they do in the
-English language.
+Python also has a more versatile set of commands that work like they do in the English language.
 ```
 yet_another_boolean_ind = not x == 5
 ```
