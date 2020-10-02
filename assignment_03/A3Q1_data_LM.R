@@ -56,7 +56,7 @@ A3Q1_data <- NULL
 for (file_num in 1:num_files) {
 
   # Set the filename.
-  file_name <- paste('iris', file_num, '.txt', sep = "")
+  file_name <- paste('iris_', file_num, '.txt', sep = "")
 
   # A3Q1a) Print filename.
   print(file_name)
