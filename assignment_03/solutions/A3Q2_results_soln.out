@@ -1,0 +1,41 @@
+[1] "Contents of Dataset for Question 2a):"
+[1] "Dimensions of dataset:"
+[1] 15000     6
+     Sample        Sepal.Length    Sepal.Width     Petal.Length  
+ Min.   :  1.00   Min.   :4.273   Min.   :1.972   Min.   :0.978  
+ 1st Qu.: 25.75   1st Qu.:5.103   1st Qu.:2.796   1st Qu.:1.584  
+ Median : 50.50   Median :5.793   Median :3.005   Median :4.351  
+ Mean   : 50.50   Mean   :5.843   Mean   :3.057   Mean   :3.758  
+ 3rd Qu.: 75.25   3rd Qu.:6.404   3rd Qu.:3.314   3rd Qu.:5.102  
+ Max.   :100.00   Max.   :7.929   Max.   :4.424   Max.   :6.928  
+  Petal.Width      Species         
+ Min.   :0.069   Length:15000      
+ 1st Qu.:0.300   Class :character  
+ Median :1.307   Mode  :character  
+ Mean   :1.199                     
+ 3rd Qu.:1.806                     
+ Max.   :2.528                     
+
+    setosa versicolor  virginica 
+      5000       5000       5000 
+[1] "#--------------------------------------------------"
+[1] "Contents of Dataset for Question 2b):"
+[1] "Dimensions of dataset:"
+[1] 15000     6
+     Sample        Sepal.Length    Sepal.Width     Petal.Length  
+ Min.   :  1.00   Min.   :4.273   Min.   :1.972   Min.   :0.978  
+ 1st Qu.: 25.75   1st Qu.:5.103   1st Qu.:2.796   1st Qu.:1.584  
+ Median : 50.50   Median :5.793   Median :3.005   Median :4.351  
+ Mean   : 50.50   Mean   :5.843   Mean   :3.057   Mean   :3.758  
+ 3rd Qu.: 75.25   3rd Qu.:6.404   3rd Qu.:3.314   3rd Qu.:5.102  
+ Max.   :100.00   Max.   :7.929   Max.   :4.424   Max.   :6.928  
+  Petal.Width      Species         
+ Min.   :0.069   Length:15000      
+ 1st Qu.:0.300   Class :character  
+ Median :1.307   Mode  :character  
+ Mean   :1.199                     
+ 3rd Qu.:1.806                     
+ Max.   :2.528                     
+
+    setosa versicolor  virginica 
+      5000       5000       5000 

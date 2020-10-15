@@ -1,0 +1,218 @@
+Running test of Assignment 3...
+Running commands for Question 2a)...
+List of files in iris folder:
+total 2.5M
+-rw-r--r-- 1 le279259 1049089    0 Oct  3 18:16 A3Q1_results_soln.out
+-rw-r--r-- 1 le279259 1049089 567K Oct  1 21:01 A3Q2_ex.txt
+-rw-r--r-- 1 le279259 1049089    0 Oct  3 18:16 A3Q2_results_soln.out
+-rw-r--r-- 1 le279259 1049089 567K Oct  3 18:19 A3Q2a_full.txt
+-rw-r--r-- 1 le279259 1049089 567K Oct  3 18:19 A3Q2b_full.txt
+-rw-r--r-- 1 le279259 1049089 5.6K Sep 12 17:56 iris_1.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_10.txt
+-rw-r--r-- 1 le279259 1049089 5.9K Sep 12 17:56 iris_100.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_11.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_12.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_13.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_14.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_15.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_16.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_17.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_18.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_19.txt
+-rw-r--r-- 1 le279259 1049089 5.6K Sep 12 17:56 iris_2.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_20.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_21.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_22.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_23.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_24.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_25.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_26.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_27.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_28.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_29.txt
+-rw-r--r-- 1 le279259 1049089 5.6K Sep 12 17:56 iris_3.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_30.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_31.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_32.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_33.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_34.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_35.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_36.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_37.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_38.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_39.txt
+-rw-r--r-- 1 le279259 1049089 5.6K Sep 12 17:56 iris_4.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_40.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_41.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_42.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_43.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_44.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_45.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_46.txt
+-rw-r--r-- 1 le279259 1049089 5.8K Sep 12 17:56 iris_47.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_48.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_49.txt
+-rw-r--r-- 1 le279259 1049089 5.6K Sep 12 17:56 iris_5.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_50.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_51.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_52.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_53.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_54.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_55.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_56.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_57.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_58.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_59.txt
+-rw-r--r-- 1 le279259 1049089 5.6K Sep 12 17:56 iris_6.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_60.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_61.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_62.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_63.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_64.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_65.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_66.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_67.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_68.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_69.txt
+-rw-r--r-- 1 le279259 1049089 5.6K Sep 12 17:56 iris_7.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_70.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_71.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_72.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_73.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_74.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_75.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_76.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_77.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_78.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_79.txt
+-rw-r--r-- 1 le279259 1049089 5.6K Sep 12 17:56 iris_8.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_80.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_81.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_82.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_83.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_84.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_85.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_86.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_87.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_88.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_89.txt
+-rw-r--r-- 1 le279259 1049089 5.6K Sep 12 17:56 iris_9.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_90.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_91.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_92.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_93.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_94.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_95.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_96.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_97.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_98.txt
+-rw-r--r-- 1 le279259 1049089 5.7K Sep 12 17:56 iris_99.txt
+-rw-r--r-- 1 le279259 1049089  370 Sep 12 16:25 README.md
+Loading file A3_iris_data/QMB6358-iris/iris_1.txt
+Loading file A3_iris_data/QMB6358-iris/iris_2.txt
+Loading file A3_iris_data/QMB6358-iris/iris_3.txt
+Loading file A3_iris_data/QMB6358-iris/iris_4.txt
+Loading file A3_iris_data/QMB6358-iris/iris_5.txt
+Loading file A3_iris_data/QMB6358-iris/iris_6.txt
+Loading file A3_iris_data/QMB6358-iris/iris_7.txt
+Loading file A3_iris_data/QMB6358-iris/iris_8.txt
+Loading file A3_iris_data/QMB6358-iris/iris_9.txt
+Loading file A3_iris_data/QMB6358-iris/iris_10.txt
+Loading file A3_iris_data/QMB6358-iris/iris_11.txt
+Loading file A3_iris_data/QMB6358-iris/iris_12.txt
+Loading file A3_iris_data/QMB6358-iris/iris_13.txt
+Loading file A3_iris_data/QMB6358-iris/iris_14.txt
+Loading file A3_iris_data/QMB6358-iris/iris_15.txt
+Loading file A3_iris_data/QMB6358-iris/iris_16.txt
+Loading file A3_iris_data/QMB6358-iris/iris_17.txt
+Loading file A3_iris_data/QMB6358-iris/iris_18.txt
+Loading file A3_iris_data/QMB6358-iris/iris_19.txt
+Loading file A3_iris_data/QMB6358-iris/iris_20.txt
+Loading file A3_iris_data/QMB6358-iris/iris_21.txt
+Loading file A3_iris_data/QMB6358-iris/iris_22.txt
+Loading file A3_iris_data/QMB6358-iris/iris_23.txt
+Loading file A3_iris_data/QMB6358-iris/iris_24.txt
+Loading file A3_iris_data/QMB6358-iris/iris_25.txt
+Loading file A3_iris_data/QMB6358-iris/iris_26.txt
+Loading file A3_iris_data/QMB6358-iris/iris_27.txt
+Loading file A3_iris_data/QMB6358-iris/iris_28.txt
+Loading file A3_iris_data/QMB6358-iris/iris_29.txt
+Loading file A3_iris_data/QMB6358-iris/iris_30.txt
+Loading file A3_iris_data/QMB6358-iris/iris_31.txt
+Loading file A3_iris_data/QMB6358-iris/iris_32.txt
+Loading file A3_iris_data/QMB6358-iris/iris_33.txt
+Loading file A3_iris_data/QMB6358-iris/iris_34.txt
+Loading file A3_iris_data/QMB6358-iris/iris_35.txt
+Loading file A3_iris_data/QMB6358-iris/iris_36.txt
+Loading file A3_iris_data/QMB6358-iris/iris_37.txt
+Loading file A3_iris_data/QMB6358-iris/iris_38.txt
+Loading file A3_iris_data/QMB6358-iris/iris_39.txt
+Loading file A3_iris_data/QMB6358-iris/iris_40.txt
+Loading file A3_iris_data/QMB6358-iris/iris_41.txt
+Loading file A3_iris_data/QMB6358-iris/iris_42.txt
+Loading file A3_iris_data/QMB6358-iris/iris_43.txt
+Loading file A3_iris_data/QMB6358-iris/iris_44.txt
+Loading file A3_iris_data/QMB6358-iris/iris_45.txt
+Loading file A3_iris_data/QMB6358-iris/iris_46.txt
+Loading file A3_iris_data/QMB6358-iris/iris_47.txt
+Loading file A3_iris_data/QMB6358-iris/iris_48.txt
+Loading file A3_iris_data/QMB6358-iris/iris_49.txt
+Loading file A3_iris_data/QMB6358-iris/iris_50.txt
+Loading file A3_iris_data/QMB6358-iris/iris_51.txt
+Loading file A3_iris_data/QMB6358-iris/iris_52.txt
+Loading file A3_iris_data/QMB6358-iris/iris_53.txt
+Loading file A3_iris_data/QMB6358-iris/iris_54.txt
+Loading file A3_iris_data/QMB6358-iris/iris_55.txt
+Loading file A3_iris_data/QMB6358-iris/iris_56.txt
+Loading file A3_iris_data/QMB6358-iris/iris_57.txt
+Loading file A3_iris_data/QMB6358-iris/iris_58.txt
+Loading file A3_iris_data/QMB6358-iris/iris_59.txt
+Loading file A3_iris_data/QMB6358-iris/iris_60.txt
+Loading file A3_iris_data/QMB6358-iris/iris_61.txt
+Loading file A3_iris_data/QMB6358-iris/iris_62.txt
+Loading file A3_iris_data/QMB6358-iris/iris_63.txt
+Loading file A3_iris_data/QMB6358-iris/iris_64.txt
+Loading file A3_iris_data/QMB6358-iris/iris_65.txt
+Loading file A3_iris_data/QMB6358-iris/iris_66.txt
+Loading file A3_iris_data/QMB6358-iris/iris_67.txt
+Loading file A3_iris_data/QMB6358-iris/iris_68.txt
+Loading file A3_iris_data/QMB6358-iris/iris_69.txt
+Loading file A3_iris_data/QMB6358-iris/iris_70.txt
+Loading file A3_iris_data/QMB6358-iris/iris_71.txt
+Loading file A3_iris_data/QMB6358-iris/iris_72.txt
+Loading file A3_iris_data/QMB6358-iris/iris_73.txt
+Loading file A3_iris_data/QMB6358-iris/iris_74.txt
+Loading file A3_iris_data/QMB6358-iris/iris_75.txt
+Loading file A3_iris_data/QMB6358-iris/iris_76.txt
+Loading file A3_iris_data/QMB6358-iris/iris_77.txt
+Loading file A3_iris_data/QMB6358-iris/iris_78.txt
+Loading file A3_iris_data/QMB6358-iris/iris_79.txt
+Loading file A3_iris_data/QMB6358-iris/iris_80.txt
+Loading file A3_iris_data/QMB6358-iris/iris_81.txt
+Loading file A3_iris_data/QMB6358-iris/iris_82.txt
+Loading file A3_iris_data/QMB6358-iris/iris_83.txt
+Loading file A3_iris_data/QMB6358-iris/iris_84.txt
+Loading file A3_iris_data/QMB6358-iris/iris_85.txt
+Loading file A3_iris_data/QMB6358-iris/iris_86.txt
+Loading file A3_iris_data/QMB6358-iris/iris_87.txt
+Loading file A3_iris_data/QMB6358-iris/iris_88.txt
+Loading file A3_iris_data/QMB6358-iris/iris_89.txt
+Loading file A3_iris_data/QMB6358-iris/iris_90.txt
+Loading file A3_iris_data/QMB6358-iris/iris_91.txt
+Loading file A3_iris_data/QMB6358-iris/iris_92.txt
+Loading file A3_iris_data/QMB6358-iris/iris_93.txt
+Loading file A3_iris_data/QMB6358-iris/iris_94.txt
+Loading file A3_iris_data/QMB6358-iris/iris_95.txt
+Loading file A3_iris_data/QMB6358-iris/iris_96.txt
+Loading file A3_iris_data/QMB6358-iris/iris_97.txt
+Loading file A3_iris_data/QMB6358-iris/iris_98.txt
+Loading file A3_iris_data/QMB6358-iris/iris_99.txt
+Loading file A3_iris_data/QMB6358-iris/iris_100.txt
+Completed commands for Question 2a).
+Running commands for Question 2b)...
+Completed command for Question 2b).
+Running R script for Question 1...
+Completed R script for Question 1.
+Running R script for Question 2...
+Completed R script for Question 2.
+Completed test of Assignment 3.
