@@ -59,13 +59,29 @@ is unrelated to the explanatory variable
 
 <img src="Images/Linear_regression.png">
 
+
 ## Logistic Regression
 
+When the variable takes the form of a binary variable, i.e., it takes on only two values, say, 0 and 1, the linear regression model is not appropriate. 
+The logistic regression model uses the logistic transformation to produce an estimate of the probability that 
+<img src="https://render.githubusercontent.com/render/math?math=Y_i = 1">.
+
 ### The Logistic Equation
+
+The logistic equation also implies that the data are a transformation of a linear equation in
+<img src="https://render.githubusercontent.com/render/math?math=X_i">
+by applying the *logit* transformation
+<img src="https://render.githubusercontent.com/render/math?math=\log{\frac{p_}{1-p_i}}">.
 
 <img src="Images/Logistic_Regression_Equation.gif">
 
 ### Comparison with Linear Probability Model
+
+
+The prediction from a linear regression is called the *linear probability model* when it is used to predict binary events. 
+Compared to the linear probability model, the logisti regression produces estimates of the probabilities that are constrained to lie between zero and one, as they should. 
+In contrast, the predictions from the linear probability model will be greater than one and lower than zero for some values of 
+<img src="https://render.githubusercontent.com/render/math?math=X_i">.
 
 <img src="Images/Logistic_vs_OLS_Regression.png">
 
