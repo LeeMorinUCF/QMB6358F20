@@ -71,7 +71,7 @@ The logistic regression model uses the logistic transformation to produce an est
 The logistic equation also implies that the data are a transformation of a linear equation in
 <img src="https://render.githubusercontent.com/render/math?math=X_i">
 by applying the *logit* transformation
-<img src="https://render.githubusercontent.com/render/math?math=\log{\frac{p_}{1-p_i}}">.
+<img src="https://render.githubusercontent.com/render/math?math=\log{\frac{p_i}{1-p_i}}">.
 
 <img src="Images/Logistic_Regression_Equation.gif">
 
