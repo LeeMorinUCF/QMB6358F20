@@ -15,6 +15,19 @@ plus an intercept
 
 ### The Regression Equation
 
+The parameters 
+<img src="https://render.githubusercontent.com/render/math?math=\beta_1"> 
+and
+<img src="https://render.githubusercontent.com/render/math?math=\beta_0">
+are estimated by minimizing the sum of squared residuals from the regression line defined by
+<img src="https://render.githubusercontent.com/render/math?math=\beta_1"> 
+and
+<img src="https://render.githubusercontent.com/render/math?math=\beta_0">.
+The residuals are the differerences from the observed values 
+<img src="https://render.githubusercontent.com/render/math?math=Y_i"> 
+from the values predicted by the regression line. 
+
+
 <img src="Images/Regression_Equation.png">
 
 ### The Minimization Problem
