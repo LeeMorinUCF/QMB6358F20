@@ -5,7 +5,13 @@ This is a quick introduction to the concept of regression analysis.
 ## Linear Regression 
 
 Linear regression is a statistical method for obtaining a prediction of an outcome 
-<img src="https://render.githubusercontent.com/render/math?math=Y_i"> as a linear combination of the variables...
+<img src="https://render.githubusercontent.com/render/math?math=Y_i"> 
+as a linear combination of the variables
+<img src="https://render.githubusercontent.com/render/math?math=X_i">
+multiplied by the parameter
+<img src="https://render.githubusercontent.com/render/math?math=\beta_1">, 
+plus an intercept
+<img src="https://render.githubusercontent.com/render/math?math=\beta_0">.
 
 ### The Regression Equation
 
