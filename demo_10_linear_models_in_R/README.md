@@ -70,8 +70,7 @@ The logistic regression model uses the logistic transformation to produce an est
 
 The logistic equation also implies that the data are a transformation of a linear equation in
 <img src="https://render.githubusercontent.com/render/math?math=X_i">
-by applying the *logit* transformation
-<img src="https://render.githubusercontent.com/render/math?math=\log{\frac{p_i}{1-p_i}}">.
+by applying the *logit* transformation:
 
 <img src="Images/Logistic_Regression_Equation.gif">
 
@@ -86,4 +85,18 @@ In contrast, the predictions from the linear probability model will be greater t
 <img src="Images/Logistic_vs_OLS_Regression.png">
 
 
+
+
+### The Fit of a Logistic Regression Model
+
+Another method is used to measure the quality of fit of a logistic regression model. 
+A statistic called the *Area under the ROC Curve* is appropriate for this. 
+The *AUROC* is interpreted as the probability that any pair of predictions is correctly ordered, when one observation is drawn from 
+<img src="https://render.githubusercontent.com/render/math?math=Y_i = 0">
+and one is drawn from
+<img src="https://render.githubusercontent.com/render/math?math=Y_i = 1">, 
+where "correctly ordered" means that the prediction for the probability that
+<img src="https://render.githubusercontent.com/render/math?math=Y_i = 1">
+is higher than the prediction for the probability that
+<img src="https://render.githubusercontent.com/render/math?math=Y_i = 0">.
 
