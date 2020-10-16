@@ -33,7 +33,7 @@ rm(list=ls(all=TRUE))
 
 # Set working directory.
 # wd_path <- '/path/to/your/folder'
-wd_path <- '~/Teaching/QMB6358_Fall_2020/GitRepos/demo_10_linear_models_in_R'
+wd_path <- '~/Teaching/QMB6358_Fall_2020/GitRepos/QMB6358F20/demo_10_linear_models_in_R'
 
 setwd(wd_path)
 

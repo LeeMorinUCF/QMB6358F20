@@ -41,6 +41,8 @@ os.chdir('C:\\Users\\le279259\\Documents\\Teaching\\QMB6358_Fall_2020\\GitRepos\
 os.getcwd()
 
 
+
+
 ##################################################
 # Using 'with' to Interact with Files.
 ##################################################
@@ -73,6 +75,24 @@ thirdLine = inputFile.readline()
 
 # Notice that each line contains the escape sequence \n
 # for new line at the end of each line.
+
+
+
+##################################################
+# Read entire contents of file.
+##################################################
+
+
+with open('file_to_save.txt', 'r') as open_file:
+  all_text = open_file.read()
+
+print(all_text)
+
+print(all_text[3])
+print(all_text[27])
+print(all_text[28])
+print(all_text[29])
+
 
 
 ##################################################
