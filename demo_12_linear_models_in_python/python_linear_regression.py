@@ -57,16 +57,47 @@ os.chdir('C:\\Users\\le279259\\Documents\\Teaching\\QMB6358_Fall_2020\\GitRepos\
 os.getcwd()
 
 
+
+##################################################
+# Digression about slashes in strings
+##################################################
+
+# Much of file IO is about handling strings.
+# When you read and write to the computer, 
+# you read and write character strings
+# to and from the files.
+
+
+# What's going on with the slashes and double slashes?
+# A slash is a special character
 "C:/Users/le279259/Documents/Teaching/QMB6358_Fall_2020/GitRepos/QMB6358F20"
 
-"This isn't a sentence"
 
-'This isn\'t a sentence'
+# A slash can also replicate other buttons on your keyboard.
+# for example '\t' prints a tab.
+print("This\tis\ta\ttab")
+# '\n' creates a new line, like the return button:
+print("These\nare\nseparate\nlines")
 
+
+# You have to be careful about what you put in a string.
+# For quotes inside quotes, single quotes can appear in double quotes.
+"This won't throw an error"
+
+# If you used single quotes on the outside, you would need
+# to use the slash to tell python that you actually 
+# want to print an apostrophe, instead of endint the 
+# string after 'This isn'.
+'This won\'t throw an error'
+# but
+# 'This won't run without error'
+
+# The same goes if you want to print a double quote
+# inside a string:
 "This is a \"string\" inside a string"
 
+# These tricks will be useful for the section on File IO.
 
-print("This\tis\ta\ttab")
 
 
 ##################################################
