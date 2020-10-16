@@ -5,7 +5,7 @@
 There is a typo in the instructions where I refer to a sample script as
 ```A5_functions.py```. 
 This is the file that you create and save in your ```assignment_06``` folder under this name. 
-The sample that you use is the file from the demo called ```my_R_functions.py``` in the folder ``demo_11_python_intro``` that I went through in class. 
+The sample that you use is the file from the demo called ```my_R_functions.py``` in the folder ```demo_11_python_intro``` that I went through in class. 
 Your ```A5_functions.py``` script should have the same format as ```my_R_functions.py```, with the file definitions at the top and the examples in the main function at the bottom. 
 
 
@@ -13,7 +13,8 @@ Your ```A5_functions.py``` script should have the same format as ```my_R_functio
 
 You might say that this is ambiguously written but I can clear it up as follows.
 The output is a string that is the path to a *file*. 
-One of the inputs is also a string that is a path but it the path to a *folder*. 
+One of the inputs is also a string that is a path but it is the path to a *folder*. 
+They are both called paths: paths to different places in the computer's memory. 
 The exercise is simply to fill the role of the ```paste()``` function in R, when you loop through files. 
 This is useful for any kind of File I/O operations with a big list of file names. 
 
