@@ -202,6 +202,11 @@ lm_full_model <- lm(data = housing_data,
 # Output the results to screen.
 summary(lm_full_model)
 
+
+##################################################
+# Output text describing regression model.
+##################################################
+
 # See what's inside the lm_full_model object:
 class(lm_full_model)
 attributes(lm_full_model)
@@ -212,6 +217,8 @@ lm_full_model$coefficients[2]
 
 coef(lm_full_model)
 
+
+
 # Model predictions:
 summary(predict(lm_full_model))
 housing_data[, 'predictions'] <- predict(lm_full_model)
@@ -221,36 +228,6 @@ attributes(summary(lm_full_model))
 lm_full_model_summ <- summary(lm_full_model)
 lm_full_model_summ$adj.r.squared
 
-
-##################################################
-# Estimating the Regression Model
-# Model 2: Omitting One Variable
-##################################################
-
-# Estimate a regression model.
-lm_no_earthquakes <- lm(data = housing_data,
-                        formula = house_price ~ income + in_cali) # earthquake removed.
-
-# Output the results to screen.
-summary(lm_no_earthquakes)
-
-
-##################################################
-#
-# Exercise:
-#
-# Observe the values of the coefficient for earthquakes.
-# Then compare the change in coefficient on California
-# with and without the earthquake variable.
-#
-##################################################
-
-# If it helps, observe summary statistics
-# both with and without earthquakes.
-
-summary(housing_data[housing_data[, 'earthquake'] == 0, ])
-
-summary(housing_data[housing_data[, 'earthquake'] == 1, ])
 
 
 ##################################################
@@ -270,22 +247,31 @@ plot(housing_data[, c('house_price', 'predictions')],
      ylab = 'Prediction')
 
 
+# So far the plot has printed to screen.
+# Now use the setEPS and postscript functions to save the figure to a file.
+
+fig_file_name <- 'predictions.eps'
+out_file_name <- sprintf('%s/%s', fig_dir, fig_file_name)
+setEPS()
+postscript(out_file_name)
 
 # Plot the actual house prices against the regression model predictions.
 plot(housing_data[, 'house_price'], housing_data[, 'predictions'],
      main = 'Regression Model Predictions',
      xlab = 'House Price',
-     ylab = 'Prediction')
+     ylab = 'Prediction', pch = 16)
 points(housing_data[housing_data[, 'in_cali'] == 1, 'house_price'],
        housing_data[housing_data[, 'in_cali'] == 1, 'predictions'],
-       col = 'green')
+       col = 'green', pch = 16)
 points(housing_data[housing_data[, 'earthquake'] == 1, 'house_price'],
        housing_data[housing_data[, 'earthquake'] == 1, 'predictions'],
-       col = 'red')
+       col = 'red', pch = 16)
+
+dev.off()
 
 
 ##################################################
-# Exercise: Add some regression lines to compare
+# Add some regression lines to compare
 # the predictions to the actual observations.
 ##################################################
 
@@ -293,13 +279,15 @@ points(housing_data[housing_data[, 'earthquake'] == 1, 'house_price'],
 plot(housing_data[, 'income'], housing_data[, 'house_price'],
      main = 'Regression Model Predictions',
      xlab = 'Income',
-     ylab = 'House Price')
+     ylab = 'House Price', pch = 16)
 points(housing_data[housing_data[, 'in_cali'] == 1, 'income'],
        housing_data[housing_data[, 'in_cali'] == 1, 'house_price'],
-       col = 'green')
+       col = 'green', pch = 16)
 points(housing_data[housing_data[, 'earthquake'] == 1, 'income'],
        housing_data[housing_data[, 'earthquake'] == 1, 'house_price'],
-       col = 'red')
+       col = 'red', pch = 16)
+
+
 
 # Use the lines() command to append to the above figure.
 # You will need to create a vector of values on the line
@@ -310,15 +298,62 @@ summary(lm_full_model)
 coef(lm_full_model)
 beta_0_hat <- coef(lm_full_model)['(Intercept)']
 beta_income_hat <- coef(lm_full_model)['income']
+beta_cali_hat <- coef(lm_full_model)['in_cali']
+beta_earthquake_hat <- coef(lm_full_model)['earthquake']
 
+# Draw a line for zip codes outside California.
 income_grid <- seq(0.07, 0.13, by = 0.01)
 reg_line_not_cali <- beta_0_hat + beta_income_hat*income_grid
 
 lines(income_grid, reg_line_not_cali,
       lwd = 3, col = 'black')
 
-# Repeat for california without earthquakes (green)
-# and earthquakes (red).
+
+# Repeat for California without earthquakes (green)
+reg_line_in_cali <- beta_0_hat +
+   beta_income_hat*income_grid +
+   beta_cali_hat
+
+lines(income_grid, reg_line_in_cali,
+      lwd = 3, col = 'green')
+
+
+# Repeat for California with earthquakes (red).
+reg_line_earthquake <- beta_0_hat +
+   beta_income_hat*income_grid +
+   beta_cali_hat + beta_earthquake_hat
+
+lines(income_grid, reg_line_earthquake,
+      lwd = 3, col = 'red')
+
+
+# Again, so far the plot has printed to screen.
+# Now use the setEPS and postscript functions to save the figure to a file.
+
+fig_file_name <- 'regression.eps'
+out_file_name <- sprintf('%s/%s', fig_dir, fig_file_name)
+setEPS()
+postscript(out_file_name)
+
+plot(housing_data[, 'income'], housing_data[, 'house_price'],
+     main = 'Regression Model Predictions',
+     xlab = 'Income',
+     ylab = 'House Price', pch = 16)
+points(housing_data[housing_data[, 'in_cali'] == 1, 'income'],
+       housing_data[housing_data[, 'in_cali'] == 1, 'house_price'],
+       col = 'green', pch = 16)
+points(housing_data[housing_data[, 'earthquake'] == 1, 'income'],
+       housing_data[housing_data[, 'earthquake'] == 1, 'house_price'],
+       col = 'red', pch = 16)
+# Plot regression lines.
+lines(income_grid, reg_line_not_cali,
+      lwd = 3, col = 'black')
+lines(income_grid, reg_line_in_cali,
+      lwd = 3, col = 'green')
+lines(income_grid, reg_line_earthquake,
+      lwd = 3, col = 'red')
+# The dev.off() closes the file for the plot.
+dev.off()
 
 
 ##################################################
