@@ -53,7 +53,7 @@ fig_dir <- 'Figures'
 tab_dir <- 'Tables'
 
 # Set directory for storing text.
-tex_dir <- 'Text'
+text_dir <- 'Text'
 
 
 # Load libraries.
@@ -178,9 +178,8 @@ plot(housing_data[, 'income'],
      xlab = 'Income',
      ylab = 'House Prices',
      col = 'blue')
-
-
-# Now output the figures
+# Not very exciting.
+# Maybe another plot will look better.
 
 
 
@@ -204,6 +203,24 @@ summary(lm_full_model)
 
 
 ##################################################
+# Output table with regression estimates.
+##################################################
+
+# The texreg package makes a LaTeX table from the regression results.
+
+# Print the output to a LaTeX file.
+tab_file_name <- 'lm_model_1.tex'
+out_file_name <- sprintf('%s/%s', tab_dir, tab_file_name)
+texreg(lm_full_model,
+       digits = 3,
+       file = out_file_name,
+       label = 'tab:lm_model_1',
+       caption = "Regression Model 1")
+
+
+
+
+##################################################
 # Output text describing regression model.
 ##################################################
 
@@ -223,11 +240,48 @@ coef(lm_full_model)
 summary(predict(lm_full_model))
 housing_data[, 'predictions'] <- predict(lm_full_model)
 
+# Other statistics are stored in the model.
 attributes(summary(lm_full_model))
 
+# The summary also returns statistics, such as R-squared.
 lm_full_model_summ <- summary(lm_full_model)
 lm_full_model_summ$adj.r.squared
 
+
+# Create a script for a write-up about the parameters and statistics
+# in the model.
+# (I admit that this level of automation is a bit much
+# but it highlights the possibilities.)
+
+text_file_name <- 'regression.tex'
+out_file_name <- sprintf('%s/%s', text_dir, text_file_name)
+# Start a new file with append = FALSE.
+cat('\n%% Regression model description:\n\n',
+    file = out_file_name, append = FALSE)
+
+# Append new lines of text with append = TRUE.
+cat('\n\nThe regression model predicts housing prices as follows \n',
+    file = out_file_name, append = TRUE)
+cat('(all figures in millions).\n',
+    file = out_file_name, append = TRUE)
+cat('For every one dollar increase in average income, housing prices are expected \n',
+    file = out_file_name, append = TRUE)
+cat(sprintf('to rise by %1.3f. \n', lm_full_model$coefficients['income']),
+    file = out_file_name, append = TRUE)
+cat('If the home is located in California, housing prices are expected \n',
+    file = out_file_name, append = TRUE)
+cat(sprintf('to be %1.3f higher. \n', lm_full_model$coefficients['in_cali']),
+    file = out_file_name, append = TRUE)
+cat('If there was an earthquake in the zip code, housing prices are expected \n',
+    file = out_file_name, append = TRUE)
+cat(sprintf('to be %1.3f lower. \n', lm_full_model$coefficients['earthquake']),
+    file = out_file_name, append = TRUE)
+
+# Include a summary of the quality of fit of the model.
+cat('Overall, this model provides a fairly good description ',
+    file = out_file_name, append = TRUE)
+cat(sprintf('with an $R^2$ of %1.3f.\n\n', lm_full_model_summ$adj.r.squared),
+    file = out_file_name, append = TRUE)
 
 
 ##################################################
