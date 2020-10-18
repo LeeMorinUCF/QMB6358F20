@@ -1,0 +1,67 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{paper}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\ifx\pdftexversion\undefined
+    \usepackage[dvips]{graphicx}
+\else
+    \usepackage[pdftex]{graphicx}
+    \usepackage{epstopdf}
+    \epstopdfsetup{suffix=}
+\fi
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Data}
+
+Summary statistics for numerical variables are shown in Table \ref{tab:summary}. 
+
+\input{../Tables/summary.tex}
+
+
+Table \ref{tab:earthquakes} shows the frequency of observations in and out of California along with the incidence of earthquakes. Notice that earthquakes have only happened in California. 
+
+\input{../Tables/earthquakes.tex}
+
+The correlation matrix of potential variables in the model is shown in Table \ref{tab:corr}. 
+House prices are positively correlated with income and California but negatively correlated with earthquakes. In the next setion, these variables will be included in a regression model. 
+
+\input{../Tables/correlation.tex}
+
+
+
+\pagebreak
+\section{Empirical Results}
+
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{../Figures/predictions.eps}
+\caption{House Prices vs. Predicted Prices}
+\label{fig:pred}
+\end{figure}
+
+
+The regression lines are shown in Figure \ref{fig:reg}, with the estimated intercept term for zip codes affected by earthquakes (red), those in the rest of California (green), and the zip codes outside of California. 
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{../Figures/regression.eps}
+\caption{Regression Model Predictions}
+\label{fig:reg}
+\end{figure}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
