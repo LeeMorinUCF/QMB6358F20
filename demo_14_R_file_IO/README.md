@@ -21,13 +21,15 @@ This is my document.
 \end{document}
 ```
 
-This program set the class of the document to ```paper``` but it could also be set to 
+This program sets the class of the document to ```paper``` but it could also be set to 
 ```article```, ```book```, ```report``` or ```letter```.
-The ```document``` ```begin```s on line 2 and ```end``` on line 4. 
+The ```document``` ```begin```s on line 2 and ```end```s on line 4. 
 Line 3 is the single sentence that is printed in the document. 
 
 Documents are typically divided into ```sections``` and ```subsections```. 
 Elements of a document, such as sections, tables, figures and equations are ```ref```erenced by ```label```s. 
+Using programmatic references to components of the document eliminates the need to change reference numbers when the components are put in a different order or
+when components are added or removed. 
 
 ```
 \documentclass[paper]
@@ -35,7 +37,7 @@ Elements of a document, such as sections, tables, figures and equations are ```r
 
 This is my document.
 The introduction is in the beginning in Section \ref{sec:intro}. 
-Next is the Middle, in Section \ref{sec:middle}. 
+Next is the middle, in Section \ref{sec:middle}. 
 We conclude at the end in Section \ref{sec:conc}. 
 
 \section{Introduction} \label{sec:intro}
@@ -108,7 +110,7 @@ Life is too short to type this sort of thing manually.
 \begin{document}
 This is my document.
 
-In Table \ref{tab:summary}, there is a table. 
+In Table \ref{tab:summary}, there are some numbers. 
 
 \begin{table}[ht]
 \centering
@@ -143,7 +145,7 @@ include it in the document using the ```input``` command.
 \begin{document}
 This is my document.
 
-In Table \ref{tab:summary}, there is a table. 
+In Table \ref{tab:summary}, there are some numbers.
 
 \input{../Text/my_table.tex}
 
@@ -151,7 +153,7 @@ In Table \ref{tab:summary}, there is a table.
 \end{document}
 ```
 The content within the ```table``` environment is in the file called ```my_table.tex```. 
-The ```input``` command can be used to ```input``` any kinds of scripts and is useful for dividing your document into smaller parts.
+The ```input``` command can be used to ```input``` all kinds of scripts and is useful for dividing your document into smaller parts.
 For example, you could use an ```input``` statement for each section of the document
 and write the sections separately. 
 
@@ -180,12 +182,15 @@ y_i = \beta_0 = \beta_1 x_i + \epsilon_i
 \end{equation}
 ```
 
+Entire books have been written about interacting with the ```equation``` environment. Most writers use the internet. 
+
+
 ### File Organization
 
 Some analysts follow the "kitchen-sink" approach to organization of files within a single folder. 
-But since we're generating the documents automatically, why not be more organized. 
-It takes a little bit of OCd personality to write documents this way in the first place. 
-A sensible approach is to divide files into the following headings. 
+But since we're generating the documents automatically, why not be more organized? 
+After all, it takes a little bit of the OCD personality to write documents this way in the first place. 
+A sensible approach is to divide files into the following headings: 
 
 - Code
 - Data
