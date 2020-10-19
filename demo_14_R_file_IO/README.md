@@ -23,8 +23,9 @@ analysts to achieve the perfect answer on the first run.
 Although it is not specifically discussed in this course, a good deal of business 
 analysis is conducted with spreadsheet programs such as Microsoft Excel. 
 Even though the capabilities of these spreadsheets is very limited, compared to 
-fully-functional programming languages, you will often hae to work with others who use this very limited, unscalable technology. 
-Rather than change your habits, I have found it effective to convert your ouputs into
+fully-functional programming languages, you will often have to work with others who use this very limited, unscalable technology. 
+Rather than fight the uphill battle of changing your habits or theirs, 
+I have found it effective to convert your ouputs into
 Excel format for others to use downstream. 
 
 An Excel spreadsheet contains the data that are represented in each worksheet 
