@@ -1,0 +1,87 @@
+     saleID        saleprice           age           enghours      
+ Min.   :101.0   Min.   :  1500   Min.   : 2.00   Min.   :    1.0  
+ 1st Qu.:169.8   1st Qu.:  7750   1st Qu.: 7.00   1st Qu.:  777.2  
+ Median :238.5   Median : 12000   Median :15.00   Median : 2398.0  
+ Mean   :238.5   Mean   : 20747   Mean   :15.91   Mean   : 3530.2  
+ 3rd Qu.:307.2   3rd Qu.: 20925   3rd Qu.:24.00   3rd Qu.: 5409.8  
+ Max.   :376.0   Max.   :200000   Max.   :33.00   Max.   :18744.0  
+   johndeere          spring           summer           winter      
+ Min.   :0.0000   Min.   :0.0000   Min.   :0.0000   Min.   :0.0000  
+ 1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.0000  
+ Median :0.0000   Median :0.0000   Median :0.0000   Median :0.0000  
+ Mean   :0.1413   Mean   :0.2246   Mean   :0.2319   Mean   :0.1703  
+ 3rd Qu.:0.0000   3rd Qu.:0.0000   3rd Qu.:0.0000   3rd Qu.:0.0000  
+ Max.   :1.0000   Max.   :1.0000   Max.   :1.0000   Max.   :1.0000  
+[1] "saleID"    "saleprice" "age"       "enghours"  "johndeere" "spring"   
+[7] "summer"    "winter"   
+
+Call:
+lm(formula = log(saleprice) ~ age + enghours + johndeere + spring + 
+    summer + winter, data = tractor_sales)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.19146 -0.54194 -0.02331  0.49336  2.15617 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  1.004e+01  1.105e-01  90.846  < 2e-16 ***
+age         -5.491e-02  5.818e-03  -9.438  < 2e-16 ***
+enghours     7.443e-05  1.652e-05   4.505  9.9e-06 ***
+johndeere    5.445e-02  1.345e-01   0.405    0.686    
+spring       1.938e-01  1.243e-01   1.559    0.120    
+summer      -6.316e-02  1.228e-01  -0.514    0.607    
+winter       1.088e-01  1.365e-01   0.797    0.426    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.7705 on 269 degrees of freedom
+Multiple R-squared:  0.2648,	Adjusted R-squared:  0.2484 
+F-statistic: 16.15 on 6 and 269 DF,  p-value: 7.206e-16
+
+     saleID        horsepower         diesel            fwd        
+ Min.   :101.0   Min.   : 16.00   Min.   :0.0000   Min.   :0.0000  
+ 1st Qu.:169.8   1st Qu.: 47.75   1st Qu.:1.0000   1st Qu.:0.0000  
+ Median :238.5   Median : 80.00   Median :1.0000   Median :1.0000  
+ Mean   :238.5   Mean   :101.06   Mean   :0.9094   Mean   :0.5652  
+ 3rd Qu.:307.2   3rd Qu.:108.50   3rd Qu.:1.0000   3rd Qu.:1.0000  
+ Max.   :376.0   Max.   :535.00   Max.   :1.0000   Max.   :1.0000  
+     manual      
+ Min.   :0.0000  
+ 1st Qu.:0.0000  
+ Median :1.0000  
+ Mean   :0.7029  
+ 3rd Qu.:1.0000  
+ Max.   :1.0000  
+ [1] "saleID"     "saleprice"  "age"        "enghours"   "johndeere" 
+ [6] "spring"     "summer"     "winter"     "horsepower" "diesel"    
+[11] "fwd"        "manual"    
+
+Call:
+lm(formula = log(saleprice) ~ horsepower + age + enghours + diesel + 
+    fwd + manual + johndeere + spring + summer + winter, data = tractor_full)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.40551 -0.32922  0.03705  0.36518  1.08651 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  8.770e+00  1.353e-01  64.825  < 2e-16 ***
+horsepower   6.536e-03  4.186e-04  15.615  < 2e-16 ***
+age         -2.754e-02  4.460e-03  -6.175 2.47e-09 ***
+enghours    -2.117e-05  1.184e-05  -1.788   0.0750 .  
+diesel       4.992e-01  1.196e-01   4.173 4.08e-05 ***
+fwd          3.567e-01  7.266e-02   4.909 1.60e-06 ***
+manual      -1.217e-01  7.744e-02  -1.571   0.1173    
+johndeere    1.725e-01  8.920e-02   1.934   0.0541 .  
+spring      -3.210e-02  8.130e-02  -0.395   0.6933    
+summer      -1.188e-01  7.947e-02  -1.494   0.1363    
+winter       4.009e-02  8.924e-02   0.449   0.6536    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.4983 on 265 degrees of freedom
+Multiple R-squared:  0.6971,	Adjusted R-squared:  0.6857 
+F-statistic: 60.99 on 10 and 265 DF,  p-value: < 2.2e-16
+

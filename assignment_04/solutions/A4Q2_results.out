@@ -1,0 +1,64 @@
+ [1] "X0_saleID"   "saleprice"   "age"         "enghours"    "johndeere"  
+ [6] "spring"      "summer"      "winter"      "X0_saleID.1" "horsepower" 
+[11] "diesel"      "fwd"         "manual"     
+
+Call:
+lm(formula = log(saleprice) ~ horsepower + age + enghours + diesel + 
+    fwd + manual + johndeere + spring + summer + winter, data = tractor_full_A4Q2a)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.40551 -0.32922  0.03705  0.36518  1.08651 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  8.770e+00  1.353e-01  64.825  < 2e-16 ***
+horsepower   6.536e-03  4.186e-04  15.615  < 2e-16 ***
+age         -2.754e-02  4.460e-03  -6.175 2.47e-09 ***
+enghours    -2.117e-05  1.184e-05  -1.788   0.0750 .  
+diesel       4.992e-01  1.196e-01   4.173 4.08e-05 ***
+fwd          3.567e-01  7.266e-02   4.909 1.60e-06 ***
+manual      -1.217e-01  7.744e-02  -1.571   0.1173    
+johndeere    1.725e-01  8.920e-02   1.934   0.0541 .  
+spring      -3.210e-02  8.130e-02  -0.395   0.6933    
+summer      -1.188e-01  7.947e-02  -1.494   0.1363    
+winter       4.009e-02  8.924e-02   0.449   0.6536    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.4983 on 265 degrees of freedom
+Multiple R-squared:  0.6971,	Adjusted R-squared:  0.6857 
+F-statistic: 60.99 on 10 and 265 DF,  p-value: < 2.2e-16
+
+ [1] "X0_saleID"  "saleprice"  "age"        "enghours"   "johndeere" 
+ [6] "spring"     "summer"     "winter"     "horsepower" "diesel"    
+[11] "fwd"        "manual"    
+
+Call:
+lm(formula = log(saleprice) ~ horsepower + age + enghours + diesel + 
+    fwd + manual + johndeere + spring + summer + winter, data = tractor_full_A4Q2b)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.40551 -0.32922  0.03705  0.36518  1.08651 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  8.770e+00  1.353e-01  64.825  < 2e-16 ***
+horsepower   6.536e-03  4.186e-04  15.615  < 2e-16 ***
+age         -2.754e-02  4.460e-03  -6.175 2.47e-09 ***
+enghours    -2.117e-05  1.184e-05  -1.788   0.0750 .  
+diesel       4.992e-01  1.196e-01   4.173 4.08e-05 ***
+fwd          3.567e-01  7.266e-02   4.909 1.60e-06 ***
+manual      -1.217e-01  7.744e-02  -1.571   0.1173    
+johndeere    1.725e-01  8.920e-02   1.934   0.0541 .  
+spring      -3.210e-02  8.130e-02  -0.395   0.6933    
+summer      -1.188e-01  7.947e-02  -1.494   0.1363    
+winter       4.009e-02  8.924e-02   0.449   0.6536    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.4983 on 265 degrees of freedom
+Multiple R-squared:  0.6971,	Adjusted R-squared:  0.6857 
+F-statistic: 60.99 on 10 and 265 DF,  p-value: < 2.2e-16
+
