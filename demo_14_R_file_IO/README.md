@@ -32,5 +32,5 @@ in a way that is recorded in the header of the file, before it is compressed
 into ```xlsx``` file format. 
 Fortunately, there are ```R``` packages such as ```openxlsx``` that can be used to
 read and write from and to individual worksheets in an Excel spreadsheet. 
-The ```R``` script ```Excel_with_R.R``` in the (Excel_with_R folder)[https://github.com/LeeMorinUCF/QMB6358F20/tree/master/demo_14_R_file_IO/Excel_with_R] above provides a sample of these procedures. 
+The ```R``` script ```Excel_with_R.R``` in the (https://github.com/LeeMorinUCF/QMB6358F20/tree/master/demo_14_R_file_IO/Excel_with_R)[Excel_with_R]  folder above provides a sample of these procedures. 
 
