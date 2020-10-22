@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.17)  22 OCT 2020 11:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.17)  22 OCT 2020 11:41
 entering extended mode
-**./docs/regression_paper.tex
-(docs/regression_paper.tex
+**./regression_paper.tex
+(regression_paper.tex
 LaTeX2e <2018-04-01> patch level 5
 ("C:\Users\le279259\AppData\Local\Programs\MiKTeX 2.9\tex\latex\paper\paper.cls
 "
@@ -119,8 +119,7 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
-)
-No file regression_paper.aux.
+) (regression_paper.aux)
 \openout1 = `regression_paper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
@@ -216,44 +215,48 @@ G,.JBIG2,.JB2,.eps]
 ) [1{C:/Users/le279259/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
-Package epstopdf Info: Source file: <regression_plot.eps>
-(epstopdf)                    date: 2020-10-22 11:15:17
-(epstopdf)                    size: 20543 bytes
-(epstopdf)             Output file: <regression_plot-eps-converted-to.pdf>
-(epstopdf)             Command: <epstopdf --outfile=regression_plot-eps-convert
-ed-to.pdf regression_plot.eps>
+Package epstopdf Info: Source file: <../Figures/regression_plot.eps>
+(epstopdf)                    date: 2020-10-22 11:41:02
+(epstopdf)                    size: 21104 bytes
+(epstopdf)             Output file: <../Figures/regression_plot-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2020-10-22 11:39:36
+(epstopdf)                    size: 13366 bytes
+(epstopdf)             Command: <epstopdf --outfile=../Figures/regression_plot-
+eps-converted-to.pdf ../Figures/regression_plot.eps>
 (epstopdf)             \includegraphics on input line 46.
-runsystem(epstopdf --outfile=regression_plot-eps-converted-to.pdf regression_pl
-ot.eps)...executed (allowed).
+runsystem(epstopdf --outfile=../Figures/regression_plot-eps-converted-to.pdf ..
+/Figures/regression_plot.eps)...executed (allowed).
 
-Package epstopdf Info: Result file: <regression_plot-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-10-22 11:15:35
-(epstopdf)                    size: 13354 bytes.
-<regression_plot-eps-converted-to.pdf, id=10, 433.62pt x 289.08pt>
-File: regression_plot-eps-converted-to.pdf Graphic file (type pdf)
-<use regression_plot-eps-converted-to.pdf>
-Package pdftex.def Info: regression_plot-eps-converted-to.pdf  used on input li
-ne 46.
+Package epstopdf Info: Result file: <../Figures/regression_plot-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2020-10-22 11:41:03
+(epstopdf)                    size: 13586 bytes.
+<../Figures/regression_plot-eps-converted-to.pdf, id=10, 433.62pt x 289.08pt>
+File: ../Figures/regression_plot-eps-converted-to.pdf Graphic file (type pdf)
+<use ../Figures/regression_plot-eps-converted-to.pdf>
+Package pdftex.def Info: ../Figures/regression_plot-eps-converted-to.pdf  used 
+on input line 46.
 (pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
- [2 <./regression_plot-eps-converted-to.pdf>] (regression_paper.aux) ) 
+ [2 <../Figures/regression_plot-eps-converted-to.pdf>] (regression_paper.aux) )
+ 
 Here is how much of TeX's memory you used:
- 2174 strings out of 492973
- 30628 string characters out of 3125363
+ 2175 strings out of 492973
+ 30725 string characters out of 3125363
  94692 words of memory out of 3000000
  6046 multiletter control sequences out of 15000+200000
  4699 words of font info for 18 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,9n,25p,290b,211s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users
-/le279259/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
-10.pfb><C:/Users/le279259/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr10.pfb><C:/Users/le279259/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/le279259/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/le279259/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on regression_paper.pdf (2 pages, 62733 bytes).
+ 41i,9n,25p,285b,211s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/le279259/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmmi10.pfb><C:/Users/le279259/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmr10.pfb><C:/Users/le279259/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/le279259/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/le279259/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on regression_paper.pdf (2 pages, 62868 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
+ 57 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

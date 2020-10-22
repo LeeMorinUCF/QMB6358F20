@@ -52,7 +52,8 @@ os.getcwd()
 ##################################################
 
 # Output tex file name.
-tex_file_name = 'docs/regression_paper.tex'
+tex_file_name = 'regression_paper.tex'
+tex_file_path = 'Paper/' + tex_file_name
 
 # Inputs for data generated for regression model.
 N = 100
@@ -86,7 +87,7 @@ plt.plot(X[:,1], y, 'x', x_grid, y_grid)
 plt.xlabel('$x_i$')
 plt.ylabel('$y_i$')
 plt.title('Regression of $y$ on $X$')
-plt.savefig('regression_plot.eps')
+plt.savefig('Figures/regression_plot.eps')
 
 
 ##################################################
@@ -95,7 +96,7 @@ plt.savefig('regression_plot.eps')
 
 
 # Generate the tex file and build the pdf.
-open_file = open(tex_file_name, 'w')
+open_file = open(tex_file_path, 'w')
 
 # Write the preamble.
 open_file.write('\n\\documentclass{paper}\n')
@@ -128,7 +129,7 @@ open_file.write('\n\\end{align}\n')
 open_file.write('\n\\pagebreak\n')
 open_file.write('\nThis is a scattergraph of the regression results:\n')
 open_file.write('\n\\begin{figure}\n%')
-open_file.write('\n\t\\includegraphics[scale = 0.5]{regression_plot.eps}\n')
+open_file.write('\n\t\\includegraphics[scale = 0.5]{../Figures/regression_plot.eps}\n')
 open_file.write('%\n\\end{figure}\n')
 open_file.write('\nThis concludes my paper.\n')
 
@@ -139,7 +140,11 @@ open_file.write('\nThis concludes my paper.\n')
 open_file.write('\\end{document}')
 open_file.close()
 
-# Build the document.
+
+# Change to the Paper directory to build the document.
+os.chdir('C:\\Users\\le279259\\Documents\\Teaching\\QMB6358_Fall_2020\\GitRepos\\QMB6358F20\\demo_14_creating_documents\\LaTeX_from_python\\Paper')
+
+# Build the document from within the Paper folder.
 os.system('pdflatex %s' % tex_file_name)
 
 
