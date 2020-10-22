@@ -2,7 +2,7 @@
 """
 ##################################################
 #
-# ECO 5445: Intro to Business Analytics
+# QMB 6358: Software Tools for Business Analytics
 #
 # Generating TeX Scripts for Building pdf Documents with Python
 #
@@ -12,7 +12,7 @@
 # College of Business Administration
 # University of Central Florida
 #
-# September 30, 2019
+# October 22, 2020
 #
 # This script first runs a regression model with artificial dataself.
 # Then, it generates a tex script that generates a pdf document of the results.
@@ -32,6 +32,20 @@ import os
 import numpy as np
 from scipy import linalg
 import matplotlib.pyplot as plt
+
+
+##################################################
+# Set Working Directory.
+##################################################
+
+
+# Find out the current directory.
+os.getcwd()
+# Change to a new directory.
+os.chdir('C:\\Users\\le279259\\Documents\\Teaching\\QMB6358_Fall_2020\\GitRepos\\QMB6358F20\\demo_14_creating_documents\\LaTeX_from_python')
+# Check that the change was successful.
+os.getcwd()
+
 
 ##################################################
 # Set parameters

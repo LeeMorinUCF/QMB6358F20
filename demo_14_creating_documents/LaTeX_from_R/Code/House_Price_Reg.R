@@ -21,7 +21,9 @@
 #   pdf document built with LaTeX.
 #
 # Dependencies:
-#   None.
+#   The xtable library to create tex scripts for tables.
+#   The texreg library to create tex scripts for tables from
+#   regression models.
 #
 ##################################################
 
@@ -35,12 +37,12 @@ rm(list=ls(all=TRUE))
 
 # Set working directory.
 # wd_path <- '/path/to/your/folder'
-wd_path <- '~/Teaching/QMB6358_Fall_2020/GitRepos/QMB6358F20/demo_14_R_file_IO/LaTeX_from_R'
+# wd_path <- 'C:/Users/le279259/Teaching/QMB6358_Fall_2020/GitRepos/QMB6358F20/demo_14_R_file_IO/LaTeX_from_R'
+# setwd(wd_path)
 
-setwd(wd_path)
 
-# Check folder:
-getwd()
+# It's not necessary to set the directory, since we are working in the
+# main directory already: that's where the shell script is running.
 
 
 # Set data directory.

@@ -1,6 +1,4 @@
-# Even More Python Exercises
-
-## File I/O
+# File I/O
 
 File I/O is the term for interacting with the file system on your computer. 
 It is the processes surrounding the ```I```nput and ```O```utput of ```File```s. 

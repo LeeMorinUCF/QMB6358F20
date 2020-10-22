@@ -2,7 +2,7 @@
 """
 ##################################################
 #
-# ECO 5445: Intro to Business Analytics
+# QMB 6358: Software Tools for Business Analytics
 #
 # Generating TeX Scripts for Building pdf Documents with Python
 #
@@ -12,7 +12,7 @@
 # College of Business Administration
 # University of Central Florida
 #
-# September 30, 2019
+# October 22, 2020
 #
 # This script generates a tex script that generates a pdf document.
 #
