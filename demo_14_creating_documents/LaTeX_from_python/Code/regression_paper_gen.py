@@ -52,7 +52,7 @@ os.getcwd()
 ##################################################
 
 # Output tex file name.
-tex_file_name = 'regression_paper.tex'
+tex_file_name = 'Paper.tex'
 tex_file_path = 'Paper/' + tex_file_name
 
 # Inputs for data generated for regression model.
