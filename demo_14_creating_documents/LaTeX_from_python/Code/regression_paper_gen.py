@@ -42,9 +42,14 @@ import matplotlib.pyplot as plt
 # Find out the current directory.
 os.getcwd()
 # Change to a new directory.
-os.chdir('C:\\Users\\le279259\\Documents\\Teaching\\QMB6358_Fall_2020\\GitRepos\\QMB6358F20\\demo_14_creating_documents\\LaTeX_from_python')
+# Directory on my (physical) machine. 
+# os.chdir('C:\\Users\\le279259\\Documents\\Teaching\\QMB6358_Fall_2020\\GitRepos\\QMB6358F20\\demo_14_creating_documents\\LaTeX_from_python')
+# Directory on my virtual machine. 
+os.chdir("/home/pgbook/Documents/QMB6358_test/QMB6358F20/demo_14_creating_documents/LaTeX_from_python")
 # Check that the change was successful.
 os.getcwd()
+
+
 
 
 ##################################################
@@ -102,6 +107,8 @@ open_file = open(tex_file_path, 'w')
 open_file.write('\n\\documentclass{paper}\n')
 open_file.write('\n\\usepackage{amsmath}\n')
 open_file.write('\n\\usepackage{graphicx}\n')
+open_file.write('\n\\usepackage{epstopdf}\n')
+open_file.write('\n\\epstopdfsetup{suffix=}\n')
 open_file.write('\n\\begin{document}\n')
 
 
@@ -142,11 +149,18 @@ open_file.close()
 
 
 # Change to the Paper directory to build the document.
-os.chdir('C:\\Users\\le279259\\Documents\\Teaching\\QMB6358_Fall_2020\\GitRepos\\QMB6358F20\\demo_14_creating_documents\\LaTeX_from_python\\Paper')
+# Directory on my (physical) machine. 
+# os.chdir('C:\\Users\\le279259\\Documents\\Teaching\\QMB6358_Fall_2020\\GitRepos\\QMB6358F20\\demo_14_creating_documents\\LaTeX_from_python\\Paper')
+
+os.chdir("/home/pgbook/Documents/QMB6358_test/QMB6358F20/demo_14_creating_documents/LaTeX_from_python/Paper")
 
 # Build the document from within the Paper folder.
-os.system('pdflatex %s' % tex_file_name)
-
+# The default version needs no options. 
+# os.system('pdflatex %s' % tex_file_name)
+# Need extra permission in the VirtualBox machine.
+os.system('pdflatex -shell-escape  %s' % tex_file_name)
+# Run it twice to obtain references in document. 
+os.system('pdflatex -shell-escape  %s' % tex_file_name)
 
 
 ##################################################
