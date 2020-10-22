@@ -3,15 +3,22 @@
 \documentclass{paper}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Declare packages in the preamble. 
 
-\ifx\pdftexversion\undefined
-    \usepackage[dvips]{graphicx}
-\else
-    \usepackage[pdftex]{graphicx}
-    \usepackage{epstopdf}
-    \epstopdfsetup{suffix=}
-\fi
+% Declare some TeX packages needed for graphics. 
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\epstopdfsetup{suffix=}
 
+% Sometimes it helps to use an if statement, 
+% if you use the file on multiple platforms. 
+% \ifx\pdftexversion\undefined
+%     \usepackage[dvips]{graphicx}
+% \else
+%     \usepackage[pdftex]{graphicx}
+%     \usepackage{epstopdf}
+%     \epstopdfsetup{suffix=}
+% \fi
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -115,7 +115,12 @@ echo "Building the pdf Document with LaTeX..."
 echo ""
 
 cd Paper
-pdflatex Paper.tex
+# The default version needs no options. 
+# pdflatex Paper.tex
+# Need extra permission in the VirtualBox machine.
+pdflatex -shell-escape Paper.tex
+# Run it twice to obtain references in document. 
+pdflatex -shell-escape Paper.tex
 cd ..
 echo ""
 
