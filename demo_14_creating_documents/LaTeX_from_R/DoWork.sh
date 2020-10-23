@@ -69,7 +69,7 @@ echo ""
 echo "Running data wrangling and modeling in Python..."
 echo ""
 
-# Comment out and replace with UNIX commands, as needed.
+# Comment out and replace with R commands, as needed.
 echo "No commands in Python."
 # python3 Code/my_data_script.py > Code/my_python_data_results.out
 # python3 Code/my_regression_script.py > Code/my_python_regression_results.out
@@ -92,7 +92,7 @@ echo ""
 echo "Running data wrangling and modeling in R..."
 echo ""
 
-# Comment out and replace with UNIX commands, as needed.
+# Comment out and replace with R commands, as needed.
 # echo "No commands in R."
 # Rscript Code/my_data_script.R > Code/my_R_data_results.out
 # Rscript Code/my_regression_script.R > Code/my_R_regression_results.out
@@ -115,11 +115,11 @@ echo "Building the pdf Document with LaTeX..."
 echo ""
 
 cd Paper
-# The default version needs no options. 
+# The default version needs no options.
 # pdflatex Paper.tex
 # Need extra permission in the VirtualBox machine.
 pdflatex -shell-escape Paper.tex
-# Run it twice to obtain references in document. 
+# Run it twice to obtain references in document.
 pdflatex -shell-escape Paper.tex
 cd ..
 echo ""

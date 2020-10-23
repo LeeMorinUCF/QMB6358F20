@@ -61,9 +61,11 @@ text_dir <- 'Text'
 # Load libraries.
 
 # The xtable library creates tex scripts for tables.
+# install.packages("xtable")
 library(xtable)
 # The texreg library creates tex scripts for tables from
 # regression models.
+# install.packages("texreg")
 library(texreg)
 
 
