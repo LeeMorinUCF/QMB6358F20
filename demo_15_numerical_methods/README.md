@@ -35,6 +35,8 @@ The simplest such calculation is to solve for a single vector in the multiplicat
 
 Here, we are given the matrix ```A```, on the left, and the product ```b = c(29, 51, 38)``` on the right. 
 The objective is to find the (unknown) vector ```x = c(4, 7)```, using only ```A``` and ```b```. 
+The most common such problem is when the matrix ```A``` is square, 
+that is, it has the same number of rows and columns.
 
 
 ### The solution
