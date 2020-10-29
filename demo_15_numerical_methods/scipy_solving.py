@@ -79,11 +79,6 @@ print(f(soln_fs))
 # soln_b1 = anderson(f, 1)
 
 
-# More modern solution (but doesn't work on all platforms):
-# soln_bi = optimize.root_scalar(f = f, method='bisect')
-# soln_bi = root_scalar(f = f, method='bisect')
-
-
 
 #--------------------------------------------------
 # Multiple variable equations
