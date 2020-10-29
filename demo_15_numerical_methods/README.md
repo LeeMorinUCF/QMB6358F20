@@ -23,12 +23,18 @@ In the following we will consider three types of computing problems:
 
 First, consider solving a *system of linear equations* for a vector of unknown parameters. 
 The objective is to find a *vector* ```x``` that, when multiplied by the *matrix* ```A``` produces the *vector* ```b```: ```x``` satisfies ```A %*% x == b```.
-
+It is necessary to first understand how this calculation is performed. 
+In matrix multiplication, the numbers in the resulting matrix are calculated as the *dot product* of the corresponding rows and columns of the matrices that are multiplied. 
+The calculation proceeds in the pattern shown in the following figure. 
 
 <img src="Images/Matrix_Mult_Example.png" width="500">
 
+The simplest such calculation is to solve for a single vector in the multiplication. 
+
 <img src="Images/Matrix_Vector_Example.png" width="500">
 
+Here, we are given the matrix ```A```, on the left, and the product ```b = c(29, 51, 38)``` on the right. 
+The objective is to find the (unknown) vector ```x = c(4, 7)```, using only ```A``` and ```b```. 
 
 
 ### The solution
@@ -42,18 +48,60 @@ Fortunately, for the practitioner, most computational packages have built-in fun
 
 ### Examples
 
+The matrix multiplication operator in ```R``` is the symbol ```%*%```. 
+In the first problem, it is used as follows.
+
+```
+A <- matrix(seq(6),
+            nrow = 2,
+            ncol = 3, 
+            byrow = TRUE)
+x <- matrix(c(10, 20, 30, 11, 21, 31),
+            nrow = 3,
+            ncol = 2)
+b <- A %*% x
+
+> b
+     [,1] [,2]
+[1,]  140  146
+[2,]  320  335
+```
+
+
 The conceptually simple--but computationally expensive--approach is to calculate the inverse of the matrix ```A``` and then multiply ```b``` to achieve the solution ```b```. 
 
+```
+# Create a matrix and a vector.
+A <- matrix(c(2, 2, 5, 10),
+            nrow = 2,
+            ncol = 2)
+x <- matrix(c(1, 2),
+            nrow = 2,
+            ncol = 1)
+b <- A %*% x
 
+# Calculate the inverse of A.
+A_inv <- solve(A)
+
+x_soln_inv <- A_inv %*% b
+> x_soln_inv
+     [,1]
+[1,]    1
+[2,]    2       
 ```
 
-```
 This is useful if the user needs to solve a series of equations with the same matrix ```A``` but a set of different different vectors ```b```.
 
 In general, you would simply solve the system to obtain the solution. 
 This requires fewer calculations and is all that is needed when only the solution is required. 
 
 ```
+# Use the solve function to solve for x.
+x_soln <- solve(A, b)
+
+# Compare with the original x:
+x_soln_inv
+x_soln
 
 ```
 
@@ -156,7 +204,7 @@ Although ```x_3``` is further from the root, it allows a close approximation in 
 
 #### Newton's Method
 
-Newton's method uses calculus to get a more accurate measurement of the slope at a given point on the function. 
+Newton's method (often called the Newton-Raphson method, with due credit given to Joseph Raphson) uses calculus to get a more accurate measurement of the slope at a given point on the function. 
 It chooses the next candidate point by solving for the root of the tangent line at the current point. 
 The solution of this linear equation is represented by the following recurrence relation. 
 
@@ -177,7 +225,21 @@ The iterations continue until the desired accuracy level is achieved.
 The ```uniroot``` function in ```R``` uses the bisection method to solve for a root of a univariate function, i.e. with one-dimensional ```x```. 
 
 ```
+# Define the function.
+# Goal: Find the root of this function.
+f <- function(x) log(x) - exp(-x)
+# That is, find the x at which this function is zero.
 
+x_grid <- seq(0.1, 2.0, by = 0.01)
+plot(x_grid, f(x_grid),
+     main = 'Finding a Root',
+     xlab = 'x', ylab = 'f(x)',
+     col = 'blue', type = 'l')
+abline(h = 0)
+
+# Solution:
+f_soln <- uniroot(f, c(0, 2), tol = 0.0001)
+f_soln
 ```
 
 In Python, the ```Brent``` algorithm serves a similar purpose and also applies to a single-variable problem. 
@@ -188,10 +250,32 @@ In Python, the ```Brent``` algorithm serves a similar purpose and also applies t
 
 For more flexible algorithms see the folowing examples that take advantage of the information contained in the slope of the function. 
 It is especially useful for speeding up calculations in a multi-variable problem. 
+The ```multiroot``` function in the ```R``` package ```rootSolve``` uses the Newton-Raphson method. 
 
 
 ```
+# Define a multivariate function.
+model_2 <- function(x) {
 
+  F1 <- x[1]^2+ x[2]^2 -1
+  F2 <- x[1]^2- x[2]^2 +0.5
+
+  return(c(F1 = F1, F2 = F2))
+}
+
+# Test it at some values of x.
+model_2(x = c(1, 2))
+model_2(x = c(1, 1))
+# Use this to get an idea of where to satrt.
+
+# Obtain the root with multiroot.
+soln_2 <- multiroot(f = model_2, start = c(1, 1))
+
+# Verify that the solution is a root.
+> model_2(x = soln_2$root)
+          F1           F2 
+2.323138e-08 2.323308e-08 
+# Close to zero (numerically).
 ```
 
 
@@ -211,7 +295,7 @@ An optimum will be located where the function is flat, that is, where the slope 
 
 ### The solution
 
-Let's consider Newton-Raphson method, inspired by Newton's method for finding roots, with due credit given to Joseph Raphson. 
+Now consider Newton-Raphson method for optimization.  
 The idea behind this algorithm is the same as that for finding roots:
 calculate a second-order approximation to the function at the current point
 and then solve this approximation for its optimum. 
@@ -228,12 +312,45 @@ Graphically, the algorithm proceeds as shown in the following two figures.
 
 ### Examples
 
+In ```R```, when solving a single-variable optimization problem, 
+the ```optimize``` function.
 
 ```
+f <- function (x, a) (x - a)^2
+xmin <- optimize(f, c(0, 1), tol = 0.0001, a = 1/3)
 
+xmin
+$minimum
+[1] 0.3333333
+
+$objective
+[1] 0
+```
+COnsider the following example of a multivariate function,
+calculated with the BFGS algorithm, a variant of Newton's method. 
 
 ```
+# The Rosenbrock "Banana" function is a good example.
+f_banana <- function(x) {
+  x1 <- x[1]
+  x2 <- x[2]
+  100 * (x2 - x1 * x1)^2 + (1 - x1)^2
+}
+# Supply the calculation of the gradient to improve optimization.
+# Gradient means a vector of first derivatives.
+gr_banana <- function(x) { ## Gradient of 'fr'
+  x1 <- x[1]
+  x2 <- x[2]
+  c(-400 * x1 * (x2 - x1 * x1) - 2 * (1 - x1), # Dx_1
+    200 *      (x2 - x1 * x1))# Dx_2
+}
 
+# Optimize the function itself.
+optim(c(-1.2,1), f_banana)
+
+# Optimize with vector of derivatives (the BFGS algorithm is a quasi-Newton method).
+soln_banana <- optim(c(-1.2,1), f_banana, gr_banana, method = "BFGS")
+```
 
 As mentioned above, in the linear regression model, the objective is to find the value of the coefficients that minimize the sum of squared errors. 
 Similarly, in the logistic regression model, the objective is to find the value of the coefficients that maximize the likelihood of the sample. 
