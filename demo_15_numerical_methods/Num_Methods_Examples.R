@@ -240,7 +240,7 @@ model_2 <- function(x) {
 # Test it at some values of x.
 model_2(x = c(1, 2))
 model_2(x = c(1, 1))
-# Use this to get an idea of where to satrt.
+# Use this to get an idea of where to start.
 
 # Obtain the root with multiroot.
 soln_2 <- multiroot(f = model_2, start = c(1, 1))
@@ -348,8 +348,16 @@ fp <- function(x) { print(x); f(x) }
 
 # Plot it to see what is going on.
 plot(f, -2,5, ylim = 0:1, col = 'red', lwd = 2)
+plot(f, xlim = c(-2,5), ylim = c(0,10), col = 'red', lwd = 2)
 optimize(fp, c(-4, 20))   # doesn't see the minimum
 optimize(fp, c(-7, 20))   # ok
+# If you know the solution is in a particular range,
+# the algorithm will work better:
+optimize(fp, c(0, 2))
+optimize(fp, c(0.9, 1.2))
+# In some spots, it won't find the solution.
+optimize(fp, c(5, 12))
+
 
 
 #--------------------------------------------------

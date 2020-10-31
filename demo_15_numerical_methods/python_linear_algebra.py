@@ -57,6 +57,11 @@ b = np.array([1., 1.])
 soln = np.linalg.solve(A, b)
 soln
 
+# Check the solution
+A.dot(soln)
+# equals b, so it's the solution. 
+
+
 
 
 # Create some data to output.
