@@ -280,6 +280,12 @@ WHERE Region NOT IN
 cur.fetchall()
 
 
+
+# Close the connection when finished. 
+con.close()
+
+
+
 ##################################################
 # End
 ##################################################
