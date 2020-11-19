@@ -117,7 +117,21 @@ sqldf('SELECT
         bids.BidderID = bidders.BidderID
       ;')
 
+
+
+
+#--------------------------------------------------
 # Example of left join.
+#--------------------------------------------------
+
+# Use this nested query to use a subset
+# of the database on the right:
+sqldf('SELECT * FROM Bidders WHERE BidderID < 6')
+# Which is a subset of:
+sqldf('SELECT * FROM Bidders')
+
+
+# Left join:
 sqldf('SELECT
         bidders.BidderID,
         bidders.FirstName,
@@ -140,7 +154,18 @@ sqldf('SELECT
 # with bidder information left blank.
 
 
+
+#--------------------------------------------------
 # Inner join.
+#--------------------------------------------------
+
+# Use another nested query to use a subset
+# of the database on the left:
+sqldf('SELECT * FROM Bids WHERE BidderID > 2')
+# Which is a subset of:
+sqldf('SELECT * FROM Bids')
+
+# Inner join:
 sqldf('SELECT
         bidders.BidderID,
         bidders.FirstName,
@@ -162,20 +187,24 @@ sqldf('SELECT
 
 
 
+#--------------------------------------------------
 # Outer join.
+#--------------------------------------------------
+
+# Combine both nested queries:
 sqldf('SELECT
-    bidders.BidderID,
-      bidders.FirstName,
-      bidders.LastName,
-      AVG(bids.Bid) AS AverageBid
+        bidders.BidderID,
+        bidders.FirstName,
+        bidders.LastName,
+        AVG(bids.Bid) AS AverageBid
       FROM
-      (SELECT * FROM Bids WHERE BidderID > 2) AS bids
+        (SELECT * FROM Bids WHERE BidderID > 2) AS bids
       FULL OUTER JOIN (SELECT * FROM Bidders WHERE BidderID < 6) AS bidders
-      ON bids.BidderID = bidders.BidderID
+        ON bids.BidderID = bidders.BidderID
       GROUP BY
-      bidders.BidderID,
-      bidders.FirstName,
-      bidders.LastName
+        bidders.BidderID,
+        bidders.FirstName,
+        bidders.LastName
       ;')
 # FAIL: Not all pakages support outer joins.
 # It is just a regular merge without much SQL machinery anyway.
@@ -183,10 +212,53 @@ sqldf('SELECT
 # Most queries can be executed with left joins.
 # It is a matter of choosing the table on the left.
 
+#--------------------------------------------------
+# Right join.
+#--------------------------------------------------
+
+# Same goes for right joins:
+sqldf('
+  SELECT
+    bidders.BidderID,
+    bidders.FirstName,
+    bidders.LastName,
+    AVG(bids.Bid) AS AverageBid
+  FROM
+    (SELECT * FROM Bids WHERE BidderID > 2) AS bids
+  RIGHT JOIN Bidders AS bidders
+    ON bids.BidderID = bidders.BidderID
+  GROUP BY
+    bidders.BidderID,
+    bidders.FirstName,
+    bidders.LastName
+  ;
+')
+
+# How to fix this:
+# Switch left and right tables.
+
+# New left join:
+sqldf('
+  SELECT
+    bidders.BidderID,
+    bidders.FirstName,
+    bidders.LastName,
+    AVG(bids.Bid) AS AverageBid
+  FROM
+    Bidders AS bidders
+  LEFT JOIN (SELECT * FROM Bids WHERE BidderID > 2) AS bids
+    ON bids.BidderID = bidders.BidderID
+  GROUP BY
+    bidders.BidderID,
+    bidders.FirstName,
+    bidders.LastName
+  ;
+')
+
 
 
 ##################################################
-#
+# Reading in the Query from an SQL Script
 ##################################################
 
 # Read the text from the SQL script.
