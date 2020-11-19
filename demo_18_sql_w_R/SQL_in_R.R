@@ -256,6 +256,44 @@ sqldf('
 ')
 
 
+##################################################
+# Unions
+##################################################
+
+sqldf('
+  SELECT
+    bidders.BidderID,
+    bidders.FirstName,
+    bidders.LastName,
+    AVG(bids.Bid) AS AverageBid,
+    1 AS TableNum
+  FROM
+    Bidders AS bidders
+  LEFT JOIN (SELECT * FROM Bids WHERE BidderID > 2) AS bids
+    ON bids.BidderID = bidders.BidderID
+  GROUP BY
+    bidders.BidderID,
+    bidders.FirstName,
+    bidders.LastName
+  UNION ALL
+  SELECT
+    bidders.BidderID,
+    bidders.FirstName,
+    bidders.LastName,
+    AVG(bids.Bid) AS AverageBid,
+    2 AS TableNum
+  FROM
+    Bidders AS bidders
+  LEFT JOIN (SELECT * FROM Bids WHERE BidderID > 2) AS bids
+    ON bids.BidderID = bidders.BidderID
+  GROUP BY
+    bidders.BidderID,
+    bidders.FirstName,
+    bidders.LastName
+  ;
+')
+
+
 
 ##################################################
 # Reading in the Query from an SQL Script
