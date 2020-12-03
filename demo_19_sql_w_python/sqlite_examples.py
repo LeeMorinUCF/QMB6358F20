@@ -171,6 +171,10 @@ for c in countries:
 con.commit()
 
 
+cur.execute('''SELECT * FROM   PopByCountry''')
+cur.fetchall()
+
+
 # Inner JOIN
 cur.execute('''
 SELECT PopByRegion.Region, PopByCountry.Country
@@ -179,6 +183,17 @@ WHERE  (PopByRegion.Region = PopByCountry.Region)
 AND    (PopByRegion.Population > 1000000)
 ''')
 
+cur.fetchall()
+
+
+
+# Left JOIN
+cur.execute('''
+SELECT PopByRegion.Region, PopByCountry.Country
+FROM   PopByRegion LEFT JOIN PopByCountry
+ON  (PopByRegion.Region = PopByCountry.Region)
+AND    (PopByRegion.Population > 1000000)
+''')
 
 cur.fetchall()
 
@@ -244,6 +259,16 @@ cur.fetchall()
 
 # Example: Select the list of regions that do not have 
 # a country with a population of 8,764,000.
+
+
+
+# Information:
+cur.execute('''SELECT *
+                   FROM PopByCountry
+                   WHERE (PopByCountry.Population != 8764)''')
+
+cur.fetchall()
+
 
 # First attempt:
 cur.execute('''SELECT DISTINCT Region

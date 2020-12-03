@@ -50,6 +50,7 @@ library(sqldf)
 ##################################################
 
 # Read the raw data.
+# Auctions <- read.csv('AuctionsTable.csv', header = FALSE)
 Auctions <- read.csv('AuctionsTable.csv')
 Bidders <- read.csv('BiddersTable.csv')
 Bids <- read.csv('BidsTable.csv')
@@ -152,6 +153,27 @@ sqldf('SELECT
 # when dropping BidderID >= 6.
 # The joined AverageBid on the right is include anyway,
 # with bidder information left blank.
+
+# What if you didn't want the missing bidders?
+# Turn this into an inner join.
+sqldf('SELECT
+        bidders.BidderID,
+        bidders.FirstName,
+        bidders.LastName,
+        AVG(bids.Bid) AS AverageBid
+      FROM
+        Bids AS bids
+      LEFT JOIN
+        (SELECT * FROM Bidders WHERE BidderID < 6) AS bidders
+      ON
+        bids.BidderID = bidders.BidderID
+      WHERE
+        bidders.BidderID IS NOT NULL
+      GROUP BY
+        bidders.BidderID,
+        bidders.FirstName,
+        bidders.LastName
+      ;')
 
 
 
