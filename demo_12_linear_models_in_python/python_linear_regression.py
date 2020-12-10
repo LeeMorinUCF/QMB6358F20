@@ -287,6 +287,8 @@ reg_model_1_sm = sm.ols(formula = "house_price ~ income", data = housing).fit()
 print(reg_model_1_sm.summary())
 
 
+# Calculate sum of squared residuals. 
+print(sum(reg_model_full_sm.resid**2))
 
 
 ##################################################
