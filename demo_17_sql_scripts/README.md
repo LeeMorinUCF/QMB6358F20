@@ -78,7 +78,7 @@ First, it aggregates data by bidder. Second, it joins data from two different ta
 Let's look at these two components separately. 
 
 
-### Aggreagation 
+### Aggregation 
 
 The aggregation step allows you to calculate functions of the data and tabulate them by different values of a particular variable. 
 
